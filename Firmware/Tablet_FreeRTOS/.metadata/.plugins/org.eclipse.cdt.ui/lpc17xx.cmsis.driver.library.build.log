@@ -1,0 +1,170 @@
+16:22:59 **** Build of configuration Debug for project lpc17xx.cmsis.driver.library ****
+make -r all 
+Building file: ../Source/debug_frmwrk.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/debug_frmwrk.d" -MT"Source/debug_frmwrk.o" -MT"Source/debug_frmwrk.d" -o "Source/debug_frmwrk.o" "../Source/debug_frmwrk.c"
+Finished building: ../Source/debug_frmwrk.c
+ 
+Building file: ../Source/lpc17xx_adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_adc.d" -MT"Source/lpc17xx_adc.o" -MT"Source/lpc17xx_adc.d" -o "Source/lpc17xx_adc.o" "../Source/lpc17xx_adc.c"
+Finished building: ../Source/lpc17xx_adc.c
+ 
+Building file: ../Source/lpc17xx_can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_can.d" -MT"Source/lpc17xx_can.o" -MT"Source/lpc17xx_can.d" -o "Source/lpc17xx_can.o" "../Source/lpc17xx_can.c"
+../Source/lpc17xx_can.c: In function 'CAN_Init':
+../Source/lpc17xx_can.c:138:11: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  uint32_t temp;
+           ^
+Finished building: ../Source/lpc17xx_can.c
+ 
+Building file: ../Source/lpc17xx_clkpwr.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_clkpwr.d" -MT"Source/lpc17xx_clkpwr.o" -MT"Source/lpc17xx_clkpwr.d" -o "Source/lpc17xx_clkpwr.o" "../Source/lpc17xx_clkpwr.c"
+Finished building: ../Source/lpc17xx_clkpwr.c
+ 
+Building file: ../Source/lpc17xx_dac.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_dac.d" -MT"Source/lpc17xx_dac.o" -MT"Source/lpc17xx_dac.d" -o "Source/lpc17xx_dac.o" "../Source/lpc17xx_dac.c"
+Finished building: ../Source/lpc17xx_dac.c
+ 
+Building file: ../Source/lpc17xx_emac.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_emac.d" -MT"Source/lpc17xx_emac.o" -MT"Source/lpc17xx_emac.d" -o "Source/lpc17xx_emac.o" "../Source/lpc17xx_emac.c"
+Finished building: ../Source/lpc17xx_emac.c
+ 
+Building file: ../Source/lpc17xx_exti.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_exti.d" -MT"Source/lpc17xx_exti.o" -MT"Source/lpc17xx_exti.d" -o "Source/lpc17xx_exti.o" "../Source/lpc17xx_exti.c"
+Finished building: ../Source/lpc17xx_exti.c
+ 
+Building file: ../Source/lpc17xx_gpdma.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_gpdma.d" -MT"Source/lpc17xx_gpdma.o" -MT"Source/lpc17xx_gpdma.d" -o "Source/lpc17xx_gpdma.o" "../Source/lpc17xx_gpdma.c"
+Finished building: ../Source/lpc17xx_gpdma.c
+ 
+Building file: ../Source/lpc17xx_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_gpio.d" -MT"Source/lpc17xx_gpio.o" -MT"Source/lpc17xx_gpio.d" -o "Source/lpc17xx_gpio.o" "../Source/lpc17xx_gpio.c"
+Finished building: ../Source/lpc17xx_gpio.c
+ 
+Building file: ../Source/lpc17xx_i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_i2c.d" -MT"Source/lpc17xx_i2c.o" -MT"Source/lpc17xx_i2c.d" -o "Source/lpc17xx_i2c.o" "../Source/lpc17xx_i2c.c"
+Finished building: ../Source/lpc17xx_i2c.c
+ 
+Building file: ../Source/lpc17xx_i2s.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_i2s.d" -MT"Source/lpc17xx_i2s.o" -MT"Source/lpc17xx_i2s.d" -o "Source/lpc17xx_i2s.o" "../Source/lpc17xx_i2s.c"
+Finished building: ../Source/lpc17xx_i2s.c
+ 
+Building file: ../Source/lpc17xx_libcfg_default.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_libcfg_default.d" -MT"Source/lpc17xx_libcfg_default.o" -MT"Source/lpc17xx_libcfg_default.d" -o "Source/lpc17xx_libcfg_default.o" "../Source/lpc17xx_libcfg_default.c"
+Finished building: ../Source/lpc17xx_libcfg_default.c
+ 
+Building file: ../Source/lpc17xx_mcpwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_mcpwm.d" -MT"Source/lpc17xx_mcpwm.o" -MT"Source/lpc17xx_mcpwm.d" -o "Source/lpc17xx_mcpwm.o" "../Source/lpc17xx_mcpwm.c"
+Finished building: ../Source/lpc17xx_mcpwm.c
+ 
+Building file: ../Source/lpc17xx_nvic.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_nvic.d" -MT"Source/lpc17xx_nvic.o" -MT"Source/lpc17xx_nvic.d" -o "Source/lpc17xx_nvic.o" "../Source/lpc17xx_nvic.c"
+Finished building: ../Source/lpc17xx_nvic.c
+ 
+Building file: ../Source/lpc17xx_pinsel.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_pinsel.d" -MT"Source/lpc17xx_pinsel.o" -MT"Source/lpc17xx_pinsel.d" -o "Source/lpc17xx_pinsel.o" "../Source/lpc17xx_pinsel.c"
+Finished building: ../Source/lpc17xx_pinsel.c
+ 
+Building file: ../Source/lpc17xx_pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_pwm.d" -MT"Source/lpc17xx_pwm.o" -MT"Source/lpc17xx_pwm.d" -o "Source/lpc17xx_pwm.o" "../Source/lpc17xx_pwm.c"
+Finished building: ../Source/lpc17xx_pwm.c
+ 
+Building file: ../Source/lpc17xx_qei.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_qei.d" -MT"Source/lpc17xx_qei.o" -MT"Source/lpc17xx_qei.d" -o "Source/lpc17xx_qei.o" "../Source/lpc17xx_qei.c"
+Finished building: ../Source/lpc17xx_qei.c
+ 
+Building file: ../Source/lpc17xx_rit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_rit.d" -MT"Source/lpc17xx_rit.o" -MT"Source/lpc17xx_rit.d" -o "Source/lpc17xx_rit.o" "../Source/lpc17xx_rit.c"
+Finished building: ../Source/lpc17xx_rit.c
+ 
+Building file: ../Source/lpc17xx_rtc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_rtc.d" -MT"Source/lpc17xx_rtc.o" -MT"Source/lpc17xx_rtc.d" -o "Source/lpc17xx_rtc.o" "../Source/lpc17xx_rtc.c"
+Finished building: ../Source/lpc17xx_rtc.c
+ 
+Building file: ../Source/lpc17xx_spi.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_spi.d" -MT"Source/lpc17xx_spi.o" -MT"Source/lpc17xx_spi.d" -o "Source/lpc17xx_spi.o" "../Source/lpc17xx_spi.c"
+Finished building: ../Source/lpc17xx_spi.c
+ 
+Building file: ../Source/lpc17xx_ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_ssp.d" -MT"Source/lpc17xx_ssp.o" -MT"Source/lpc17xx_ssp.d" -o "Source/lpc17xx_ssp.o" "../Source/lpc17xx_ssp.c"
+Finished building: ../Source/lpc17xx_ssp.c
+ 
+Building file: ../Source/lpc17xx_systick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_systick.d" -MT"Source/lpc17xx_systick.o" -MT"Source/lpc17xx_systick.d" -o "Source/lpc17xx_systick.o" "../Source/lpc17xx_systick.c"
+Finished building: ../Source/lpc17xx_systick.c
+ 
+Building file: ../Source/lpc17xx_timer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_timer.d" -MT"Source/lpc17xx_timer.o" -MT"Source/lpc17xx_timer.d" -o "Source/lpc17xx_timer.o" "../Source/lpc17xx_timer.c"
+Finished building: ../Source/lpc17xx_timer.c
+ 
+Building file: ../Source/lpc17xx_uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_uart.d" -MT"Source/lpc17xx_uart.o" -MT"Source/lpc17xx_uart.d" -o "Source/lpc17xx_uart.o" "../Source/lpc17xx_uart.c"
+Finished building: ../Source/lpc17xx_uart.c
+ 
+Building file: ../Source/lpc17xx_wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Plus-Demo-1\Source" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\FreeRTOS-Products\FreeRTOS\portable\GCC\ARM_CM3" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\lpc17xx.cmsis.driver.library\Include" -I"C:\Projects\Ananke\Firmware\Tablet_FreeRTOS\CMSISv2p00_LPC17xx\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"Source/lpc17xx_wdt.d" -MT"Source/lpc17xx_wdt.o" -MT"Source/lpc17xx_wdt.d" -o "Source/lpc17xx_wdt.o" "../Source/lpc17xx_wdt.c"
+Finished building: ../Source/lpc17xx_wdt.c
+ 
+Building target: liblpc17xx.cmsis.driver.library.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc17xx.cmsis.driver.library.a"  ./Source/debug_frmwrk.o ./Source/lpc17xx_adc.o ./Source/lpc17xx_can.o ./Source/lpc17xx_clkpwr.o ./Source/lpc17xx_dac.o ./Source/lpc17xx_emac.o ./Source/lpc17xx_exti.o ./Source/lpc17xx_gpdma.o ./Source/lpc17xx_gpio.o ./Source/lpc17xx_i2c.o ./Source/lpc17xx_i2s.o ./Source/lpc17xx_libcfg_default.o ./Source/lpc17xx_mcpwm.o ./Source/lpc17xx_nvic.o ./Source/lpc17xx_pinsel.o ./Source/lpc17xx_pwm.o ./Source/lpc17xx_qei.o ./Source/lpc17xx_rit.o ./Source/lpc17xx_rtc.o ./Source/lpc17xx_spi.o ./Source/lpc17xx_ssp.o ./Source/lpc17xx_systick.o ./Source/lpc17xx_timer.o ./Source/lpc17xx_uart.o ./Source/lpc17xx_wdt.o   
+c:\nxp\LPCXpresso_8.2.2_650\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating liblpc17xx.cmsis.driver.library.a
+Finished building target: liblpc17xx.cmsis.driver.library.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size liblpc17xx.cmsis.driver.library.a ; # arm-none-eabi-objdump -h -S liblpc17xx.cmsis.driver.library.a >liblpc17xx.cmsis.driver.library.lss
+   text	   data	    bss	    dec	    hex	filename
+   1611	      0	      0	   1611	    64b	debug_frmwrk.o (ex liblpc17xx.cmsis.driver.library.a)
+   1244	      0	      0	   1244	    4dc	lpc17xx_adc.o (ex liblpc17xx.cmsis.driver.library.a)
+  10804	      0	     10	  10814	   2a3e	lpc17xx_can.o (ex liblpc17xx.cmsis.driver.library.a)
+    536	      0	      0	    536	    218	lpc17xx_clkpwr.o (ex liblpc17xx.cmsis.driver.library.a)
+    384	      0	      0	    384	    180	lpc17xx_dac.o (ex liblpc17xx.cmsis.driver.library.a)
+   2831	      0	    100	   2931	    b73	lpc17xx_emac.o (ex liblpc17xx.cmsis.driver.library.a)
+    344	      0	      0	    344	    158	lpc17xx_exti.o (ex liblpc17xx.cmsis.driver.library.a)
+   1554	     32	      0	   1586	    632	lpc17xx_gpdma.o (ex liblpc17xx.cmsis.driver.library.a)
+   2192	      0	      0	   2192	    890	lpc17xx_gpio.o (ex liblpc17xx.cmsis.driver.library.a)
+   4500	      0	     52	   4552	   11c8	lpc17xx_i2c.o (ex liblpc17xx.cmsis.driver.library.a)
+   2720	      0	      0	   2720	    aa0	lpc17xx_i2s.o (ex liblpc17xx.cmsis.driver.library.a)
+     12	      0	      0	     12	      c	lpc17xx_libcfg_default.o (ex liblpc17xx.cmsis.driver.library.a)
+   1820	      0	      0	   1820	    71c	lpc17xx_mcpwm.o (ex liblpc17xx.cmsis.driver.library.a)
+    232	      0	      0	    232	     e8	lpc17xx_nvic.o (ex liblpc17xx.cmsis.driver.library.a)
+    564	      0	      0	    564	    234	lpc17xx_pinsel.o (ex liblpc17xx.cmsis.driver.library.a)
+   2544	      0	      0	   2544	    9f0	lpc17xx_pwm.o (ex liblpc17xx.cmsis.driver.library.a)
+   2148	      0	      0	   2148	    864	lpc17xx_qei.o (ex liblpc17xx.cmsis.driver.library.a)
+    560	      0	      0	    560	    230	lpc17xx_rit.o (ex liblpc17xx.cmsis.driver.library.a)
+   3916	      0	      0	   3916	    f4c	lpc17xx_rtc.o (ex liblpc17xx.cmsis.driver.library.a)
+   1368	      0	      0	   1368	    558	lpc17xx_spi.o (ex liblpc17xx.cmsis.driver.library.a)
+   2612	      0	      0	   2612	    a34	lpc17xx_ssp.o (ex liblpc17xx.cmsis.driver.library.a)
+    500	      0	      0	    500	    1f4	lpc17xx_systick.o (ex liblpc17xx.cmsis.driver.library.a)
+   2562	      0	      0	   2562	    a02	lpc17xx_timer.o (ex liblpc17xx.cmsis.driver.library.a)
+   5329	      0	      0	   5329	   14d1	lpc17xx_uart.o (ex liblpc17xx.cmsis.driver.library.a)
+    708	      0	      0	    708	    2c4	lpc17xx_wdt.o (ex liblpc17xx.cmsis.driver.library.a)
+ 
+
+16:23:04 Build Finished (took 4s.822ms)
+

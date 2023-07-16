@@ -1,0 +1,12 @@
+Changes between FreeRTOS+IO featured demo release 1 and release 2
+
+	+ Update FreeRTOS to V7.3.0 (essential).
+	+ Update FreeRTOS+IO to V1.0.1 (includes minor bug fixes, see FreeRTOS+IO
+	  History.txt file.
+	+ Update FreeRTOS+CLI to V1.0.1.
+	+ Improve USART CLI interface formatting and functionality, and add in
+	  additional example commands.
+	+ Corrected xCommandLineInput structure name to CLI_Command_Definition_t, as
+	  was the name in the actual FreeRTOS+CLI release.
+
+
