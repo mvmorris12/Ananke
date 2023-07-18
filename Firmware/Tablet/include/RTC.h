@@ -39,12 +39,14 @@ typedef struct {
 				    PCLK = 15Mhz */
 #define PREFRAC_RTC	0x000061C0  /* Prescaler value, fraction portion, 
 				    PCLK = 15Mhz */
-#define ILR_RTCCIF	0x01
-#define ILR_RTCALF	0x02
+#define ILR_RTCCIF        0x01
+#define ILR_RTCALF        0x02
 
-#define CCR_CLKEN	0x01
-#define CCR_CTCRST	0x02
-#define CCR_CLKSRC	0x10
+#define CCR_CLKEN         0x01
+#define CCR_CTCRST        0x02
+#define CCR_CLKSRC        0x10
+
+#define UPDATE_RTC_ON_PWR 0x1
 
 extern void RTC_IRQHandler (void);
 extern void RTC_Init( void );
@@ -56,5 +58,9 @@ extern RTCTime RTCGetTime( void );
 extern void RTCSetAlarm( RTCTime );
 extern void RTCSetAlarmMask( uint32_t AlarmMask );
 extern void print_time(void);
+uint32_t rtc_read_time(void);
+extern void rtc_set_time(void);
+void rtc_set_minute_timer(void);
+void read_minute_timer(void);
 
 #endif /* end __RTC_H */

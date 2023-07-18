@@ -2,24 +2,54 @@
 #include "I2C.h"
 #include "LPC177x_8x.h"
 #include "type.h"
+#include "Interrupts.h"
+#include "getdatetime_var.h"
 
 extern volatile unsigned char I2C_MasterBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned char I2C_SlaveBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned int I2C_Count[I2C_PORT_NUM];
 extern volatile unsigned int I2C_ReadLength[I2C_PORT_NUM];
 extern volatile unsigned int I2C_WriteLength[I2C_PORT_NUM];
+extern volatile RTCTime local_time;
+
+//void rtc_set_minute_timer(void){
+//    I2C_WriteLength[1] = 3;
+//    I2C_MasterBuffer[1][0] = (0x51<<1) | 0x00;
+//    I2C_MasterBuffer[1][1] = 0x01;
+//    I2C_MasterBuffer[1][2] = 0x20;  
+//    I2C_Engine(1);  
+//}
 
 
-uint32_t read_rtc(void){
-    I2C_ReadLength[1] = 2;
-    I2C_WriteLength[1] = 2;
-    I2C_MasterBuffer[1][0] = (0x51<<1) | 0x00;
-    I2C_MasterBuffer[1][1] = 0x04;
-    I2C_MasterBuffer[1][2] = (0x51<<1) | 0x01;
-    I2C_Engine(1);
-    printf("%X\t%02X %02X\n", *I2C_MasterBuffer[1], I2C_SlaveBuffer[1][0], I2C_SlaveBuffer[1][1]);
-};
+//uint32_t rtc_read_time(void){
+//    I2C_ReadLength[1] = 3;
+//    I2C_WriteLength[1] = 2;
+//    I2C_MasterBuffer[1][0] = (0x51<<1) | 0x00;
+//    I2C_MasterBuffer[1][1] = 0x04;
+//    I2C_MasterBuffer[1][2] = (0x51<<1) | 0x01;
+//    I2C_Engine(1);
+//    //printf("%X\t%02X %02X %02X\n", *I2C_MasterBuffer[1], I2C_SlaveBuffer[1][0], I2C_SlaveBuffer[1][1], I2C_SlaveBuffer[1][2]);
+//    uint8_t seconds, minutes, hours;
+//    seconds = I2C_SlaveBuffer[1][0] & 0x7F;
+//    minutes = I2C_SlaveBuffer[1][1];
+//    hours = I2C_SlaveBuffer[1][2];
+//    printf("%02X %02X %02X\n", seconds, minutes, hours);
+//};
 
+
+//void rtc_set_time(void){
+//    I2C_WriteLength[1] = 9;
+//    I2C_MasterBuffer[1][0] = (0x51<<1) | 0x00;
+//    I2C_MasterBuffer[1][1] = 0x04;
+//    I2C_MasterBuffer[1][2] = TIMESTAMP_AT_FLASH_SEC+5;  
+//    I2C_MasterBuffer[1][3] = TIMESTAMP_AT_FLASH_MIN;  
+//    I2C_MasterBuffer[1][4] = TIMESTAMP_AT_FLASH_HR;  
+//    I2C_MasterBuffer[1][5] = TIMESTAMP_AT_FLASH_DATE;  
+//    I2C_MasterBuffer[1][6] = TIMESTAMP_AT_FLASH_DAY;  
+//    I2C_MasterBuffer[1][7] = TIMESTAMP_AT_FLASH_MON;  
+//    I2C_MasterBuffer[1][8] = TIMESTAMP_AT_FLASH_YR & 0xFF;  
+//    I2C_Engine(1);  
+//}
 
 volatile uint32_t alarm_on = 0;
 
@@ -33,12 +63,12 @@ volatile uint32_t alarm_on = 0;
 ** Returned value:		None
 ** 
 *****************************************************************************/
-void RTC_IRQHandler (void) 
-{  
-  LPC_RTC->ILR |= ILR_RTCCIF;		/* clear interrupt flag */
-  alarm_on = 1;
-  return;
-}
+//void RTC_IRQHandler (void) 
+//{  
+//  //LPC_RTC->ILR |= ILR_RTCCIF;		/* clear interrupt flag */
+//  alarm_on = 1;
+//  return;
+//}
 
 /*****************************************************************************
 ** Function name:		RTCInit
@@ -68,15 +98,17 @@ void RTC_Init( void )
   LPC_RTC->CCR = 0;
 
   /* Set local time for internal RTC*/
-  //local_time.RTC_Sec    = TIMESTAMP_AT_FLASH_SEC;
-  //local_time.RTC_Min    = TIMESTAMP_AT_FLASH_MIN;
-  //local_time.RTC_Hour   = TIMESTAMP_AT_FLASH_MON;
-  //local_time.RTC_Mday   = TIMESTAMP_AT_FLASH_DATE;
-  //local_time.RTC_Wday   = TIMESTAMP_AT_FLASH_DAY;
-  ////local_time.RTC_Yday = TIMESTAMP_AT_FLASH_DATE;
-  //local_time.RTC_Mon    = TIMESTAMP_AT_FLASH_MON;
-  //local_time.RTC_Year   = TIMESTAMP_AT_FLASH_YR;
-  //RTCSetTime( local_time );		
+  #if UPDATE_RTC_ON_PWR == 0x1
+  local_time.RTC_Sec    = TIMESTAMP_AT_FLASH_SEC;
+  local_time.RTC_Min    = TIMESTAMP_AT_FLASH_MIN;
+  local_time.RTC_Hour   = TIMESTAMP_AT_FLASH_HR;
+  local_time.RTC_Mday   = TIMESTAMP_AT_FLASH_DATE;
+  local_time.RTC_Wday   = TIMESTAMP_AT_FLASH_DAY;
+  //local_time.RTC_Yday = TIMESTAMP_AT_FLASH_DATE;
+  local_time.RTC_Mon    = TIMESTAMP_AT_FLASH_MON;
+  local_time.RTC_Year   = TIMESTAMP_AT_FLASH_YR;
+  RTCSetTime( local_time );
+  #endif                
   return;
 }
 
@@ -94,6 +126,7 @@ void RTCStart( void )
   /*--- Start RTC counters ---*/
   LPC_RTC->CCR |= CCR_CLKEN;
   LPC_RTC->ILR = ILR_RTCCIF;
+  rtc_interrupt_enable();
   return;
 }
 
@@ -223,5 +256,4 @@ void print_time(void){
     printf("DOY: %d\n", LPC_RTC->DOY);
     printf("Mon: %d\n", LPC_RTC->MONTH);
     printf("Yr:  %d\n", LPC_RTC->YEAR);
-
 }

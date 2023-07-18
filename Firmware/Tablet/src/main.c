@@ -21,12 +21,15 @@
 #include "getdatetime.h"
 #include "getdatetime_var.h"
 
+#include "Colors.h"
+
 volatile unsigned int Continue;
 extern volatile uint32_t alarm_on;
 extern volatile uint8_t get_touch_coordinates_flag;
+//extern volatile uint8_t update_time_flag = FALSE;
 //extern volatile uint32_t I2SRXBuffer[MEASUREMENTS_TO_TAKE];
 
-RTCTime local_time, alarm_time, current_time;
+volatile RTCTime local_time, alarm_time, current_time;
 
 struct Sensor_Data sensor_data;
 
@@ -90,7 +93,7 @@ void SystemClockUpdate(void){
     LPC_SC->CLKSRCSEL = 0x1;
     LPC_SC->PCLKSEL   = 0x1;
     //LPC_SC->CCLKSEL   &= ~(0x1<<8);
-    LPC_SC->PLL0CFG   = 0x0B;
+    LPC_SC->PLL0CFG   = 0x0A;
     LPC_SC->PLL0FEED  = 0xAA;
     LPC_SC->PLL0FEED  = 0x55;
     LPC_SC->PLL0CON   = 0x1;
@@ -112,9 +115,8 @@ int main(void) {
     led_flash(2);
 
     //I2C0_Init(1); // lcd
-    I2C1_Init(1); // rtc
+    I2C1_Init(1);   // rtc
     SSP0_Init();
-    //SSP1_Init();
 
     esp32_init();
     esp32_start_ble();
@@ -123,9 +125,9 @@ int main(void) {
 
     //fft_test(); 
 
-    //RTC_Init();  // need to check
-    //RTCStart(); 
-    //RTCStop();
+    RTC_Init();  // just for on-board RTC
+    RTCStart();  // just for on-board RTC
+    //RTCStop();   // just for on-board RTC
     
     ram_init();  // generally working, not sure why ram_addr needs to increment by 1 on read
     //ram_test();
@@ -133,7 +135,7 @@ int main(void) {
     //flash_test();
 
     
-    /* TODO clean up mic fx's - generally working for short msmnts, need to incorporate fft*/  
+    /* TODO clean up mic fx's - generally working for short msmnts(?), need to incorporate fft*/  
     //mic_init();
     //mic_take_measurements();
     
@@ -144,7 +146,6 @@ int main(void) {
 
 //delay(50000000);
 
-    printf("ENTERING MAIN LOOP\n");
 
     lcd_init();
     //i2c_scan_devices();
@@ -154,17 +155,43 @@ int main(void) {
     //interrupt_test();
 
 
-
-
-    printf("start lcd test\n");
     lcd_test();
-    printf("end lcd test\n");
 
-    uint32_t iter = 0;
+    lcd_draw_time();
 
+    //lcd_block_test(150,25,600,400);
+    delay_short();
+    lcd_vfp_interrupt_enable();
+
+    //uint32_t iter = 0;
+    //char txtarr[10], txtarr2[10];
+    //rtc_read_time();
+    //delay_short();
+    //rtc_read_time();
+    //delay_short();
+
+    //rtc_interrupt_enable();
+    //delay_short();
+
+    //rtc_set_time();
+    //delay_short();
+    //rtc_set_minute_timer();
+    //delay_short();
+    printf("ENTERING MAIN LOOP\n");
     while(1){
-        printf("%d\n", iter++);
-        delay_ms(1000);
+
+        //if (update_time_flag){
+        //    update_time_flag = FALSE;
+        //}
+        //printf("%d\n", iter++);
+        //lcd_draw_text(txtarr2, 300, 300, BLACK);
+        //lcd_draw_text(txtarr, 300, 300, WHITE);
+        delay_ms(50);
+        //lcd_block_test(150,25,600,400);
+        //strcpy(txtarr2, txtarr);
+        //sprintf(txtarr, "%d", iter++);
+        //rtc_read_time();
+        //delay_long();
 
     }
 

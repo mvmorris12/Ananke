@@ -17,4 +17,7 @@ Output/Debug/Obj/Tablet/LCD.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\Power.h \
   C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
   C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\RTC.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Colors.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Fonts.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h

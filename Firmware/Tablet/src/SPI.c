@@ -84,32 +84,32 @@ void SSP0_IRQHandler(void)
 ** Returned value:		None
 ** 
 *****************************************************************************/
-void SSP1_IRQHandler(void) 
-{
-  uint32_t regValue;
+//void SSP1_IRQHandler(void) 
+//{
+//  uint32_t regValue;
 
-  regValue = LPC_SSP1->MIS;
-  if ( regValue & SSPMIS_RORMIS )	/* Receive overrun interrupt */
-  {
-	interrupt1OverRunStat++;
-	LPC_SSP1->ICR = SSPICR_RORIC;		/* clear interrupt */
-  }
-  if ( regValue & SSPMIS_RTMIS )	/* Receive timeout interrupt */
-  {
-	interrupt1RxTimeoutStat++;
-	LPC_SSP1->ICR = SSPICR_RTIC;		/* clear interrupt */
-  }
+//  regValue = LPC_SSP1->MIS;
+//  if ( regValue & SSPMIS_RORMIS )	/* Receive overrun interrupt */
+//  {
+//	interrupt1OverRunStat++;
+//	LPC_SSP1->ICR = SSPICR_RORIC;		/* clear interrupt */
+//  }
+//  if ( regValue & SSPMIS_RTMIS )	/* Receive timeout interrupt */
+//  {
+//	interrupt1RxTimeoutStat++;
+//	LPC_SSP1->ICR = SSPICR_RTIC;		/* clear interrupt */
+//  }
 
-  /* please be aware that, in main and ISR, CurrentRxIndex and CurrentTxIndex
-  are shared as global variables. It may create some race condition that main
-  and ISR manipulate these variables at the same time. SSPSR_BSY checking (polling)
-  in both main and ISR could prevent this kind of race condition */
-  if ( regValue & SSPMIS_RXMIS )	/* Rx at least half full */
-  {
-	interrupt1RxStat++;		/* receive until it's empty */		
-  }
-  return;
-}
+//  /* please be aware that, in main and ISR, CurrentRxIndex and CurrentTxIndex
+//  are shared as global variables. It may create some race condition that main
+//  and ISR manipulate these variables at the same time. SSPSR_BSY checking (polling)
+//  in both main and ISR could prevent this kind of race condition */
+//  if ( regValue & SSPMIS_RXMIS )	/* Rx at least half full */
+//  {
+//	interrupt1RxStat++;		/* receive until it's empty */		
+//  }
+//  return;
+//}
 
 /*****************************************************************************
 ** Function name:		SSP0_SSELToggle
@@ -217,62 +217,62 @@ void SSP0_Init( void )
 ** Returned value:		None
 ** 
 *****************************************************************************/
-void SSP1_Init( void )
-{
-  uint8_t i, Dummy=Dummy;
+//void SSP1_Init( void )
+//{
+//  uint8_t i, Dummy=Dummy;
 
-  /* Enable AHB clock to the SSP1. */
-  LPC_SC->PCONP |= (0x1<<10);
+//  /* Enable AHB clock to the SSP1. */
+//  LPC_SC->PCONP |= (0x1<<10);
 
-  /* Further divider is needed on SSP1 clock. Using default divided by 4 */
-  LPC_SC->CCLKSEL &= ~(0x3<<20);
+//  /* Further divider is needed on SSP1 clock. Using default divided by 4 */
+//  LPC_SC->CCLKSEL &= ~(0x3<<20);
  
-  /* P0.6~0.9 as SSP1 */
-  LPC_IOCON->P4_20 |= 0x3;    // SCK
-  LPC_IOCON->P4_22  = 0x0;    // MISO
-  LPC_IOCON->P4_22 |= 0x13;   // MISO
-  LPC_IOCON->P4_23 |= 0x3;    // MOSI
+//  /* P0.6~0.9 as SSP1 */
+//  LPC_IOCON->P4_20 |= 0x3;    // SCK
+//  LPC_IOCON->P4_22  = 0x0;    // MISO
+//  LPC_IOCON->P4_22 |= 0x13;   // MISO
+//  LPC_IOCON->P4_23 |= 0x3;    // MOSI
   
-//#if !USE_CS
-//#endif
+////#if !USE_CS
+////#endif
 		
-  /* Set DSS data to 8-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
-  LPC_SSP1->CR0 = 0x0107;
+//  /* Set DSS data to 8-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
+//  LPC_SSP1->CR0 = 0x0107;
 
-  /* SSPCPSR clock prescale register, master mode, minimum divisor is 0x02 */
-  LPC_SSP1->CPSR = 0x2;
+//  /* SSPCPSR clock prescale register, master mode, minimum divisor is 0x02 */
+//  LPC_SSP1->CPSR = 0x2;
 
-  for ( i = 0; i < FIFOSIZE; i++ )
-  {
-	Dummy = LPC_SSP1->DR;		/* clear the RxFIFO */
-  }
+//  for ( i = 0; i < FIFOSIZE; i++ )
+//  {
+//	Dummy = LPC_SSP1->DR;		/* clear the RxFIFO */
+//  }
 
-  /* Enable the SSP Interrupt */
-  NVIC_EnableIRQ(SSP1_IRQn);
+//  /* Enable the SSP Interrupt */
+//  NVIC_EnableIRQ(SSP1_IRQn);
 	
-  /* Device select as master, SSP Enabled */
-#if LOOPBACK_MODE
-  LPC_SSP1->CR1 = SSPCR1_LBM | SSPCR1_SSE;
-#else
-#if SSP_SLAVE
-  /* Slave mode */
-  if ( LPC_SSP1->CR1 & SSPCR1_SSE )
-  {
-	/* The slave bit can't be set until SSE bit is zero. */
-	LPC_SSP1->CR1 &= ~SSPCR1_SSE;
-  }
-  LPC_SSP1->CR1 = SSPCR1_MS;		/* Enable slave bit first */
-  LPC_SSP1->CR1 |= SSPCR1_SSE;	/* Enable SSP */
-#else
-  /* Master mode */
-  LPC_SSP1->CR1 = SSPCR1_SSE;
-#endif
-#endif
-  /* Set SSPINMS registers to enable interrupts */
-  /* enable all error related interrupts */
-  LPC_SSP1->IMSC = SSPIMSC_RORIM | SSPIMSC_RTIM;
-  return;
-}
+//  /* Device select as master, SSP Enabled */
+//#if LOOPBACK_MODE
+//  LPC_SSP1->CR1 = SSPCR1_LBM | SSPCR1_SSE;
+//#else
+//#if SSP_SLAVE
+//  /* Slave mode */
+//  if ( LPC_SSP1->CR1 & SSPCR1_SSE )
+//  {
+//	/* The slave bit can't be set until SSE bit is zero. */
+//	LPC_SSP1->CR1 &= ~SSPCR1_SSE;
+//  }
+//  LPC_SSP1->CR1 = SSPCR1_MS;		/* Enable slave bit first */
+//  LPC_SSP1->CR1 |= SSPCR1_SSE;	/* Enable SSP */
+//#else
+//  /* Master mode */
+//  LPC_SSP1->CR1 = SSPCR1_SSE;
+//#endif
+//#endif
+//  /* Set SSPINMS registers to enable interrupts */
+//  /* enable all error related interrupts */
+//  LPC_SSP1->IMSC = SSPIMSC_RORIM | SSPIMSC_RTIM;
+//  return;
+//}
 
 /*****************************************************************************
 ** Function name:		SSPSend

@@ -1,11 +1,14 @@
 #include "LCD.h"
 #include "Power.h"
 #include "I2C.h"
+#include "RTC.h"
+#include "Colors.h"
+#include "Fonts.h"
 #include <stdlib.h>
 
 #define PIXELS_ROW  (480)
 #define PIXELS_COL  (800)
-#define RGB(r,g,b) ((r<<16) + (g<<8) + (b))
+//#define RGB(r,g,b) ((r<<16) + (g<<8) + (b))
 
 extern volatile unsigned char I2C_MasterBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned char I2C_SlaveBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
@@ -13,35 +16,181 @@ extern volatile unsigned int I2C_Count[I2C_PORT_NUM];
 extern volatile unsigned int I2C_ReadLength[I2C_PORT_NUM];
 extern volatile unsigned int I2C_WriteLength[I2C_PORT_NUM];
 extern volatile uint8_t get_touch_coordinates_flag;
+extern volatile RTCTime local_time;
 typedef uint32_t lcd_arr_t[PIXELS_COL];
 
 uint32_t *pFB32, col;
 uint16_t touch_x[5], touch_y[5];
 lcd_arr_t *lcd_arr = (lcd_arr_t*) 0xA0000000; // TODO was 0xA0000800;
 
+uint8_t iter = 1;
+
+void lcd_block_test(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2){
+    uint32_t color;
+    switch(iter&2){
+        case 0:
+            color = WHITE;
+            break;
+        case 1:
+            color = BLACK;
+            break;
+        case 2:
+            color = GREEN;
+            break;
+        case 3:
+            color = BLUE;
+            break;
+        case 4:
+            color = YELLOW;
+            break;
+        case 5:
+            color = CYAN;
+            break;
+        case 6:
+            color = PURPLE;
+            break;
+        case 7:
+            color = MAGENTA;
+            break;
+    }
+    lcd_draw_text("52137", 700,300,BLACK);
+    lcd_draw_text("52137", 700,300,WHITE);
+    lcd_draw_text("12345", 700,350,BLACK);
+    lcd_draw_text("12345", 700,350,WHITE);
+    lcd_draw_text("34679", 700,400,BLACK);
+    lcd_draw_text("34679", 700,400,WHITE);
+
+
+    lcd_draw_line(400,10,400,240,1,color);
+    lcd_draw_line(200,470,400,240,1,color);
+    lcd_draw_line(700,240,400,240,1,color);
+    iter++;
+    if (iter > 1){
+        iter = 1;
+    }
+}
+
+
+void lcd_draw_time(void){
+    char time_old[6]; 
+    char time_new[6];
+    sprintf(time_old, "%02d:%02d", local_time.RTC_Hour, local_time.RTC_Min); 
+    local_time = RTCGetTime();
+    sprintf(time_new, "%02d:%02d", local_time.RTC_Hour, local_time.RTC_Min);
+    lcd_draw_text(time_old, 730,10,BLACK);
+    lcd_draw_text(time_new, 730,10,WHITE);
+}
+
+void lcd_draw_text(char *string, uint16_t x, uint16_t y, uint32_t color){
+    //uint16_t x = 300, y = 240;
+    //uint32_t color = WHITE;
+    //printf("printing %s at (%d,%d)\n", string, x, y);
+    for (uint8_t l=0; l<strlen(string); l++){
+        uint16_t box_w = 0, box_h = 0, ofs_x = 0, ofs_y =0, ypo = 0, idx = 0, idx_len = 0, bit_idx = 0;
+        uint16_t current_bitmap = 0, current_bit = 0, i = 0;
+    
+        //printf("%c %d %d\n", string[l], string[l], string[l]-31);
+        idx = string[l]-31;
+        idx_len = glyph_dsc[idx+1].bitmap_index - glyph_dsc[idx].bitmap_index;
+        box_w = glyph_dsc[idx].box_w;
+        box_h = glyph_dsc[idx].box_h;
+        ofs_x = glyph_dsc[idx].ofs_x;
+        ofs_y = glyph_dsc[idx].ofs_y;
+        ypo = y + ofs_y;
+        //printf("0x%02x\n", current_bitmap);
+        while (i < idx_len){
+            if (i < idx_len){
+                current_bitmap = glyph_bitmap[glyph_dsc[idx].bitmap_index+i];
+                //printf("0x%02x\n", current_bitmap);
+                for (uint8_t j=0; j<box_h; j++){
+                    for (uint8_t k=0; k<(box_w); k++){
+                        if ((current_bitmap>>(7-bit_idx))&0x01){
+                            lcd_draw_pixel(x+k, ypo+j, color);
+                            //printf("1");
+                        } else {
+                            //printf("0");
+                        }
+                        bit_idx++;
+                        if (bit_idx>7){
+                            bit_idx = 0;
+                            i++;
+                            //printf(" - 0x%02x\n", glyph_bitmap[glyph_dsc[idx].bitmap_index+i]);
+                            current_bitmap = glyph_bitmap[glyph_dsc[idx].bitmap_index+i];
+                        }
+                    }
+                    //printf("\n");
+                    //delay_short();
+                }
+                if (idx = 68){
+                    i++;
+                }
+            }
+        }
+        x += (box_w + ofs_x);
+        
+        
+        /*
+            //convert letter to decimal, subtract to get index
+            read index, get box size, read next index to get total length of first
+            iterate through bitmap, draw pixels
+
+
+        */
+    }
+
+}
 
 void lcd_test(void){
-    lcd_draw_circle(200,200,50,0xFFFFFFFF);
-    lcd_draw_circle(200,200,70,0xFFFFFFFF);
-    lcd_draw_circle(200,200,90,0xFFFFFFFF);
-    lcd_draw_circle(200,200,30,0xFFFFFFFF);
-    lcd_draw_circle(200,200,10,0xFFFFFFFF);
+    lcd_draw_line(50,50,100,400,2,0xFFFFFFFF);
+    //delay_long();
+    lcd_draw_line(60,50,110,400,2,RED);
+    //delay_long();
+    lcd_draw_line(70,50,120,400,2,GREEN);
+    //delay_long();
+    lcd_draw_line(80,50,130,400,2,BLUE);
+    //delay_long();
+    //lcd_draw_line(50,50,100,400,2,0xFFFFFFFF);
+    //lcd_draw_line(50,200,400,200,0,0x00000000);
+    //lcd_draw_text("AB!\"#");
+    //lcd_draw_line(260,257,799,257,1,RED);
+    //lcd_draw_text("0123456789");
 }
+
+
+
+
 
 void lcd_draw_pixel(uint16_t x, uint16_t y, uint32_t val){
     lcd_arr[y][x] = val;
 }
 
 
-void lcd_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint32_t color){
+void lcd_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t thickness, uint32_t color){
+    if (thickness < 1){
+        thickness = 1;
+    }
+    uint32_t white = RGB(255,255,255);
+    uint16_t x0_i = x0;
+    uint16_t y0_i = y0;    
     int16_t dx =  abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
     int16_t dy = -abs(y1 - y0), sy = y0 < y1 ? 1 : -1; 
     int16_t err = dx + dy, e2; /* error value e_xy */ 
-    printf("dx: %x\ndy: %d\nerr: %d\n", dx, dy, err);
+    //printf("dx: %x\ndy: %d\nerr: %d\n", dx, dy, err);
+    uint16_t i, j;
     for (;;){  /* loop */
-        lcd_draw_pixel(x0, y0, color);
+        for (i=0; i<thickness; i++){
+            for (j=0; j<thickness; j++){
+                lcd_draw_pixel(x0+i, y0+j, color);
+            }
+        }
         if (x0 == x1 && y0 == y1){
-            break;
+            if (i == thickness){
+                break;
+            } else {
+                i++;
+                x0 = x0_i;
+                y0 = y0_i;
+            }
         }
         e2 = 2 * err;
         if (e2 >= dy){ 
@@ -195,7 +344,7 @@ void InitLCDPorts(void) {
 
 void lcd_fill_screen(uint32_t color){
     uint32_t* ram_addr = 0xA0000000;
-    for (uint32_t j=0; j<481; j++){
+    for (uint32_t j=0; j<480; j++){
         for (uint32_t i=0; i<800; i++){
             *ram_addr = (uint32_t)0x0000FF00;
             ram_addr++;

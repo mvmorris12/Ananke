@@ -16,4 +16,6 @@ Output/Debug/Obj/Tablet/RTC.o: \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\system_LPC177x_8x.h \
   C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
   C:\Projects\Ananke\Firmware\Tablet\include\type.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\type.h
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
+  C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h

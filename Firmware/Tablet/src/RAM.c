@@ -53,13 +53,14 @@ void ram_init(void){
     LPC_IOCON->P3_15  |= (0x1 | (0x1 << 9));  // D15
     LPC_IOCON->P3_16   = (0x0);
     LPC_IOCON->P3_30   = (0x0);               // SET TO GPIO
-    LPC_SC->EMCDLYCTL  = 0x00005555;
+    LPC_SC->EMCDLYCTL  = 0x00081415;
     LPC_EMC->DynamicConfig0 = 0X00000480;     //((0x2 << 9) | (0x1 << 7)); 
     LPC_EMC->DynamicRasCas0 = 0x00000303;     // 3 RAS, 3 CAS latency */
-    LPC_EMC->DynamicRP      = 0x00000003;     // Min 20ns. (n + 1) -> 3 clock cycles
-    LPC_EMC->DynamicRAS     = 0x00000006;     // Min 44 ns.(n + 1) -> 6 clock cycles
-    LPC_EMC->DynamicSREX    = 0x00000009;     // Min 75 ns. ( n + 1 ) -> 10 clock cycles */
-    LPC_EMC->DynamicAPR     = 0x00000005;     // ??? ( n + 1 ) -> 2 clock cycles */
+    LPC_EMC->DynamicReadConfig = 0x00000001;     // Min 20ns. (n + 1) -> 3 clock cycles
+    LPC_EMC->DynamicRP      = 0x00000002;     // Min 20ns. (n + 1) -> 3 clock cycles
+    LPC_EMC->DynamicRAS     = 0x00000005;     // Min 44 ns.(n + 1) -> 6 clock cycles
+    LPC_EMC->DynamicSREX    = 0x00000008;     // Min 75 ns. ( n + 1 ) -> 10 clock cycles */
+    LPC_EMC->DynamicAPR     = 0x00000002;     // ??? ( n + 1 ) -> 2 clock cycles */
     LPC_EMC->DynamicDAL     = 0x00000006;     // tWR + tRP: min 35 ns (n + 1) -> 5 clock cycles */
     LPC_EMC->DynamicWR      = 0x00000002;     // Min 15 ns. ( n + 1 ) -> 2 clock cycles */
     LPC_EMC->DynamicRC      = 0x00000002;     // Min 66 ns. ( n + 1 ) -> 8 clock cycles */
@@ -71,7 +72,7 @@ void ram_init(void){
     LPC_EMC->DynamicControl = 0x00000183; /* Issue NOP command */
     delay_ms(200);   /* wait 200ms */
     LPC_EMC->DynamicControl = 0x00000103; /* Issue PALL command */
-    LPC_EMC->DynamicRefresh = 0x00000002; /* ( n * 16 ) -> 32 clock cycles */
+    LPC_EMC->DynamicRefresh = 0x00000001; /* ( n * 16 ) -> 32 clock cycles */
     //LPC_EMC->Config &= 0xE;
     for(uint8_t i = 0; i < 0x80; i++);           /* wait 128 AHB clock cycles */
 
@@ -90,20 +91,20 @@ void ram_init(void){
     //LPC_EMC->Config &= ~(0x1);
     LPC_EMC->Config |= (0x1);
     delay_ms(100);
-    ram_write(NULL,NULL,NULL);
+    ram_write_init(NULL,NULL,NULL);
     //ram_read(NULL,NULL,NULL);
     printf("ram setup done\n");
     
 }
 
 
-void ram_write(uint32_t row, uint32_t col, uint32_t val){
+void ram_write_init(uint32_t row, uint32_t col, uint32_t val){
     uint32_t* ram_addr = 0xA0000000;
     //*ram_addr = 0xABCDEF21;
     //ram_addr++;
-    for (uint32_t j=0; j<481; j++){
+    for (uint32_t j=0; j<480; j++){
         for (uint32_t i=0; i<800; i++){
-            *ram_addr = (uint32_t)0x0000FF00;
+            *ram_addr = 0x00000000;
             ram_addr++;
             //*ram_addr = 0x0000;
             //ram_addr++;

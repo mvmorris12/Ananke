@@ -23,7 +23,7 @@
 #define BPP_4DLCD   0x5     // Bits per pixel b101 = 24 bpp 8:8:8 mode
 #define BCD_4DLCD   0x1     // Bypass clock divider
 //#define CLK_4DLCD   0x01     // 1 ~ 50MHz, 2 ~ 25MHz  Optimal clock rate (Hz) according to datasheet
-#define CLK_4DLCD   0x3     // 1 ~ 50MHz, 2 ~ 25MHz  Optimal clock rate (Hz) according to datasheet
+#define CLK_4DLCD   0x2     // 1 ~ 50MHz, 2 ~ 25MHz  Optimal clock rate (Hz) according to datasheet
 #define LCD_4DLCD   0x1     // Panel type; 1: LCD TFT panel
 #define DUAL_4DLCD  0x0     // No dual panel
 
@@ -64,5 +64,8 @@ void lcd_config(void);
 void InitLCDPorts(void);
 void lcd_fill_screen(uint32_t color);
 void lcd_draw_pixel(uint16_t x, uint16_t y, uint32_t val);
-void lcd_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint32_t color);
+void lcd_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t thickness, uint32_t color);
 void lcd_draw_circle(int16_t xm, int16_t ym, int16_t r, uint32_t color);
+void lcd_draw_text(char *string, uint16_t x, uint16_t y, uint32_t color);
+void lcd_draw_time(void);
+void lcd_block_test(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);

@@ -17,8 +17,8 @@ static LPC_I2C_TypeDef (* const LPC_I2C[I2C_PORT_NUM]) = { LPC_I2C0, LPC_I2C1, L
 #define I2C_BUFSIZE           64
 #define I2C_MAX_TIMEOUT       0x00FFFFFF
 
-#define I2C_MASTER           	0x01
-#define I2C_SLAVE            	0x02
+#define I2C_MASTER            0x01
+#define I2C_SLAVE             0x02
 
 #define I2C_READ_BIT          0x01
 

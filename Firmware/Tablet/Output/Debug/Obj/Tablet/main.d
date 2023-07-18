@@ -34,4 +34,5 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\RTC.h \
   C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
   C:\Projects\Ananke\Firmware\Tablet\include\getdatetime.h \
-  C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h
+  C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Colors.h
