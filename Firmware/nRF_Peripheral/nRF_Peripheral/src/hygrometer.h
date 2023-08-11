@@ -1,0 +1,18 @@
+#include "stdint.h"
+#include "i2c.h"
+
+#define HYGROMETER_REG_HEAT_20MW_0_1S		0x15
+#define HYGROMETER_REG_HEAT_20MW_1S		0x1E
+#define HYGROMETER_REG_HEAT_110MW_0_1S		0x24
+#define HYGROMETER_REG_HEAT_110MW_1S		0x2F
+#define HYGROMETER_REG_HEAT_200MW_0_1S		0x32
+#define HYGROMETER_REG_HEAT_200MW_1S		0x39
+#define HYGROMETER_REG_SOFT_RESET		0x94
+#define HYGROMETER_REG_SERIAL_NUMBER		0x89
+#define HYGROMETER_REG_MEASURE_LOW_PRECISION	0xE0
+#define HYGROMETER_REG_MEASURE_MED_PRECISION	0xF6
+#define HYGROMETER_REG_MEASURE_HI_PRECISION	0xFD
+
+void hygrometer_check_connection(void);
+void hygrometer_reset(void);
+void hygrometer_get_measurement(void);

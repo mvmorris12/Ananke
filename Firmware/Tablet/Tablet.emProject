@@ -65,19 +65,57 @@
       <file file_name="src/getdatetime.c">
         <configuration Name="Debug" build_always_rebuild="Yes" />
       </file>
-      <file file_name="src/FFT.c" />
       <file file_name="src/ESP32.c" />
       <file file_name="src/main.c" />
       <file file_name="src/LCD.c" />
       <file file_name="src/Interrupts.c" />
       <file file_name="src/Fonts.c" />
+      <folder Name="Apps">
+        <file file_name="src/Apps/Cube.c" />
+        <file file_name="src/Apps/Physics.c" />
+        <file file_name="src/Apps/Pong.c" />
+        <file file_name="src/Apps/Launcher.c" />
+        <folder Name="FFT">
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BasicMathFunctions/BasicMathFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BasicMathFunctions/BasicMathFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BayesFunctions/BayesFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BayesFunctions/BayesFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/CommonTables/CommonTables.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/CommonTables/CommonTablesF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/ComplexMathFunctions/ComplexMathFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/ControllerFunctions/ControllerFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/DistanceFunctions/DistanceFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/DistanceFunctions/DistanceFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FastMathFunctions/FastMathFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FastMathFunctions/FastMathFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FilteringFunctions/FilteringFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FilteringFunctions/FilteringFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/MatrixFunctions/MatrixFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/MatrixFunctions/MatrixFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/QuaternionMathFunctions/QuaternionMathFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SVMFunctions/SVMFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SVMFunctions/SVMFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/TransformFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/TransformFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctionsF16.c" />
+          <file file_name="src/Apps/arm_fft_bin_data.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctionsF16.c" />
+        </folder>
+        <file file_name="src/Apps/FFT.c" />
+      </folder>
+      <file file_name="src/Timer.c" />
     </folder>
     <folder Name="System Files">
       <file file_name="SEGGER_THUMB_Startup.s" />
-      <file file_name="LPC1700/Source/LPC1700_Startup.s" />
       <file file_name="LPC1700/Source/LPC177x_8x_Vectors.s">
         <configuration Name="Common" file_type="Assembly" />
       </file>
+      <file file_name="LPC1700/Source/LPC1700_Startup.s" />
     </folder>
     <configuration
       Name="Debug"

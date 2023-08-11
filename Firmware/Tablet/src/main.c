@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <LPC177x_8x.h>
-//#include <LPC17xx.h>
 #include "system_LPC177x_8x.h"
 
 #include "Accelerometer.h"
 #include "ESP32.h"
-//#include "Flash.h"
+#include "Flash.h"
 #include "FFT.h"
 #include "GPIO.h"
 #include "I2C.h"
@@ -21,12 +20,17 @@
 #include "getdatetime.h"
 #include "getdatetime_var.h"
 
+#include "Cube.h"
+#include "Physics.h"
+#include "Pong.h"
+#include "Launcher.h"
+
 #include "Colors.h"
+
 
 volatile unsigned int Continue;
 extern volatile uint32_t alarm_on;
 extern volatile uint8_t get_touch_coordinates_flag;
-//extern volatile uint8_t update_time_flag = FALSE;
 //extern volatile uint32_t I2SRXBuffer[MEASUREMENTS_TO_TAKE];
 
 volatile RTCTime local_time, alarm_time, current_time;
@@ -34,10 +38,6 @@ volatile RTCTime local_time, alarm_time, current_time;
 struct Sensor_Data sensor_data;
 
 
- //kiss_fft_cpx cx_in[512];
- //kiss_fft_cpx cx_out[258];
- //kiss_fft_cpx *p_in;
- //kiss_fft_cpx *p_out;
 
 extern void delay(uint32_t i);
 extern void delay_ms(uint32_t ms);
@@ -65,49 +65,32 @@ void delay_short(void){
 }
 
 
-//void read_pin(void){
-//    uint32_t pin_value1, pin_value2;
-//    pin_value1 = (LPC_GPIO1->PIN);
-//    pin_value2 = (pin_value1>>18) & 0x01;
-//    printf("Pin state: %d\t%d\n", pin_value1, pin_value2);
-//}
-
-
-//void pin_toggle(void){
-
-//}
-
-
-//void pin_test_on(void){
-//    LPC_GPIO0->SET |= (0x1<<28);
-//}
-
-
-//void pin_test_off(void){
-//    LPC_GPIO0->CLR |= (0x1<<28);
-//}
-
-
 void SystemClockUpdate(void){ 
-    //LPC_SC->PLL0CFG = 0x04;
     LPC_SC->CLKSRCSEL = 0x1;
     LPC_SC->PCLKSEL   = 0x1;
-    //LPC_SC->CCLKSEL   &= ~(0x1<<8);
     LPC_SC->PLL0CFG   = 0x0A;
     LPC_SC->PLL0FEED  = 0xAA;
     LPC_SC->PLL0FEED  = 0x55;
     LPC_SC->PLL0CON   = 0x1;
+    //LPC_SC->PLL1CON   = 0x1;
+    //LPC_SC->PLL1CFG   = 0x02;
+    //LPC_SC->PLL1FEED  = 0xAA;
+    //LPC_SC->PLL1FEED  = 0x55;
+    //LPC_SC->PLL1CON   = 0x1;
 }
 
 
 void HardFault_Handler(void) {
-    Continue = 0u;
+    Continue = 1u;
     //
     // When stuck here, change the variable value to != 0 in order to step out
     //
     printf("hardfault..\n");
     while (Continue == 0u);
 }
+
+
+
 
 int main(void) {
     SystemClockUpdate();
@@ -118,36 +101,24 @@ int main(void) {
     I2C1_Init(1);   // rtc
     SSP0_Init();
 
-    esp32_init();
-    esp32_start_ble();
-
-
-
-    //fft_test(); 
+    esp32_init(); 
 
     RTC_Init();  // just for on-board RTC
     RTCStart();  // just for on-board RTC
     //RTCStop();   // just for on-board RTC
     
-    ram_init();  // generally working, not sure why ram_addr needs to increment by 1 on read
-    //ram_test();
+    ram_init();
 
     //flash_test();
 
-    
-    /* TODO clean up mic fx's - generally working for short msmnts(?), need to incorporate fft*/  
-    //mic_init();
-    //mic_take_measurements();
+
     
 
     //acc_init();
     //acc_read_xyz();
 
-
-//delay(50000000);
-
-
     lcd_init();
+    delay_long();
     //i2c_scan_devices();
 
     //delay_short();  
@@ -177,24 +148,18 @@ int main(void) {
     //delay_short();
     //rtc_set_minute_timer();
     //delay_short();
-    printf("ENTERING MAIN LOOP\n");
-    while(1){
+    
 
-        //if (update_time_flag){
-        //    update_time_flag = FALSE;
-        //}
-        //printf("%d\n", iter++);
-        //lcd_draw_text(txtarr2, 300, 300, BLACK);
-        //lcd_draw_text(txtarr, 300, 300, WHITE);
-        delay_ms(50);
-        //lcd_block_test(150,25,600,400);
-        //strcpy(txtarr2, txtarr);
-        //sprintf(txtarr, "%d", iter++);
-        //rtc_read_time();
-        //delay_long();
+
+    printf("ENTERING MAIN LOOP\n");
+
+    //cube_run_app();
+    //physics_run_app();
+    mic_start_fft();
+    while(1){
 
     }
 
-    printf("Fin");
+    printf("Fin\n");
 }
 

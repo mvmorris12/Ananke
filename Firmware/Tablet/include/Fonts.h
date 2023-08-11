@@ -470,7 +470,7 @@ static const uint8_t glyph_bitmap[] = {
 
 static const glyph_dsc_t glyph_dsc[] = {
     {.bitmap_index = 0, .adv_w = 0, .box_w = 0, .box_h = 0, .ofs_x = 0, .ofs_y = 0} /* id = 0 reserved */,
-    {.bitmap_index = 0, .adv_w = 256, .box_w = 1, .box_h = 1, .ofs_x = 0, .ofs_y = 16},     // 
+    {.bitmap_index = 0, .adv_w = 256, .box_w = 1, .box_h = 1, .ofs_x = 10, .ofs_y = 16},     // 
     {.bitmap_index = 1, .adv_w = 256, .box_w = 4, .box_h = 14, .ofs_x = 6, .ofs_y = 2},     // 
     {.bitmap_index = 8, .adv_w = 256, .box_w = 12, .box_h = 6, .ofs_x = 2, .ofs_y = 10},    // SPACE
     {.bitmap_index = 17, .adv_w = 256, .box_w = 14, .box_h = 14, .ofs_x = 0, .ofs_y = 2},   // !

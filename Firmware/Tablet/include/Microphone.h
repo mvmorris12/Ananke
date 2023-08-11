@@ -5,14 +5,16 @@ void mic_init(void);
 void mic_pwr_on(void);
 void mic_pwr_off(void);
 void mic_take_measurements(void);
+void mic_start_fft(void);
 
 extern void delay(uint32_t i);
 extern void delay_ms(uint32_t ms);
 extern void delay_short(void);
 extern void delay_long(void);
 
-#define MEASUREMENTS_TO_SKIP 0x100
-#define MEASUREMENTS_TO_TAKE 0x2000
+#define MEASUREMENTS_TO_SKIP 20
+//#define MEASUREMENTS_TO_TAKE 1024
+#define MEASUREMENTS_TO_TAKE 700
 
 #define I2S_WORDWIDTH_8		((uint32_t)(0))
 #define I2S_WORDWIDTH_16	((uint32_t)(1))

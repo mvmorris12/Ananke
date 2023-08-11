@@ -32,7 +32,7 @@ void acc_pwr_on(void){
     LPC_IOCON->P0_19 = 0x0; // acc gnd enable
     LPC_GPIO0->DIR |= (0x1<<19); // acc gnd enable
     LPC_GPIO0->SET |= (0x1<<19); // turn on acc gnd nfet
-    printf("\tAccelerometer power on\n");
+    printf("Accelerometer power on\n");
 }
 
 
@@ -40,7 +40,7 @@ void acc_pwr_off(void){
     LPC_IOCON->P0_19 = 0x0; // acc gnd enable
     LPC_GPIO0->DIR |= (0x1<<19); // acc gnd enable
     LPC_GPIO0->SET |= (0x0<<19); // turn off acc gnd nfet
-    printf("\tAccelerometer power off\n");
+    printf("Accelerometer power off\n");
 }
 
 
@@ -101,10 +101,21 @@ void acc_read_xyz(void){
     //for (uint8_t i=0; i<6; i++){
     //    printf("%X ", xyz_vals[i]);
     //}
-    //printf("\n");
-
+    //printf("\n")
     sensor_data.acc.x = (xyz_vals[1]<<8) + xyz_vals[0];
     sensor_data.acc.y = (xyz_vals[3]<<8) + xyz_vals[2];
     sensor_data.acc.z = (xyz_vals[5]<<8) + xyz_vals[4];
-    printf("%X\t%X\t%X\n", sensor_data.acc.x, sensor_data.acc.y, sensor_data.acc.z);
+    //printf("%X\t%X\t%X\n", sensor_data.acc.x, sensor_data.acc.y, sensor_data.acc.z);
+}
+
+
+void acc_calculate_xyz_angles(void){
+    sensor_data.acc.x_ang = (int16_t)sensor_data.acc.x/8192.0*90;
+    sensor_data.acc.x_rad = sensor_data.acc.x_ang*PI/180.0;
+    sensor_data.acc.y_ang = (int16_t)sensor_data.acc.y/8192.0*90;
+    sensor_data.acc.y_rad = sensor_data.acc.y_ang*PI/180.0;
+    //sensor_data.acc.y_ang = (int16_t)sensor_data.acc.y/8192.0*180.0;
+    //sensor_data.acc.z_ang = (int16_t)sensor_data.acc.z/8192.0*180.0;
+    //printf("x_ang: %0.2f\n", sensor_data.acc.x_ang);    
+    //printf("cos test: %0.2f %0.2f %0.2f %0.2f %0.2f\n", cos(0.2), cos(0.3), cos(0.9), cos(2.55), cos(45));
 }

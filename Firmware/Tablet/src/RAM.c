@@ -93,7 +93,7 @@ void ram_init(void){
     delay_ms(100);
     ram_write_init(NULL,NULL,NULL);
     //ram_read(NULL,NULL,NULL);
-    printf("ram setup done\n");
+    //printf("ram setup done\n");
     
 }
 

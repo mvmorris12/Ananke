@@ -4,13 +4,16 @@
 #include "type.h"
 #include "RTC.h"
 #include "LCD.h"
+#include "FFT.h"
 #include "Colors.h"
 #include <stdlib.h>
 #include <stdio.h>
 
-extern volatile uint8_t get_touch_coordinates_flag, update_time_flag;
+extern volatile uint8_t get_touch_coordinates_flag;
+extern volatile uint8_t fft_ready;
 extern volatile RTCTime local_time;
 volatile uint32_t eint0_counter;
+extern float32_t maxValue;
 uint32_t cnt1 = 0;
 
 /*****************************************************************************
@@ -22,8 +25,7 @@ uint32_t cnt1 = 0;
 ** Returned value:		None
 ** 
 *****************************************************************************/
-void EINT0_IRQHandler(void) 
-{
+void EINT0_IRQHandler(void){
     LPC_SC->EXTINT = EINT0;		/* clear interrupt */
               
     eint0_counter++;
@@ -38,8 +40,7 @@ void EINT0_IRQHandler(void)
 }
 
 
-void EINT2_IRQHandler(void) 
-{
+void EINT2_IRQHandler(void){
     LPC_SC->EXTINT = EINT2;		/* clear interrupt */
               
     eint0_counter++;
@@ -51,6 +52,14 @@ void EINT2_IRQHandler(void)
         printf("4\n");
     }
 
+}
+
+void TIMER0_IRQHandler(void){
+    NVIC_DisableIRQ(TIMER0_IRQn);
+    //printf("timer0 interrupt\n");
+    physics_interrupt_operations();
+    LPC_TIM0->IR = 0x1;
+    timer0_interrupt_enable();
 }
 
 void RTC_IRQHandler(void){
@@ -70,6 +79,13 @@ void LCD_IRQHandler(void){
     // do drawing stuff here, maybe calculations outside? might have timing issues
     // maybe calcs inside too
     // LCD vertical front porch set to 199, max at 200(?) should be long enough to draw
+    // for large changes might need to use double frame buffer
+
+    if (fft_ready){
+        fft_ready = 0;
+        lcd_draw_audio_signal();
+        lcd_draw_fft_bins(maxValue);
+    }
 
     LPC_LCD->INTCLR |= (0x1 << 3);
     LPC_LCD->CTRL |= (0x3 << 12);
@@ -80,37 +96,25 @@ void LCD_IRQHandler(void){
 
 
 void GPIO_IRQHandler(void){
+    NVIC_DisableIRQ(GPIO_IRQn);
     //LPC_GPIOINT->IO0IntClr |= (0x1<<12);
     //NVIC_DisableIRQ(GPIO_IRQn);
     //get_touch_coordinates_flag = 1;
     //NVIC_EnableIRQ(GPIO_IRQn);
-    if (LPC_GPIOINT->IO2IntStatF & (0x1<<1)){
-        NVIC_DisableIRQ(GPIO_IRQn);
+    if (LPC_GPIOINT->IO2IntStatR & (0x1<<1)){
         LPC_GPIOINT->IO2IntClr |= (0x1<<1);
-        printf("interrupt P2.1 - BLE Accelerometer data ready\n");
+        //printf("esp32 interrupt\n"); // BLE Accelerometer data ready
         esp32_get_accel_data();
         //esp32_rcv();
-        NVIC_EnableIRQ(GPIO_IRQn);
     }
     if (LPC_GPIOINT->IO0IntStatF & (0x1<<12)){
-        NVIC_DisableIRQ(GPIO_IRQn);
         LPC_GPIOINT->IO0IntClr |= (0x1<<12);
         printf("lcd interrupt\n");
-        NVIC_EnableIRQ(GPIO_IRQn);
     }
-    //if (LPC_GPIOINT->IO2IntStatF & (0x1<<25)){
-    //    NVIC_DisableIRQ(GPIO_IRQn);
-    //    delay_ms(10);
-    //    LPC_GPIOINT->IO2IntClr |= (0x1<<25);
-    //    printf("RTC interrupt\n");
-    //    //rtc_read_time();
-    //    //rtc_set_minute_timer();
-    //    //update_time_flag = TRUE;
-
-    //    NVIC_EnableIRQ(GPIO_IRQn);
-    //}
-
+    NVIC_EnableIRQ(GPIO_IRQn);
 }
+
+
 /*****************************************************************************
 ** Function name:		EINTInit
 **
@@ -151,7 +155,7 @@ uint32_t EINTInit( void )
       }
 }
 
-extern void lcd_interrupt_enable(void){
+extern void lcd_touch_interrupt_enable(void){
     LPC_IOCON->P0_12 = (0x1<<3) | (0x1<<7);
     LPC_GPIO0->DIR &= ~(0x1 << 12);
     LPC_GPIOINT->IO0IntEnF |= (0x1 << 12);	/* Port2.10 is falling edge. */
@@ -182,4 +186,9 @@ void lcd_vfp_interrupt_enable(void){
     LPC_LCD->INTMSK |= (0x1 << 3);
 
     NVIC_EnableIRQ(LCD_IRQn);
+}
+
+void timer0_interrupt_enable(void){
+
+    NVIC_EnableIRQ(TIMER0_IRQn);
 }

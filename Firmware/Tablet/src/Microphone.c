@@ -1,13 +1,19 @@
 #include "Microphone.h"
 #include "LPC177x_8x.h"			/* LPC17xx Peripheral Registers */
+#include "arm_math_types.h"
+#include "FFT.h"
+#include "LCD.h"
 #include <stdio.h>
 
 
 volatile uint32_t I2SReadLength = 0;
 volatile uint32_t I2SReadLength2 = 0;
 volatile uint32_t readings_skipped = 0;
-volatile uint8_t  I2SRXDone = 0;
+volatile uint8_t I2SRXDone = 0;
 volatile int32_t I2SRXBuffer[MEASUREMENTS_TO_TAKE];// = (uint8_t *)(DMA_DST);
+volatile uint8_t mic_fft_run_flag = 0;
+float32_t fft_buffer[TEST_LENGTH_SAMPLES];
+//volatile int32_t I2SRXBuffer[1];// = (uint8_t *)(DMA_DST);
 
 void mic_init(void){
     for (uint32_t i=0; i<MEASUREMENTS_TO_TAKE; i++){
@@ -48,11 +54,14 @@ void mic_take_measurements(void){
     LPC_GPIO0->DIR |= (0x1 << 24);
     LPC_IOCON->P0_25 = 0x8A;
     LPC_GPIO0->DIR |= (0x0 << 25);
-
+    I2SRXDone = 0;
+    
+    //printf("Recording on microphone\n");
     I2S_Start();
-    delay_long();
-    delay_long();
-    delay_long();
+    delay(100);
+    //delay_long();
+    //delay_long();
+    //delay_long();
 
     I2S_IRQConfig(0x01, 0x2);
     I2S_IRQCmd(0x01, 1);
@@ -60,14 +69,22 @@ void mic_take_measurements(void){
     while(!I2SRXDone);
 
     I2S_Stop();
+    
+    //printf("Recording finished\n");
+    uint16_t temp = 0;
     for (uint32_t i=0; i<MEASUREMENTS_TO_TAKE; i++){
+
+        //temp = I2SRXBuffer[i];
         if (I2SRXBuffer[i] > (131072)){
-            printf("%d\n", I2SRXBuffer[i]-262144);
+            //printf("%d,\n ", I2SRXBuffer[i]-262144);
+            fft_buffer[i*2] = (((float)I2SRXBuffer[i]-262144)/65536);
         } else {
-            printf("%d\n", I2SRXBuffer[i]);
+            //printf("%d,\n", I2SRXBuffer[i]);
+            fft_buffer[i*2] = (((float)I2SRXBuffer[i])/65536);
         }
-        delay(1000);
     }
+    fft_test();   
+    I2SReadLength = 0;
 }
 
 
@@ -78,7 +95,7 @@ void I2S_IRQHandler (void){
     NVIC->ISER[0] &= ~(0x1 << 27);
     if ( LPC_I2S->STATE & 0x01 ){
         if (readings_skipped < MEASUREMENTS_TO_SKIP){
-            dummy_reading = LPC_I2S->RXFIFO>>14;
+            I2SRXBuffer[I2SReadLength] = LPC_I2S->RXFIFO>>14;
             readings_skipped++;
         } else if (I2SReadLength < MEASUREMENTS_TO_TAKE){
             I2SRXBuffer[I2SReadLength] = LPC_I2S->RXFIFO>>14;
@@ -170,7 +187,7 @@ void I2S_Init(void) {
 
 	// Turn on power and clock
 	//CLKPWR_ConfigPPWR(CLKPWR_PCONP_PCI2S, ENABLE);
-        LPC_SC->PCLKSEL = 0x02;
+        LPC_SC->PCLKSEL = 0x01;
         LPC_SC->PCONP |= (0x1 << 27);
 	LPC_I2S->DAI = LPC_I2S->DAO = 0x00;
         LPC_I2S->RXRATE = 0x0101;
@@ -627,5 +644,17 @@ uint8_t I2S_GetIRQDepth(uint8_t TRMode)
 /**
  * @}
  */
+
+ void mic_start_fft(void){
+    lcd_draw_fft_graph(1);
+    lcd_draw_audio_graph(1);
+    lcd_fft_draw_buttons();
+    mic_init();
+    while(1){    
+        mic_take_measurements();
+        
+        //delay_ms(500);
+    }
+}
 
 
