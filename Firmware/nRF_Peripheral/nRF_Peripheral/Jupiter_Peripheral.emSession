@@ -63,9 +63,9 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="19" y="5" useTextEdit="1" openedFrom="C:/Projects/Jupiter/Firmware/Jupiter_Peripheral/src/main.c" useBinaryEdit="0" left="0" path="src/main.h" selected="0" top="12" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="403" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="392" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="38" y="376" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="344" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="45" useTextEdit="1" openedFrom="C:/Projects/Jupiter/Firmware/Jupiter_Peripheral/src/main.c" useBinaryEdit="0" left="0" path="src/rtc.c" selected="0" top="27" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="8" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/main.c" useBinaryEdit="0" left="0" path="src/magnetometer.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="28" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/main.c" useBinaryEdit="0" left="0" path="src/magnetometer.c" selected="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="24" y="2" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/gpiote.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2" useTextEdit="1" openedFrom="C:/Projects/Jupiter/Firmware/Jupiter_Peripheral/src/magnetometer.c" useBinaryEdit="0" left="0" path="src/i2c.c" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="6" y="16" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/gpiote.c" selected="0" top="6" codecName="Default"/>
@@ -90,10 +90,10 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="286" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 5.60a/source/thumb_crt0.s" selected="0" top="274" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="26" y="13" useTextEdit="1" openedFrom="C:/Projects/Jupiter/Firmware/Jupiter_Peripheral/src/i2c.c" useBinaryEdit="0" left="0" path="src/i2c.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/led.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../Jupiter/Firmware/Jupiter_Peripheral/src/magnetometer.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="28" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../Jupiter/Firmware/Jupiter_Peripheral/src/magnetometer.c" selected="0" top="12" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="3" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/main.c" useBinaryEdit="0" left="0" path="src/magnetometer.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="6" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/accelerometer.c" useBinaryEdit="0" left="0" path="src/accelerometer.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="5" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/accelerometer.c" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="5" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/accelerometer.c" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="20" y="2" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/spi.c" useBinaryEdit="0" left="0" path="src/spi.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="16" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/spi.c" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="38" y="222" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/nRF_Peripheral/nRF_Peripheral/src/spi.c" useBinaryEdit="0" left="0" path="../nRF5_SDK_17/integration/nrfx/legacy/nrf_drv_spi.h" selected="0" top="203" codecName="Default"/>

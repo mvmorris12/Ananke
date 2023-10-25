@@ -5,11 +5,11 @@
 #define LCD_I2C_ADDRESS  0x38
 #define LCD_REG_TOUCH_XL 0x38
 
-#define HBP_4DLCD   (5U)    // Horizontal back porch in clocks
+#define HBP_4DLCD   (50U)    // Horizontal back porch in clocks
 #define HFP_4DLCD   (40U)   // Horizontal front porch in clocks
 #define HSW_4DLCD   (48U)   // HSYNC pulse width in clocks
 #define PPL_4DLCD   (800U)  // Actual pixels per line
-#define VBP_4DLCD   (31U)   // Vertical back porch in clocks
+#define VBP_4DLCD   (10U)   // Vertical back porch in clocks
 #define VFP_4DLCD   (200U)  // Vertical front porch in clocks
 #define VSW_4DLCD   (3U)    // VSYNC pulse width in clocks
 #define LPP_4DLCD   (480U)  // Lines per panel
@@ -35,11 +35,41 @@
 #define FFT_GRAPH_Y_GRID_SPACING (25)
 
 #define AUDIO_GRAPH_ORIGIN_X (236)
+#define AUDIO_GRAPH_X_END (786)
 #define AUDIO_GRAPH_ORIGIN_Y (202)
 #define AUDIO_GRAPH_TOP_PIXEL (49)
 #define AUDIO_SIGNAL_ORIGIN_X (238)
 #define AUDIO_SIGNAL_ORIGIN_Y (125)
 #define AUDIO_GRAPH_Y_GRID_SPACING (25)
+
+#define BUTTON_FFT_SCALE_X1 (30)
+#define BUTTON_FFT_SCALE_Y1 (225)
+#define BUTTON_FFT_SCALE_X2 (200)
+#define BUTTON_FFT_SCALE_Y2 (325)
+#define BUTTON_FFT_SCALE_TXT_X (53)
+#define BUTTON_FFT_SCALE_TXT_Y (268)
+
+#define BUTTON_FFT_ERASE_X1 (30)
+#define BUTTON_FFT_ERASE_Y1 (350)
+#define BUTTON_FFT_ERASE_X2 (200)
+#define BUTTON_FFT_ERASE_Y2 (450)
+#define BUTTON_FFT_ERASE_TXT_X (53)
+#define BUTTON_FFT_ERASE_TXT_Y (393)
+
+#define BUTTON_PAUSE_X1 (30)
+#define BUTTON_PAUSE_Y1 (100)
+#define BUTTON_PAUSE_X2 (200)
+#define BUTTON_PAUSE_Y2 (200)
+#define BUTTON_PAUSE_TXT_X (81)
+#define BUTTON_PAUSE_TXT_Y (143)
+
+#define BUTTON_SPEECH_RECORD_X1 (30)
+#define BUTTON_SPEECH_RECORD_Y1 (350)
+#define BUTTON_SPEECH_RECORD_X2 (200)
+#define BUTTON_SPEECH_RECORD_Y2 (450)
+#define BUTTON_SPEECH_RECORD_TXT_X (78)
+#define BUTTON_SPEECH_RECORD_TXT_Y (393)
+
 
 enum {
     DISPLAY_TRULY_240_320,
@@ -70,8 +100,24 @@ typedef struct {
     uint32_t FREQ;  // LCD Clk frequency
 } lcd_param_t;
 
+//typedef struct {
+//    typedef  struct {
+//        uint8_t active;
+//     } fft;
+//    typedef  struct {
+//        uint8_t active;
+//     } speech;
+//    typedef  struct {
+//        uint8_t active;
+//     } physics;
+//    typedef  struct {
+//        uint8_t active;
+//     } cube;
+//} app_state_t;
+
 
 extern void delay_long(void);
+void touch_check(void);
 void lcd_test(void);
 void lcd_init(void);
 void lcd_config(void);
@@ -93,3 +139,6 @@ void lcd_process_audio_signal(void);
 void lcd_draw_audio_signal(void);
 void lcd_clear_audio_signal(void);
 void lcd_fft_draw_buttons(void);
+void lcd_toggle_fft_scale_button(void);
+void lcd_toggle_pause_button(void);
+void lcd_speech_draw_buttons(void);

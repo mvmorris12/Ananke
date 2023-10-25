@@ -95,6 +95,7 @@
 #include "FFT.h"
 #include "LCD.h"
 #include <stdio.h>
+#include "Microphone.h"
 
 #include "arm_math.h"
 #include "arm_const_structs.h"
@@ -107,7 +108,9 @@
 /* -------------------------------------------------------------------
 * External Input and Output buffer Declarations for FFT Bin Example
 * ------------------------------------------------------------------- */
-extern float32_t fft_buffer[TEST_LENGTH_SAMPLES];
+extern fft_buffer_t *fft_buffer;
+//extern fft_buffer_t *fft_buffer;
+//extern fft_buffer_t *fft_bin_output;
 float32_t fft_bin_output[TEST_LENGTH_SAMPLES/2];
 //float32_t fft_bin_output_old[TEST_LENGTH_SAMPLES/2];
 
@@ -166,8 +169,9 @@ int32_t fft_test(void)
 
 
     //for (uint32_t i=0; i<TEST_LENGTH_SAMPLES/2; i++){
-    //    fft_bin_output_old[i] = fft_bin_output[i];
-    //    fft_bin_output[i] = 0.0;
+    //    printf("%0.4f\n", fft_bin_output[i]);
+    ////    fft_bin_output_old[i] = fft_bin_output[i];
+    ////    fft_bin_output[i] = 0.0;
     //}
 }
 

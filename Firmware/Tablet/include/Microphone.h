@@ -1,20 +1,30 @@
 #include "stdint.h"
 #include "type.h"
+#include "arm_math_types.h"
 
 void mic_init(void);
 void mic_pwr_on(void);
 void mic_pwr_off(void);
 void mic_take_measurements(void);
 void mic_start_fft(void);
+void mic_start_speech_analyzer(void);
+
+
+typedef int I2S_array_t;
+typedef float32_t fft_buffer_t;
+//I2S_array_t *I2S_arr = (I2S_array_t*) 0xA0177000; // TODO was 0xA0000800;
 
 extern void delay(uint32_t i);
 extern void delay_ms(uint32_t ms);
 extern void delay_short(void);
 extern void delay_long(void);
 
-#define MEASUREMENTS_TO_SKIP 20
-//#define MEASUREMENTS_TO_TAKE 1024
+#define MEASUREMENTS_TO_SKIP 200
+////////#define MEASUREMENTS_TO_TAKE 1024
 #define MEASUREMENTS_TO_TAKE 700
+#define MEASUREMENTS_TO_TAKE_SPEECH 16000
+//#define MEASUREMENTS_TO_TAKE 510
+//#define MEASUREMENTS_TO_TAKE 16000
 
 #define I2S_WORDWIDTH_8		((uint32_t)(0))
 #define I2S_WORDWIDTH_16	((uint32_t)(1))

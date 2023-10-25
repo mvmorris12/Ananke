@@ -171,7 +171,7 @@ void SSP0_Init( void )
 //#endif
 		
   /* Set DSS data to 8-bit, Frame format SPI, CPOL = 0, CPHA = 0, and SCR is 15 */
-  LPC_SSP0->CR0 = 0x0107;
+  LPC_SSP0->CR0 = 0x0207;
 
   /* SSPCPSR clock prescale register, master mode, minimum divisor is 0x02 */
   LPC_SSP0->CPSR = 0x2;

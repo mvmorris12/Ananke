@@ -50,6 +50,8 @@ Output/Debug/Obj/Tablet/FFT.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\filtering_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\support_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\quaternion_math_functions.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_const_structs.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_common_tables.h

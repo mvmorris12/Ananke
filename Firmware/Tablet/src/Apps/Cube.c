@@ -10,6 +10,8 @@
 
 volatile uint8_t cube_data_updated_flag = 0;
 
+uint8_t cube_run = 0;
+
 float angle_x = 0.0;
 float angle_y = 0.0;
 float angle_z = 0.0;
@@ -23,11 +25,12 @@ float rot_z[3][3]; // = {{cos(angle*180.0/3.14),-sin(angle*180.0/3.14),0}, {sin(
 
 float proj_array[3] = {0.0,0.0,0.0};
 float current_spots[8][2] = {{0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}};
-uint16_t current_spots_avg[NUMBER_SAMPLES_AVG_DRAW][8][2];
+float old_spots[8][2] = {{0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}};
+float current_spots_avg[NUMBER_SAMPLES_AVG_DRAW][8][2];
 uint8_t  current_spots_avg_idx = 0;
 
 uint16_t draw_spot_x[8]; draw_spot_y[8];
-uint8_t draw_spot_flag = 1;
+volatile uint8_t draw_spot_flag = 0;
 volatile uint16_t x_accel, y_accel, z_accel;
 
 float x_deg, y_deg, z_deg;
@@ -149,15 +152,16 @@ void xyz_calc(void){
         }
     }
 
-    //angle_x = -angle_x;
-    //angle_z = angle_y;
-    angle_y = 15.0;
+    angle_x = -angle_x;
+    angle_z = -angle_z;
+    //angle_y = 15.0;
+    angle_z += 90.0;
+    printf("x: %0.1f\t\ty: %0.1f\t\tz: %0.1f\n", angle_x, angle_y, angle_z);
     
 
-	//angle_x = 1.0;
+	angle_x = 1.0;
 	//angle_y = 1.0;
-	//angle_z = 0.234;
-	//angle_z = 80.0;
+	angle_z = 0.234;
 
 }
 
@@ -177,13 +181,6 @@ void calculate_cube_points(void){
 	
 
 	
-	for (uint8_t i=0; i<8; i++){
-	    dot(proj_matrix, points[i], proj_array); 
-	    if (draw_spot_flag == 1){
-                lcd_draw_square(current_spots[i][0], current_spots[i][1], SQ_SIZE+5, BLACK);
-		//p_lcd->lcd_rect_draw_fast(draw_spot_x[i],draw_spot_y[i],SQ_SIZE,SQ_SIZE,BLACK);
-	    }
-	}
 
 	//angle_x += 1.0;
 	//angle_y += 1.0;
@@ -288,62 +285,90 @@ void calculate_cube_points(void){
 	    
 	}
 	*/
-	if (draw_spot_flag == 1){
-	    if (angle_x > 40){
-                lcd_draw_square(current_spots[2][0], current_spots[2][1], SQ_SIZE, RED);
-                lcd_draw_square(current_spots[3][0], current_spots[3][1], SQ_SIZE, RED);
-                lcd_draw_square(current_spots[0][0], current_spots[0][1], SQ_SIZE, GREEN);
-                lcd_draw_square(current_spots[1][0], current_spots[1][1], SQ_SIZE, GREEN);
-                lcd_draw_square(current_spots[6][0], current_spots[6][1], SQ_SIZE, BLUE);
-                lcd_draw_square(current_spots[7][0], current_spots[7][1], SQ_SIZE, BLUE);
-                lcd_draw_square(current_spots[4][0], current_spots[4][1], SQ_SIZE, WHITE);
-                lcd_draw_square(current_spots[5][0], current_spots[5][1], SQ_SIZE, WHITE);
-	    } else {	
-                lcd_draw_square(current_spots[0][0], current_spots[0][1], SQ_SIZE, GREEN);
-                lcd_draw_square(current_spots[1][0], current_spots[1][1], SQ_SIZE, GREEN);
-                lcd_draw_square(current_spots[2][0], current_spots[2][1], SQ_SIZE, RED);
-                lcd_draw_square(current_spots[3][0], current_spots[3][1], SQ_SIZE, RED);
-                lcd_draw_square(current_spots[4][0], current_spots[4][1], SQ_SIZE, WHITE);
-                lcd_draw_square(current_spots[5][0], current_spots[5][1], SQ_SIZE, WHITE);
-                lcd_draw_square(current_spots[6][0], current_spots[6][1], SQ_SIZE, BLUE);
-                lcd_draw_square(current_spots[7][0], current_spots[7][1], SQ_SIZE, BLUE);
-	    }
-            //printf("x_accel : %d\n", x_accel);
-            //printf("y_accel : %d\n", y_accel);
-            //printf("z_accel : %d\n", z_accel);
-            //for (uint8_t i=0; i<8; i++){
-            //    printf("%d  ( %d , %d )\n", i, draw_spot_x[i], draw_spot_y[i]);
-            //}
-            //printf("\n");
 
-            //for (uint8_t i=0; i<8; i++){
-            //    printf("%d  %f  %f\n", i, current_spots[i][0], current_spots[i][1]);
-            //}
+        for (uint8_t i=0; i<8; i++){
+            current_spots[i][0] = 0;
+            current_spots[i][1] = 0;
+        }
 
-	}
+        for (uint8_t i=0; i<8; i++){
+            for (uint8_t j=0; j<NUMBER_SAMPLES_AVG_DRAW; j++){
+                current_spots[i][0] += current_spots_avg[j][i][0];
+                current_spots[i][1] += current_spots_avg[j][i][1];
+            }
+        }
+        
+        for (uint8_t i=0; i<8; i++){
+            current_spots[i][0] /= NUMBER_SAMPLES_AVG_DRAW;
+            current_spots[i][1] /= NUMBER_SAMPLES_AVG_DRAW;
+        }
+
+	cube_clear_spots();
+	cube_draw_spots();
         
 	
 	//for (uint8_t j = 0; j<10; j++){    
 	//}
-	if (current_spots_avg_idx > NUMBER_SAMPLES_AVG_DRAW-2){
-	    draw_spot_flag = 1;
-	}
+	//if (current_spots_avg_idx > NUMBER_SAMPLES_AVG_DRAW-2){
+	//    draw_spot_flag = 1;
+	//}
 	current_spots_avg_idx = ++current_spots_avg_idx > NUMBER_SAMPLES_AVG_DRAW-1 ? 0 : current_spots_avg_idx;
 	//p_lcd->
 	//nrf_delay_ms(10);
 }
 
 
+void cube_clear_spots(void){
+    for (uint8_t i=0; i<8; i++){
+        dot(proj_matrix, points[i], proj_array); 
+        if (draw_spot_flag){
+            lcd_draw_square(old_spots[i][0], old_spots[i][1], SQ_SIZE+5, BLACK);
+            //p_lcd->lcd_rect_draw_fast(draw_spot_x[i],draw_spot_y[i],SQ_SIZE,SQ_SIZE,BLACK);
+        }
+    }
+}
+
+
+void cube_draw_spots(void){
+    if (draw_spot_flag){
+        if (angle_x > 40){
+            lcd_draw_square(current_spots[2][0], current_spots[2][1], SQ_SIZE, RED);
+            lcd_draw_square(current_spots[3][0], current_spots[3][1], SQ_SIZE, RED);
+            lcd_draw_square(current_spots[0][0], current_spots[0][1], SQ_SIZE, GREEN);
+            lcd_draw_square(current_spots[1][0], current_spots[1][1], SQ_SIZE, GREEN);
+            lcd_draw_square(current_spots[6][0], current_spots[6][1], SQ_SIZE, BLUE);
+            lcd_draw_square(current_spots[7][0], current_spots[7][1], SQ_SIZE, BLUE);
+            lcd_draw_square(current_spots[4][0], current_spots[4][1], SQ_SIZE, WHITE);
+            lcd_draw_square(current_spots[5][0], current_spots[5][1], SQ_SIZE, WHITE);
+        } else {	
+            lcd_draw_square(current_spots[0][0], current_spots[0][1], SQ_SIZE, GREEN);
+            lcd_draw_square(current_spots[1][0], current_spots[1][1], SQ_SIZE, GREEN);
+            lcd_draw_square(current_spots[2][0], current_spots[2][1], SQ_SIZE, RED);
+            lcd_draw_square(current_spots[3][0], current_spots[3][1], SQ_SIZE, RED);
+            lcd_draw_square(current_spots[4][0], current_spots[4][1], SQ_SIZE, WHITE);
+            lcd_draw_square(current_spots[5][0], current_spots[5][1], SQ_SIZE, WHITE);
+            lcd_draw_square(current_spots[6][0], current_spots[6][1], SQ_SIZE, BLUE);
+            lcd_draw_square(current_spots[7][0], current_spots[7][1], SQ_SIZE, BLUE);
+        }
+        draw_spot_flag = 0;
+        for (uint8_t i=0; i<8; i++){
+            old_spots[i][0] = current_spots[i][0];
+            old_spots[i][1] = current_spots[i][1];
+        }
+    }
+}
+
+
 void cube_run_app(void){
-    uint8_t cube_run = 1;
+    cube_run = 1;
     esp32_start_ble();
     esp32_interrupt_enable();
     printf("Starting cube app\n");
     //current_spots_avg[NUMBER_SAMPLES_AVG_DRAW][8][2];
     for (uint16_t i=0; i<(NUMBER_SAMPLES_AVG_DRAW); i++){
         for (uint8_t j=0; j<8; j++){
-            current_spots_avg[i][j][0] = CUBE_OFFSET_X;
-            current_spots_avg[i][j][1] = CUBE_OFFSET_Y;
+            current_spots_avg[i][j][0] = CUBE_OFFSET_Y;
+            current_spots_avg[i][j][1] = CUBE_OFFSET_X;
         }
     }
     while(cube_run){

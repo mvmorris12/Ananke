@@ -92,12 +92,12 @@ void HardFault_Handler(void) {
 
 
 
-int main(void) {
+  int main(void) {
     SystemClockUpdate();
     led_init();
     led_flash(2);
 
-    //I2C0_Init(1); // lcd
+    I2C0_Init(1); // lcd
     I2C1_Init(1);   // rtc
     SSP0_Init();
 
@@ -116,6 +116,12 @@ int main(void) {
 
     //acc_init();
     //acc_read_xyz();
+    LPC_IOCON->P3_31 = 0x00;
+    LPC_IOCON->P3_30 = 0x00;
+    //LPC_GPIO3->DIR |= (0x1)<<30;
+    //LPC_GPIO3->SET |= (0x1)<<30;
+    LPC_GPIO3->DIR |= (0x1)<<31;
+    LPC_GPIO3->SET |= (0x1)<<31;
 
     lcd_init();
     delay_long();
@@ -155,7 +161,12 @@ int main(void) {
 
     //cube_run_app();
     //physics_run_app();
-    mic_start_fft();
+    //mic_start_fft();
+    //for (int i=0; i<16000; i++){
+    //    printf("%d\n",i);
+    //    delay(10000);
+    //}
+    mic_start_speech_analyzer();
     while(1){
 
     }

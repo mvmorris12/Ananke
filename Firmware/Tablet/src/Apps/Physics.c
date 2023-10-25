@@ -212,7 +212,7 @@ void physics_run_app(void){
     acc_init();
     timer0_init();
     physics_add_body(400,240);
-    physics_add_body(415,320);
+    //physics_add_body(415,320);
     //physics_add_body(200,240);
     //physics_add_body(100,140);
     while(1){

@@ -6,14 +6,18 @@
 #include "LCD.h"
 #include "FFT.h"
 #include "Colors.h"
+#include "Timer.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 extern volatile uint8_t get_touch_coordinates_flag;
+extern volatile uint8_t get_touch_coordinates_block;
 extern volatile uint8_t fft_ready;
 extern volatile RTCTime local_time;
 volatile uint32_t eint0_counter;
 extern float32_t maxValue;
+extern volatile uint8_t draw_spot_flag;
+extern uint8_t cube_run;
 uint32_t cnt1 = 0;
 
 /*****************************************************************************
@@ -62,6 +66,16 @@ void TIMER0_IRQHandler(void){
     timer0_interrupt_enable();
 }
 
+
+void TIMER1_IRQHandler(void){
+    NVIC_DisableIRQ(TIMER1_IRQn);
+    //printf("timer1 interrupt\n");
+    LPC_TIM1->IR = 0x1;
+    get_touch_coordinates_block = 0;
+    timer1_disable();
+}
+
+
 void RTC_IRQHandler(void){
     NVIC_DisableIRQ(RTC_IRQn);
     lcd_draw_time();
@@ -86,6 +100,9 @@ void LCD_IRQHandler(void){
         lcd_draw_audio_signal();
         lcd_draw_fft_bins(maxValue);
     }
+    if (cube_run){
+        draw_spot_flag = 1;
+    }
 
     LPC_LCD->INTCLR |= (0x1 << 3);
     LPC_LCD->CTRL |= (0x3 << 12);
@@ -108,8 +125,14 @@ void GPIO_IRQHandler(void){
         //esp32_rcv();
     }
     if (LPC_GPIOINT->IO0IntStatF & (0x1<<12)){
+        //printf("lcd interrupt\n");
+        // get touch coordinates
+        //lcd_read_touch_coords();
         LPC_GPIOINT->IO0IntClr |= (0x1<<12);
-        printf("lcd interrupt\n");
+        if (!get_touch_coordinates_block){
+            get_touch_coordinates_flag = 1;
+        }
+        timer1_init();
     }
     NVIC_EnableIRQ(GPIO_IRQn);
 }
@@ -155,6 +178,7 @@ uint32_t EINTInit( void )
       }
 }
 
+
 extern void lcd_touch_interrupt_enable(void){
     LPC_IOCON->P0_12 = (0x1<<3) | (0x1<<7);
     LPC_GPIO0->DIR &= ~(0x1 << 12);
@@ -163,6 +187,7 @@ extern void lcd_touch_interrupt_enable(void){
     NVIC_EnableIRQ(GPIO_IRQn);
 }
 
+
 extern void esp32_interrupt_enable(void){
     LPC_IOCON->P2_1 = (0x1<<3);
     LPC_GPIO2->DIR &= ~(0x1 << 1);
@@ -170,6 +195,7 @@ extern void esp32_interrupt_enable(void){
     LPC_GPIOINT->IO2IntClr |= (0x1<<1);
     NVIC_EnableIRQ(GPIO_IRQn);
 }
+
 
 void rtc_interrupt_enable(void){
     //LPC_IOCON->P2_25 = 0x10;
@@ -181,6 +207,7 @@ void rtc_interrupt_enable(void){
     NVIC_EnableIRQ(RTC_IRQn);
 }
 
+
 void lcd_vfp_interrupt_enable(void){
     LPC_LCD->CTRL |= (0x3 << 12);
     LPC_LCD->INTMSK |= (0x1 << 3);
@@ -188,7 +215,14 @@ void lcd_vfp_interrupt_enable(void){
     NVIC_EnableIRQ(LCD_IRQn);
 }
 
+
 void timer0_interrupt_enable(void){
 
     NVIC_EnableIRQ(TIMER0_IRQn);
+}
+
+
+void timer1_interrupt_enable(void){
+
+    NVIC_EnableIRQ(TIMER1_IRQn);
 }
