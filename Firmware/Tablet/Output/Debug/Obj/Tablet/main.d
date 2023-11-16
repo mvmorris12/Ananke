@@ -20,12 +20,8 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\Flash.h \
   C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
   C:\Projects\Ananke\Firmware\Tablet\include\FFT.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\GPIO.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
   C:\Projects\Ananke\Firmware\Tablet\include\type.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\LCD.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_types.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\string.h \
@@ -33,6 +29,11 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_FP.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\float.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\limits.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\GPIO.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\LCD.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_memory.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\none.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_types.h \
@@ -65,6 +66,7 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\Power.h \
   C:\Projects\Ananke\Firmware\Tablet\include\RAM.h \
   C:\Projects\Ananke\Firmware\Tablet\include\RTC.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Speech.h \
   C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
   C:\Projects\Ananke\Firmware\Tablet\include\getdatetime.h \
   C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h \

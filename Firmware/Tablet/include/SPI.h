@@ -43,7 +43,7 @@
 
 /* SPI read and write buffer size */
 #define SSP_BUFSIZE		16
-#define FLASH_BUFSIZE		260
+#define FLASH_BUFSIZE		128
 #define FIFOSIZE		8
 
 #define DELAY_COUNT		10

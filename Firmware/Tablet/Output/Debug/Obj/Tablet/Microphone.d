@@ -23,6 +23,7 @@ Output/Debug/Obj/Tablet/Microphone.o: \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\system_LPC177x_8x.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_types.h \
   C:\Projects\Ananke\Firmware\Tablet\include\FFT.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
   C:\Projects\Ananke\Firmware\Tablet\include\LCD.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdio.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \

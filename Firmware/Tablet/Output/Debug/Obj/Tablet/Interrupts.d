@@ -54,6 +54,8 @@ Output/Debug/Obj/Tablet/Interrupts.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\support_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\quaternion_math_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\FFT.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Colors.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Timer.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h

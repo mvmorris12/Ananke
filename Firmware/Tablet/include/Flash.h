@@ -28,12 +28,16 @@
 
 extern void delay(uint32_t i);
 void flash_init(void);
-void flash_read(uint8_t bytes, uint8_t* ret_ptr, uint16_t block, uint16_t sector, uint16_t page);
+void flash_read_page(uint8_t* ret_ptr, uint16_t block, uint16_t sector, uint16_t page);
 void flash_read_reg(uint32_t reg, uint8_t bytes, uint8_t* ret_ptr);
 void flash_write_reg(uint32_t reg, uint8_t val);
-void flash_write(uint8_t *data, uint16_t block, uint16_t sector, uint16_t page);
+void flash_write_page(uint8_t *data, uint16_t block, uint16_t sector, uint16_t page);
 void flash_get_deviceid(void);
 void flash_get_uniqueid(void);
 void flash_test(void);
 void flash_block_erase(uint8_t block);
 uint32_t flash_get_address(uint16_t block, uint16_t sector, uint16_t page);
+void flash_write_audio(uint32_t *signal, uint8_t rgb);
+void flash_write_audio_to_ram(uint8_t rgb);
+
+

@@ -16,4 +16,5 @@ Output/Debug/Obj/Tablet/Flash.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdio.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Speech.h \
   C:\Projects\Ananke\Firmware\Tablet\include\SPI.h

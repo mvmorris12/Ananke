@@ -3,6 +3,7 @@
 #include "FFT.h"
 #include "I2C.h"
 #include "RTC.h"
+#include "Speech.h"
 #include "Microphone.h"
 #include "Colors.h"
 #include "Fonts.h"
@@ -11,6 +12,100 @@
 #include <stdlib.h>
 
 
+
+
+const uint8_t image_microphone[90][62] = {
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,
+    1,1,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,1,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,
+    1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,
+    1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,
+    1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,
+    1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,
+    1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,
+    1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,
+    1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,
+    1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,
+    1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,
+    1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+};
 
 extern volatile unsigned char I2C_MasterBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned char I2C_SlaveBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
@@ -34,6 +129,21 @@ extern volatile uint8_t fft_buttons_active;
 extern volatile uint8_t speech_buttons_active;
 uint8_t get_touch_coordinates_flag = 0;
 uint8_t get_touch_coordinates_block = 0;
+uint8_t record_button_status = FALSE;
+
+extern const int audio_signal_r[];
+extern const int audio_signal_g[];
+extern const int audio_signal_b[];
+extern volatile I2S_array_t *I2S_arr;
+extern fft_buffer_t *speech_fft_test;
+extern fft_buffer_t *speech_fft_model_r;
+extern fft_buffer_t *speech_fft_model_g;
+extern fft_buffer_t *speech_fft_model_b;
+
+extern volatile uint8_t run_fft_app;
+
+//float audio_signal_test_current[256];
+
 
 
 uint32_t *pFB32, col;
@@ -252,6 +362,11 @@ void lcd_read_touch_coords(void){
     //}
 }
 
+void lcd_clear_screen(void){
+    lcd_draw_rectangle(0,0,700,480,1,0,BLACK);
+    lcd_draw_rectangle(700,30,800,480,1,0,BLACK);
+}
+
 void touch_check(void){
     if (get_touch_coordinates_flag){
         get_touch_coordinates_flag = 0;
@@ -281,8 +396,33 @@ void touch_check(void){
                 LPC_TIM1->TCR = (0x1 << 1);
                 lcd_toggle_pause_button();
             }
+            if (touch_x[0] > BUTTON_FFT_SPEECH_X1 && touch_x[0] < BUTTON_FFT_SPEECH_X2 && touch_y[0] > BUTTON_FFT_SPEECH_Y1 && touch_y[0] < BUTTON_FFT_SPEECH_Y2){
+                //printf("FFT SCALE BUTTON PRESSED\n");
+                LPC_TIM1->TCR = (0x1 << 1);
+                run_fft_app = 0;
+                fft_buttons_active = 0;
+                speech_buttons_active = 1;
+                //mic_start_speech_analyzer();
+                speech_test();
+            }
         } else if (speech_buttons_active){
+            if (touch_x[0] > SPEECH_BUTTON_MICROPHONE_X1 && touch_x[0] < SPEECH_BUTTON_MICROPHONE_X2 && touch_y[0] > SPEECH_BUTTON_MICROPHONE_Y1 && touch_y[0] < SPEECH_BUTTON_MICROPHONE_Y2){
+                printf("SPEECH RECORD BUTTON PRESSED\n");
+                LPC_TIM1->TCR = (0x1 << 1);
+                mic_start_speech_analyzer();
+                lcd_toggle_record_button();
+                lcd_speech_draw_test_signal();
+                //fft_compare_models_test();
+            }
+            if (touch_x[0] > BUTTON_SPEECH_TO_FFT_X1 && touch_x[0] < BUTTON_SPEECH_TO_FFT_X2 && touch_y[0] > BUTTON_SPEECH_TO_FFT_Y1 && touch_y[0] < BUTTON_SPEECH_TO_FFT_Y2){
+                //printf("FFT SCALE BUTTON PRESSED\n");
+                LPC_TIM1->TCR = (0x1 << 1);
+                speech_buttons_active = 0;
+                fft_buttons_active = 1;
+                lcd_clear_screen();
+                mic_start_fft();
 
+            }
         }
         //LPC_TIM1->TC = (0x0);
         //LPC_GPIOINT->IO0IntClr |= (0x1<<12);
@@ -422,7 +562,8 @@ void lcd_draw_fft_graph(uint8_t init){
 void lcd_draw_fft_bins(float32_t max_val){
     float32_t scale;
     if (fft_scale_flag){
-        scale = 148/(max_val);
+        //scale = 148/(max_val);
+        scale = 175/(max_val);
     } else {
         scale = 1;
     }
@@ -511,24 +652,29 @@ void lcd_draw_audio_signal(void){
             y_coord_0 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-((float)I2S_arr[bin]/2048.0*6.0));//*scale);
             y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-((float)I2S_arr[bin+1]/2048.0*6.0));//*scale);
             
-            if (y_coord_0 < 50 || y_coord_0 > 400){
-                //y_coord_0 = AUDIO_SIGNAL_ORIGIN_Y;
-                y_coord_0 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin])/2048.0*6.0));
-                //pr
+            if (y_coord_0 < 51){
+                y_coord_0 = 51;
             }
-            if (y_coord_1 < 50 || y_coord_1 > 400){ 
+            if (y_coord_0 > 200){ 
                 //y_coord_1 = AUDIO_SIGNAL_ORIGIN_Y;
-                y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin+1])/2048.0*6.0));
+                y_coord_0 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin]-262143)/2048.0*6.0));
+            }
+            if (y_coord_1 < 51){
+                y_coord_1 = 51;
+            }
+            if (y_coord_1 > 200){ 
+                //y_coord_1 = AUDIO_SIGNAL_ORIGIN_Y;
+                y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin+1]-262143)/2048.0*6.0));
             }
 
-            if (y_coord_0 < 50){
-                y_coord_0 = 50;
+            if (y_coord_0 < 51){
+                y_coord_0 = 51;
             } else if (y_coord_0 > 200){
                 y_coord_0 = 200;
             }
 
-            if (y_coord_1 < 50){
-                y_coord_1 = 50;
+            if (y_coord_1 < 51){
+                y_coord_1 = 51;
             } else if (y_coord_1 > 200){
                 y_coord_1 = 200;
             }
@@ -560,13 +706,16 @@ void lcd_clear_audio_signal(void){
 void lcd_fft_draw_buttons(void){
     // clear left side of screen
     lcd_draw_rectangle(0,0,200,450,1,0,BLACK);
-    //erase fft button
+    // speech analyizer button
+    lcd_draw_rectangle(BUTTON_FFT_SPEECH_X1,BUTTON_FFT_SPEECH_Y1,BUTTON_FFT_SPEECH_X2,BUTTON_FFT_SPEECH_Y2,0,2,GRAY_DARK);
+    lcd_draw_text("SPEECH",BUTTON_FFT_SPEECH_TXT_X,BUTTON_FFT_SPEECH_TXT_Y,GRAY);
+    // erase fft button
     lcd_draw_rectangle(BUTTON_FFT_ERASE_X1,BUTTON_FFT_ERASE_Y1,BUTTON_FFT_ERASE_X2,BUTTON_FFT_ERASE_Y2,0,2,GRAY_DARK);
     lcd_draw_text("FFT SCALE",BUTTON_FFT_SCALE_TXT_X,BUTTON_FFT_SCALE_TXT_Y,GRAY);
-    //toggle scale button
+    // toggle scale button
     lcd_draw_rectangle(BUTTON_FFT_SCALE_X1,BUTTON_FFT_SCALE_Y1,BUTTON_FFT_SCALE_X2,BUTTON_FFT_SCALE_Y2,0,2,GRAY_DARK);
     lcd_draw_text("FFT ERASE",BUTTON_FFT_ERASE_TXT_X,BUTTON_FFT_ERASE_TXT_Y,GRAY);
-    //pause button
+    // pause button
     lcd_draw_rectangle(BUTTON_PAUSE_X1,BUTTON_PAUSE_Y1,BUTTON_PAUSE_X2,BUTTON_PAUSE_Y2,0,2,GRAY_DARK);
     lcd_draw_text("PAUSE",BUTTON_PAUSE_TXT_X,BUTTON_PAUSE_TXT_Y,GRAY);
     fft_buttons_active = 1;
@@ -610,17 +759,234 @@ void lcd_toggle_pause_button(void){
 }
 
 
-void lcd_speech_draw_buttons(void){
-    // clear left side of screen
+//void lcd_speech_draw_buttons(void){
+//    // clear left side of screen
+//    lcd_draw_rectangle(0,0,200,450,1,0,BLACK);
+//    //erase fft button
+//    //lcd_draw_rectangle(BUTTON_FFT_ERASE_X1,BUTTON_FFT_ERASE_Y1,BUTTON_FFT_ERASE_X2,BUTTON_FFT_ERASE_Y2,0,2,GRAY_DARK);
+//    //lcd_draw_text("RECORD",BUTTON_FFT_SCALE_TXT_X,BUTTON_FFT_SCALE_TXT_Y,GRAY);
+//    //toggle scale button
+//    lcd_draw_rectangle(BUTTON_SPEECH_RECORD_X1,BUTTON_SPEECH_RECORD_Y1,BUTTON_SPEECH_RECORD_X2,BUTTON_SPEECH_RECORD_Y2,0,2,GRAY_DARK);
+//    lcd_draw_text("RECORD",BUTTON_SPEECH_RECORD_TXT_X,BUTTON_SPEECH_RECORD_TXT_Y,GRAY);
+//    //pause button
+//    //lcd_draw_rectangle(BUTTON_PAUSE_X1,BUTTON_PAUSE_Y1,BUTTON_PAUSE_X2,BUTTON_PAUSE_Y2,0,2,GRAY_DARK);
+//    //lcd_draw_text("PAUSE",BUTTON_PAUSE_TXT_X,BUTTON_PAUSE_TXT_Y,GRAY);
+//    speech_buttons_active = 1;
+//}
+
+
+
+void lcd_draw_speech_models(void){
     lcd_draw_rectangle(0,0,200,450,1,0,BLACK);
-    //erase fft button
-    //lcd_draw_rectangle(BUTTON_FFT_ERASE_X1,BUTTON_FFT_ERASE_Y1,BUTTON_FFT_ERASE_X2,BUTTON_FFT_ERASE_Y2,0,2,GRAY_DARK);
-    //lcd_draw_text("RECORD",BUTTON_FFT_SCALE_TXT_X,BUTTON_FFT_SCALE_TXT_Y,GRAY);
-    //toggle scale button
-    lcd_draw_rectangle(BUTTON_SPEECH_RECORD_X1,BUTTON_SPEECH_RECORD_Y1,BUTTON_SPEECH_RECORD_X2,BUTTON_SPEECH_RECORD_Y2,0,2,GRAY_DARK);
-    lcd_draw_text("RECORD",BUTTON_SPEECH_RECORD_TXT_X,BUTTON_SPEECH_RECORD_TXT_Y,GRAY);
-    //pause button
-    //lcd_draw_rectangle(BUTTON_PAUSE_X1,BUTTON_PAUSE_Y1,BUTTON_PAUSE_X2,BUTTON_PAUSE_Y2,0,2,GRAY_DARK);
-    //lcd_draw_text("PAUSE",BUTTON_PAUSE_TXT_X,BUTTON_PAUSE_TXT_Y,GRAY);
+    lcd_draw_rectangle(SPEECH_GRAPH_RED_X1,SPEECH_GRAPH_RED_Y1,SPEECH_GRAPH_RED_X2,SPEECH_GRAPH_RED_Y2,0,2,GRAY_DARK);
+    lcd_draw_rectangle(SPEECH_GRAPH_GREEN_X1,SPEECH_GRAPH_GREEN_Y1,SPEECH_GRAPH_GREEN_X2,SPEECH_GRAPH_GREEN_Y2,0,2,GRAY_DARK);
+    lcd_draw_rectangle(SPEECH_GRAPH_BLUE_X1,SPEECH_GRAPH_BLUE_Y1,SPEECH_GRAPH_BLUE_X2,SPEECH_GRAPH_BLUE_Y2,0,2,GRAY_DARK);
+    lcd_draw_rectangle(SPEECH_GRAPH_TEST_X1,SPEECH_GRAPH_TEST_Y1,SPEECH_GRAPH_TEST_X2,SPEECH_GRAPH_TEST_Y2,0,2,GRAY_DARK);
+    
+    int signal_start_red = 0;
+    int signal_start_green = 0;
+    int signal_start_blue = 0;
+    uint16_t offset = 0;
+
+    //signal_start_red = speech_find_audio_start("red");
+    signal_start_red = 0;
+    //signal_start_green = speech_find_audio_start("green");
+    signal_start_green = 0;
+    //signal_start_blue = speech_find_audio_start("blue");
+    signal_start_blue = 0;
+    float datapoint0 = 0.0;
+    float datapoint1 = 0.0;
+
+    int r_offset = 60;
+    int g_offset = 60;
+    int b_offset = 60;
+    
+    //datapoint0 = ((float)(audio_signal_r[signal_start_red-offset]/131072.0*72*8)+SPEECH_GRAPH_RED_Y_ORIGIN-10);    
+    datapoint1 = ((float)(audio_signal_r[signal_start_red-offset+16]/131072.0*72*8)+SPEECH_GRAPH_RED_Y_ORIGIN-r_offset);
+    datapoint0 = datapoint1;    
+    for (int i=1; i<256; i++){
+        datapoint1 = ((float)(audio_signal_r[signal_start_red-offset+i*16]/131072.0*72*8)+SPEECH_GRAPH_RED_Y_ORIGIN-r_offset);
+        if (datapoint0 < SPEECH_GRAPH_RED_Y1){
+            datapoint0 = SPEECH_GRAPH_RED_Y1+2;
+        } else if (datapoint0 > SPEECH_GRAPH_RED_Y2){
+            datapoint0 = SPEECH_GRAPH_RED_Y2-1;
+        }
+        if (datapoint1 < SPEECH_GRAPH_RED_Y1){
+            datapoint1 = SPEECH_GRAPH_RED_Y1+2;
+        } else if (datapoint1 > SPEECH_GRAPH_RED_Y2){
+            datapoint1 = SPEECH_GRAPH_RED_Y2-1;
+        }
+        lcd_draw_line(11+i, datapoint0, 12+i, datapoint1, 1, RED);
+        datapoint0 = datapoint1;
+    }
+
+    datapoint0 = ((float)(audio_signal_r[signal_start_green-offset]/131072.0*72*8+SPEECH_GRAPH_GREEN_Y_ORIGIN-g_offset));  
+    for (int i=1; i<256; i++){
+        datapoint1 = ((float)(audio_signal_g[signal_start_green-offset+i*16]/131072.0*72*8)+SPEECH_GRAPH_GREEN_Y_ORIGIN-g_offset);
+        if (datapoint0 < SPEECH_GRAPH_GREEN_Y1){
+            datapoint0 = SPEECH_GRAPH_GREEN_Y1+2;
+        } else if (datapoint0 > SPEECH_GRAPH_GREEN_Y2){
+            datapoint0 = SPEECH_GRAPH_GREEN_Y2-1;
+        }
+        if (datapoint1 < SPEECH_GRAPH_GREEN_Y1){
+            datapoint1 = SPEECH_GRAPH_GREEN_Y1+2;
+        } else if (datapoint1 > SPEECH_GRAPH_GREEN_Y2){
+            datapoint1 = SPEECH_GRAPH_GREEN_Y2-1;
+        }
+        lcd_draw_line(11+i, datapoint0, 12+i, datapoint1, 1, GREEN);
+        datapoint0 = datapoint1;
+    }
+    
+    datapoint0 = ((float)(audio_signal_r[signal_start_blue-offset]/131072.0*72*8)+SPEECH_GRAPH_BLUE_Y_ORIGIN-b_offset);  
+    for (int i=1; i<256; i++){
+        datapoint1 = ((float)(audio_signal_b[signal_start_blue-offset+i*16]/131072.0*72*8)+SPEECH_GRAPH_BLUE_Y_ORIGIN-b_offset);
+        if (datapoint0 < SPEECH_GRAPH_BLUE_Y1){
+            datapoint0 = SPEECH_GRAPH_BLUE_Y1+2;
+        } else if (datapoint0 > SPEECH_GRAPH_BLUE_Y2){
+            datapoint0 = SPEECH_GRAPH_BLUE_Y2-1;
+        }
+        if (datapoint1 < SPEECH_GRAPH_BLUE_Y1){
+            datapoint1 = SPEECH_GRAPH_BLUE_Y1+2;
+        } else if (datapoint1 > SPEECH_GRAPH_BLUE_Y2){
+            datapoint1 = SPEECH_GRAPH_BLUE_Y2-1;
+        }
+        lcd_draw_line(11+i, datapoint0, 12+i, datapoint1, 1, BLUE);
+        datapoint0 = datapoint1;
+    }
+    
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES*2; i++){
+        speech_fft_model_r[i] = 0.0;
+        speech_fft_model_g[i] = 0.0;
+        speech_fft_model_b[i] = 0.0;
+    }
+
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+        //speech_fft_model_r[i] = audio_signal_r[signal_start_red+i];
+        //speech_fft_model_g[i] = audio_signal_g[signal_start_green+i];
+        //speech_fft_model_b[i] = audio_signal_b[signal_start_blue+i];
+
+
+
+
+        
+        //if (I2S_arr[i] > (131072)){
+        //    fft_buffer[i*2] = ((float)I2S_arr[i]-262144)/65536;
+        //    //fft_buffer[i*2] = (((float)I2SRXBuffer[i]-262144)/65536);
+        //} else {
+        //    fft_buffer[i*2] = ((float)I2S_arr[i])/65536;
+        //    //fft_buffer[i*2] = (((float)I2SRXBuffer[i])/65536);
+        //}
+        speech_fft_model_r[i*2] = ((float)audio_signal_r[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g[i*2] = ((float)audio_signal_g[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b[i*2] = ((float)audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        //speech_fft_model_r[i*2] = ((float)audio_signal_r[i])/65536;
+        //speech_fft_model_g[i*2] = ((float)audio_signal_g[i])/65536;
+        //speech_fft_model_b[i*2] = ((float)audio_signal_b[i])/65536;
+        //printf("%d\n%d\n%0.2f\n%0.2f\n",i,audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1],((float)audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536, speech_fft_model_b[i*2]);
+    }
+}
+
+
+void lcd_speech_draw_buttons(void){
+    lcd_draw_rectangle(SPEECH_BUTTON_MICROPHONE_X1,SPEECH_BUTTON_MICROPHONE_Y1,SPEECH_BUTTON_MICROPHONE_X2,SPEECH_BUTTON_MICROPHONE_Y2,0,2,GRAY_DARK);
+    for (uint8_t i=0; i<90; i++){
+        for(uint8_t j=0; j<62; j++){
+            if (image_microphone[i][j] == 0){
+                lcd_draw_pixel(SPEECH_BUTTON_MICROPHONE_X1+20+j,SPEECH_BUTTON_MICROPHONE_Y1+6+i,GRAY_DARK);
+            } else {
+                lcd_draw_pixel(SPEECH_BUTTON_MICROPHONE_X1+20+j,SPEECH_BUTTON_MICROPHONE_Y1+6+i,BLACK);
+            }
+        }
+    }
+    lcd_draw_rectangle(BUTTON_SPEECH_TO_FFT_X1,BUTTON_SPEECH_TO_FFT_Y1,BUTTON_SPEECH_TO_FFT_X2,BUTTON_SPEECH_TO_FFT_Y2,0,2,GRAY_DARK);
+    lcd_draw_text("FFT",BUTTON_SPEECH_TO_FFT_TXT_X,BUTTON_SPEECH_TO_FFT_TXT_Y,GRAY);
+
+    record_button_status = FALSE;
     speech_buttons_active = 1;
+}
+
+
+void lcd_toggle_record_button(void){
+    uint32_t color_mic;
+
+    if (record_button_status == FALSE){
+        color_mic = RED;
+        record_button_status = TRUE;
+    } else {
+        color_mic = GRAY_DARK;
+        record_button_status = FALSE;
+    }
+    for (uint8_t i=0; i<90; i++){
+        for(uint8_t j=0; j<62; j++){
+            if (image_microphone[i][j] == 0){
+                lcd_draw_pixel(SPEECH_BUTTON_MICROPHONE_X1+20+j,SPEECH_BUTTON_MICROPHONE_Y1+6+i,color_mic);
+            }
+        }
+    }
+
+}
+
+
+void lcd_speech_draw_test_signal(void){
+    lcd_draw_rectangle(SPEECH_GRAPH_TEST_X1,SPEECH_GRAPH_TEST_Y1,SPEECH_GRAPH_TEST_X2,SPEECH_GRAPH_TEST_Y2,0,2,GRAY_DARK);
+    lcd_speech_clear_test_signal();
+    int signal_start_test = 0;
+    signal_start_test = speech_find_audio_start("test");
+    uint16_t offset = 200;
+    float datapoint0 = 0.0;
+    float datapoint1 = 0.0;
+    float datapointe = 0.0;
+    float slope = 0.0;
+    float eq_b = 0.0;
+    datapoint0 = ((float)(I2S_arr[signal_start_test-offset]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-10);    
+    datapointe = ((float)(I2S_arr[signal_start_test-offset+255*16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-10);    
+    //audio_signal_test_current[0] = datapoint0;
+    eq_b = ((datapointe-(float)SPEECH_GRAPH_TEST_Y_ORIGIN) - (datapoint0-(float)SPEECH_GRAPH_TEST_Y_ORIGIN))/2.0;
+    
+    //printf("s:%f e:%f d0:%f de:%f\n", datapoint0-SPEECH_GRAPH_TEST_Y_ORIGIN, datapointe-SPEECH_GRAPH_TEST_Y_ORIGIN, datapoint0-(float)SPEECH_GRAPH_TEST_Y_ORIGIN, datapointe-(float)SPEECH_GRAPH_TEST_Y_ORIGIN);
+   
+    slope = ((datapoint0-(float)SPEECH_GRAPH_TEST_Y_ORIGIN) - (datapointe-(float)SPEECH_GRAPH_TEST_Y_ORIGIN))/255.0;
+    //printf("slope %f\n", slope);
+    
+    //datapoint0 = ((float)(I2S_arr[signal_start_test-offset]/131072.0*72*6)*SPEECH_GRAPH_TEST_Y_ORIGIN-10)+eq_b;    
+    datapoint1 = ((float)(I2S_arr[signal_start_test-offset+16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-30)+slope*(16+1)+eq_b;
+    datapoint0 = datapoint1;  
+    printf("%0.2f\n", datapoint0);
+    for (int i=1; i<256; i++){
+        datapoint1 = ((float)(I2S_arr[signal_start_test-offset+i*16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-30)+slope*(i+1)+eq_b;
+        if (datapoint0 < SPEECH_GRAPH_TEST_Y1+2){
+            datapoint0 = SPEECH_GRAPH_TEST_Y1+2;
+        } else if (datapoint0 > SPEECH_GRAPH_TEST_Y2){
+            datapoint0 = SPEECH_GRAPH_TEST_Y2-1;
+        }
+        if (datapoint1 < SPEECH_GRAPH_TEST_Y1+2){
+            datapoint1 = SPEECH_GRAPH_TEST_Y1+2;
+        } else if (datapoint1 > SPEECH_GRAPH_TEST_Y2){
+            datapoint1 = SPEECH_GRAPH_TEST_Y2-1;
+        }
+        //lcd_draw_line(SPEECH_GRAPH_TEST_X1+1+i, datapoint0*(slope*i/(255*3))+(datapointe+(slope)/3), SPEECH_GRAPH_TEST_X1+2+i, datapoint1*(slope*(i+1)/(255*3))+(datapointe+(slope)/3), 1, WHITE);
+        lcd_draw_line(SPEECH_GRAPH_TEST_X1+1+i, datapoint0, SPEECH_GRAPH_TEST_X1+2+i, datapoint1, 1, WHITE);
+        datapoint0 = datapoint1;
+        //audio_signal_test_current[i] = datapoint0;
+    }
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES*2; i++){
+        speech_fft_test[i] = 0.0;
+    }
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+        speech_fft_test[i*2] = ((float)I2S_arr[signal_start_test+i])/65536;
+    }
+
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+        printf("%d\n", I2S_arr[signal_start_test+i]);
+        delay(3000);
+    }
+
+    
+    fft_speech_test();
+    speech_cross_correlation_test();
+
+}
+
+void lcd_speech_clear_test_signal(void){
+    lcd_draw_rectangle(SPEECH_GRAPH_TEST_X1+2,SPEECH_GRAPH_TEST_Y1+2,SPEECH_GRAPH_TEST_X2,SPEECH_GRAPH_TEST_Y2,1,0,BLACK);
 }

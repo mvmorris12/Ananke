@@ -6,6 +6,10 @@
 #include <stdio.h>
 
 
+
+
+
+
 volatile uint32_t I2SReadLength = 0;
 volatile uint32_t I2SReadLength2 = 0;
 volatile uint32_t readings_skipped = 0;
@@ -15,14 +19,45 @@ volatile uint8_t mic_fft_run_flag = 0;
 volatile uint8_t fft_buttons_active = 0;
 volatile uint8_t speech_buttons_active = 0;
 extern volatile uint8_t pause_flag;
+volatile uint8_t run_fft_app = 1;
 //volatile int32_t I2SRXBuffer[1];// = (uint8_t *)(DMA_DST);
-
+/*
 I2S_array_t *I2S_arr = (I2S_array_t*) 0xA0177000;
-fft_buffer_t *I2S_arr_adjusted = (I2S_array_t*) 0xA0186A00;
-//fft_buffer_t *fft_bin_output = (fft_buffer_t*) 0xA0196400; //length: 0xFA00 
-fft_buffer_t *fft_buffer = (fft_buffer_t*) 0xA01A5E00; //length: 0xFA00 
+fft_buffer_t *I2S_arr_adjusted = (I2S_array_t*) 0xA0186A00;   // length: 0xFA00
+//fft_buffer_t *fft_bin_output = (fft_buffer_t*) 0xA0196400;  // length: 0xFA00 
+fft_buffer_t *fft_buffer = (fft_buffer_t*) 0xA01A5E00;        // length: 0x1F400
+fft_buffer_t *speech_fft_test = (fft_buffer_t*) 0xA01C5200;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_r = (fft_buffer_t*) 0xA01E4600;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_g = (fft_buffer_t*) 0xA0203A00;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_b = (fft_buffer_t*) 0xA0222E00;     // length: 0x1F400
+//fft_buffer_t *speech_xcorr_r = (fft_buffer_t*) 0xA0242200;     // length: 0x1F400
+//fft_buffer_t *speech_xcorr_g = (fft_buffer_t*) 0xA0262200;     // length: 0x1F400
+//fft_buffer_t *speech_xcorr_b = (fft_buffer_t*) 0xA0282200;     // length: 0x1F400
+*/
 
 
+
+
+I2S_array_t *I2S_arr = (I2S_array_t*) ADDR_I2S_ARR;
+fft_buffer_t *I2S_arr_adjusted = (I2S_array_t*) ADDR_I2S_ARR_ADJUSTED;   // length: 0xFA00
+fft_buffer_t *fft_buffer = (fft_buffer_t*) ADDR_FFT_BUFFER;        // length: 0x1F400
+fft_buffer_t *speech_fft_test = (fft_buffer_t*) ADDR_SPEECH_FFT_TEST;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_r = (fft_buffer_t*) ADDR_SPEECH_FFT_MODEL_R;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_g = (fft_buffer_t*) ADDR_SPEECH_FFT_MODEL_G;     // length: 0x1F400
+fft_buffer_t *speech_fft_model_b = (fft_buffer_t*) ADDR_SPEECH_FFT_MODEL_B;     // length: 0x1F400
+
+
+
+
+
+
+#define ADDR_I2S_ARR 0xA0177000
+#define ADDR_I2S_ARR_ADJUSTED ADDR_I2S_ARR + 64 * 1000
+#define ADDR_FFT_BUFFER ADDR_I2S_ARR_ADJUSTED + 2 * 64 * 1000
+#define ADDR_SPEECH_FFT_TEST ADDR_FFT_BUFFER + 2 * 64 * 1000
+#define ADDR_SPEECH_FFT_MODEL_R ADDR_SPEECH_FFT_TEST + 2 * 64 * 1000
+#define ADDR_SPEECH_FFT_MODEL_G ADDR_SPEECH_FFT_MODEL_R + 2 * 64 * 1000
+#define ADDR_SPEECH_FFT_MODEL_B ADDR_SPEECH_FFT_MODEL_G + 2 * 64 * 1000
 void mic_init(void){
     for (uint32_t i=0; i<MEASUREMENTS_TO_TAKE; i++){
         //I2SRXBuffer[i] = 0;
@@ -84,9 +119,17 @@ void mic_take_measurements(void){
     I2S_Stop();
     
     //printf("Recording finished\n");
-    uint16_t temp = 0;
+    uint32_t measurements_needed = 0;
     
-    for (uint32_t i=0; i<MEASUREMENTS_TO_TAKE; i++){
+    if (fft_buttons_active){
+        measurements_needed = MEASUREMENTS_TO_TAKE;   
+    } else {
+        measurements_needed = MEASUREMENTS_TO_TAKE_SPEECH;   
+    }
+    
+
+
+    for (uint32_t i=0; i<measurements_needed; i++){
 
         //temp = I2SRXBuffer[i];
         if (I2S_arr[i] > (131072)){
@@ -109,14 +152,21 @@ void mic_take_measurements(void){
 void I2S_IRQHandler (void){
     uint32_t RxCount = 0;
     uint32_t dummy_reading = 0;
-    
+    uint32_t measurements_needed = 0;
     NVIC->ISER[0] &= ~(0x1 << 27);
+
+    if (fft_buttons_active){
+        measurements_needed = MEASUREMENTS_TO_TAKE;   
+    } else {
+        measurements_needed = MEASUREMENTS_TO_TAKE_SPEECH;   
+    }
+    
     if ( LPC_I2S->STATE & 0x01 ){
         if (readings_skipped < MEASUREMENTS_TO_SKIP){
             //I2SRXBuffer[I2SReadLength] = LPC_I2S->RXFIFO>>14;
             I2S_arr[I2SReadLength] = LPC_I2S->RXFIFO>>14;
             readings_skipped++;
-        } else if (I2SReadLength < MEASUREMENTS_TO_TAKE){
+        } else if (I2SReadLength < measurements_needed){
             //I2SRXBuffer[I2SReadLength] = LPC_I2S->RXFIFO>>14;
             I2S_arr[I2SReadLength] = LPC_I2S->RXFIFO>>14;
             //if (I2SRXBuffer[I2SReadLength]){
@@ -670,12 +720,13 @@ uint8_t I2S_GetIRQDepth(uint8_t TRMode)
  */
 
  void mic_start_fft(void){
+    run_fft_app = 1;
     lcd_draw_fft_graph(1);
     lcd_draw_audio_graph(1);
     lcd_fft_draw_buttons();
     mic_init();
 
-    while(1){    
+    while(run_fft_app){    
         //printf("..\n");
         mic_take_measurements();
         touch_check();
@@ -689,39 +740,17 @@ uint8_t I2S_GetIRQDepth(uint8_t TRMode)
 
 
  void mic_start_speech_analyzer(void){
-    lcd_speech_draw_buttons();
-    //lcd_speech_draw_control_signals();
     mic_init();
-    printf("start array test\n");
-    for (uint32_t i=0; i<16000; i++){
-        I2S_arr[i] = i;
 
-    }
-    //for (uint32_t i=0; i<16000; i++){
-    //    printf("%d %d\n", i, I2S_arr[i]);
-    //    delay(10000);
-    //}
-
-    printf("end array test\n");
-    //while(1){    
     printf("start measurements\n");
-        mic_take_measurements();
-        //touch_check();
-        //while (pause_flag){
-        //    touch_check();
-        //}
+    lcd_toggle_record_button();
+    mic_take_measurements();
     printf("end measurements\n");
-    //for (uint32_t i=0; i<8000; i++){
-    //    printf("%d\n", I2S_arr_adjusted[i]);
-    //    delay(10000);
-    //}
-    //delay_long();
-    //for (uint32_t i=8000; i<16000; i++){
-    //    printf("%d\n", I2S_arr[i]);
-    //    delay(10000);
-    //}
-        //delay_ms(500);
-    //}
+    for (int i=0; i<16000; i++){
+        if (I2S_arr[i] > 131072){
+            I2S_arr[i] = (I2S_arr[i]-262144); 
+        }
+    }
 }
 
 

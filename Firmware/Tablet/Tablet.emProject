@@ -107,6 +107,7 @@
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctionsF16.c" />
         </folder>
         <file file_name="src/Apps/FFT.c" />
+        <file file_name="src/Apps/Speech.c" />
       </folder>
       <file file_name="src/Timer.c" />
     </folder>

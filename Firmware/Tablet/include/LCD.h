@@ -39,29 +39,36 @@
 #define AUDIO_GRAPH_ORIGIN_Y (202)
 #define AUDIO_GRAPH_TOP_PIXEL (49)
 #define AUDIO_SIGNAL_ORIGIN_X (238)
-#define AUDIO_SIGNAL_ORIGIN_Y (125)
+#define AUDIO_SIGNAL_ORIGIN_Y (150)
 #define AUDIO_GRAPH_Y_GRID_SPACING (25)
 
+#define BUTTON_FFT_SPEECH_X1 (30)
+#define BUTTON_FFT_SPEECH_Y1 (16)
+#define BUTTON_FFT_SPEECH_X2 (200)
+#define BUTTON_FFT_SPEECH_Y2 (116)
+#define BUTTON_FFT_SPEECH_TXT_X (81)
+#define BUTTON_FFT_SPEECH_TXT_Y (BUTTON_FFT_SPEECH_Y2 - (BUTTON_FFT_SPEECH_Y2 - BUTTON_FFT_SPEECH_Y1)/2) - 7
+
 #define BUTTON_FFT_SCALE_X1 (30)
-#define BUTTON_FFT_SCALE_Y1 (225)
+#define BUTTON_FFT_SCALE_Y1 (248)
 #define BUTTON_FFT_SCALE_X2 (200)
-#define BUTTON_FFT_SCALE_Y2 (325)
+#define BUTTON_FFT_SCALE_Y2 (348)
 #define BUTTON_FFT_SCALE_TXT_X (53)
-#define BUTTON_FFT_SCALE_TXT_Y (268)
+#define BUTTON_FFT_SCALE_TXT_Y (BUTTON_FFT_SCALE_Y2 - (BUTTON_FFT_SCALE_Y2 - BUTTON_FFT_SCALE_Y1)/2) - 7
 
 #define BUTTON_FFT_ERASE_X1 (30)
-#define BUTTON_FFT_ERASE_Y1 (350)
+#define BUTTON_FFT_ERASE_Y1 (364)
 #define BUTTON_FFT_ERASE_X2 (200)
-#define BUTTON_FFT_ERASE_Y2 (450)
+#define BUTTON_FFT_ERASE_Y2 (465)
 #define BUTTON_FFT_ERASE_TXT_X (53)
-#define BUTTON_FFT_ERASE_TXT_Y (393)
+#define BUTTON_FFT_ERASE_TXT_Y (BUTTON_FFT_ERASE_Y2 - (BUTTON_FFT_ERASE_Y2 - BUTTON_FFT_ERASE_Y1)/2) - 7
 
 #define BUTTON_PAUSE_X1 (30)
-#define BUTTON_PAUSE_Y1 (100)
+#define BUTTON_PAUSE_Y1 (132)
 #define BUTTON_PAUSE_X2 (200)
-#define BUTTON_PAUSE_Y2 (200)
+#define BUTTON_PAUSE_Y2 (232)
 #define BUTTON_PAUSE_TXT_X (81)
-#define BUTTON_PAUSE_TXT_Y (143)
+#define BUTTON_PAUSE_TXT_Y (BUTTON_PAUSE_Y2 - (BUTTON_PAUSE_Y2 - BUTTON_PAUSE_Y1)/2) - 7
 
 #define BUTTON_SPEECH_RECORD_X1 (30)
 #define BUTTON_SPEECH_RECORD_Y1 (350)
@@ -69,6 +76,42 @@
 #define BUTTON_SPEECH_RECORD_Y2 (450)
 #define BUTTON_SPEECH_RECORD_TXT_X (78)
 #define BUTTON_SPEECH_RECORD_TXT_Y (393)
+
+#define BUTTON_SPEECH_TO_FFT_X1 (685)
+#define BUTTON_SPEECH_TO_FFT_Y1 (50)
+#define BUTTON_SPEECH_TO_FFT_X2 (785)
+#define BUTTON_SPEECH_TO_FFT_Y2 (100)
+#define BUTTON_SPEECH_TO_FFT_TXT_X (720)
+#define BUTTON_SPEECH_TO_FFT_TXT_Y (68)
+
+#define SPEECH_GRAPH_RED_X1 (10)
+#define SPEECH_GRAPH_RED_Y1 (10)
+#define SPEECH_GRAPH_RED_X2 (268)
+#define SPEECH_GRAPH_RED_Y2 (155)
+#define SPEECH_GRAPH_RED_Y_ORIGIN (73)
+
+#define SPEECH_GRAPH_GREEN_X1 (10)
+#define SPEECH_GRAPH_GREEN_Y1 (165)
+#define SPEECH_GRAPH_GREEN_X2 (268)
+#define SPEECH_GRAPH_GREEN_Y2 (310)
+#define SPEECH_GRAPH_GREEN_Y_ORIGIN (228)
+
+#define SPEECH_GRAPH_BLUE_X1 (10)
+#define SPEECH_GRAPH_BLUE_Y1 (320)
+#define SPEECH_GRAPH_BLUE_X2 (268)
+#define SPEECH_GRAPH_BLUE_Y2 (465)
+#define SPEECH_GRAPH_BLUE_Y_ORIGIN (383)
+
+#define SPEECH_GRAPH_TEST_X1 (348)
+#define SPEECH_GRAPH_TEST_Y1 (320)
+#define SPEECH_GRAPH_TEST_X2 (606)
+#define SPEECH_GRAPH_TEST_Y2 (465)
+#define SPEECH_GRAPH_TEST_Y_ORIGIN (383)
+
+#define SPEECH_BUTTON_MICROPHONE_X1 (685)
+#define SPEECH_BUTTON_MICROPHONE_Y1 (365)
+#define SPEECH_BUTTON_MICROPHONE_X2 (785)
+#define SPEECH_BUTTON_MICROPHONE_Y2 (465)
 
 
 enum {
@@ -131,14 +174,23 @@ void lcd_draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint
 void lcd_draw_text(char *string, uint16_t x, uint16_t y, uint32_t color);
 void lcd_draw_time(void);
 void lcd_block_test(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
+void lcd_clear_screen(void);
 void lcd_draw_fft_graph(uint8_t init);
 void lcd_draw_fft_bins(float32_t max_val);
 void lcd_clear_fft_graph(void);
+
 void lcd_draw_audio_graph(uint8_t init);
 void lcd_process_audio_signal(void);
 void lcd_draw_audio_signal(void);
 void lcd_clear_audio_signal(void);
+
 void lcd_fft_draw_buttons(void);
 void lcd_toggle_fft_scale_button(void);
 void lcd_toggle_pause_button(void);
 void lcd_speech_draw_buttons(void);
+
+void lcd_draw_speech_models(void);
+void lcd_draw_speech_buttons(void);
+void lcd_toggle_record_button(void);
+void lcd_speech_draw_test_signal(void);
+void lcd_speech_clear_test_signal(void);

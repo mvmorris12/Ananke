@@ -16,6 +16,7 @@
 #include "Power.h"
 #include "RAM.h"
 #include "RTC.h"
+#include "Speech.h"
 #include "SPI.h"
 #include "getdatetime.h"
 #include "getdatetime_var.h"
@@ -98,7 +99,7 @@ void HardFault_Handler(void) {
     led_flash(2);
 
     I2C0_Init(1); // lcd
-    I2C1_Init(1);   // rtc
+    I2C1_Init(1); // rtc
     SSP0_Init();
 
     esp32_init(); 
@@ -108,6 +109,7 @@ void HardFault_Handler(void) {
     //RTCStop();   // just for on-board RTC
     
     ram_init();
+    flash_init();
 
     //flash_test();
 
@@ -124,7 +126,7 @@ void HardFault_Handler(void) {
     LPC_GPIO3->SET |= (0x1)<<31;
 
     lcd_init();
-    delay_long();
+    //delay_long();
     //i2c_scan_devices();
 
     //delay_short();  
@@ -161,12 +163,26 @@ void HardFault_Handler(void) {
 
     //cube_run_app();
     //physics_run_app();
-    //mic_start_fft();
+
+
+
+    mic_start_fft();
+    //speech_test();
+
+
+
     //for (int i=0; i<16000; i++){
     //    printf("%d\n",i);
-    //    delay(10000);
+    //    delay(1000);
     //}
-    mic_start_speech_analyzer();
+    //mic_start_speech_analyzer();
+
+
+    //flash_test();
+    //flash_write_audio(NULL, 0);
+
+
+
     while(1){
 
     }
