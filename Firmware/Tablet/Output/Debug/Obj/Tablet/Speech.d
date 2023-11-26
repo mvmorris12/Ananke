@@ -53,4 +53,5 @@ Output/Debug/Obj/Tablet/Speech.o: \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Speech_signals.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\type.h
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Colors.h

@@ -53,7 +53,7 @@ void delay(uint32_t i){
 
 void delay_ms(uint32_t ms)
 {
-	delay(ms * 20500);
+	delay(ms * 18900);
 }
 
 void delay_long(void){
@@ -91,9 +91,7 @@ void HardFault_Handler(void) {
 }
 
 
-
-
-  int main(void) {
+int main(void) {
     SystemClockUpdate();
     led_init();
     led_flash(2);
@@ -166,8 +164,9 @@ void HardFault_Handler(void) {
 
 
 
-    mic_start_fft();
-    //speech_test();
+    //mic_start_fft();
+
+    speech_test();
 
 
 
@@ -182,8 +181,10 @@ void HardFault_Handler(void) {
     //flash_write_audio(NULL, 0);
 
 
-
+    int i=0;
     while(1){
+        printf("%d\n", i++);
+        delay_ms(1000);
 
     }
 

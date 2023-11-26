@@ -96,6 +96,7 @@
 #include "LCD.h"
 #include <stdio.h>
 #include "Microphone.h"
+#include "Colors.h"
 
 #include "arm_math.h"
 #include "arm_const_structs.h"
@@ -110,9 +111,30 @@
 * ------------------------------------------------------------------- */
 extern fft_buffer_t *fft_buffer;
 extern fft_buffer_t *speech_fft_test;
-extern fft_buffer_t *speech_fft_model_r;
-extern fft_buffer_t *speech_fft_model_g;
-extern fft_buffer_t *speech_fft_model_b;
+extern fft_buffer_t *speech_fft_model_r0;
+extern fft_buffer_t *speech_fft_model_r1;
+extern fft_buffer_t *speech_fft_model_r2;
+extern fft_buffer_t *speech_fft_model_r3;
+extern fft_buffer_t *speech_fft_model_r4;
+extern fft_buffer_t *speech_fft_model_r5;
+extern fft_buffer_t *speech_fft_model_r6;
+extern fft_buffer_t *speech_fft_model_r7;
+extern fft_buffer_t *speech_fft_model_g0;
+extern fft_buffer_t *speech_fft_model_g1;
+extern fft_buffer_t *speech_fft_model_g2;
+extern fft_buffer_t *speech_fft_model_g3;
+extern fft_buffer_t *speech_fft_model_g4;
+extern fft_buffer_t *speech_fft_model_g5;
+extern fft_buffer_t *speech_fft_model_g6;
+extern fft_buffer_t *speech_fft_model_g7;
+extern fft_buffer_t *speech_fft_model_b0;
+extern fft_buffer_t *speech_fft_model_b1;
+extern fft_buffer_t *speech_fft_model_b2;
+extern fft_buffer_t *speech_fft_model_b3;
+extern fft_buffer_t *speech_fft_model_b4;
+extern fft_buffer_t *speech_fft_model_b5;
+extern fft_buffer_t *speech_fft_model_b6;
+extern fft_buffer_t *speech_fft_model_b7;
 //extern fft_buffer_t *fft_buffer;
 //extern fft_buffer_t *fft_bin_output;
 float32_t fft_bin_output[TEST_LENGTH_SAMPLES/2];
@@ -134,9 +156,32 @@ float32_t *fft_bin_input_xcorr_b = (float32_t*) ADDR_FFT_BIN_INPUT_XCORR_B;
 float32_t *fft_bin_output_xcorr_r = (float32_t*) ADDR_FFT_BIN_OUTPUT_XCORR_R;
 float32_t *fft_bin_output_xcorr_g = (float32_t*) ADDR_FFT_BIN_OUTPUT_XCORR_G;
 float32_t *fft_bin_output_xcorr_b = (float32_t*) ADDR_FFT_BIN_OUTPUT_XCORR_B;
-float32_t *fft_bin_output_speech_model_r = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R;
-float32_t *fft_bin_output_speech_model_g = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G;
-float32_t *fft_bin_output_speech_model_b = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B;
+float32_t *fft_bin_output_speech_model_r0 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R0;
+float32_t *fft_bin_output_speech_model_r1 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R1;
+float32_t *fft_bin_output_speech_model_r2 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R2;
+float32_t *fft_bin_output_speech_model_r3 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R3;
+float32_t *fft_bin_output_speech_model_r4 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R4;
+float32_t *fft_bin_output_speech_model_r5 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R5;
+float32_t *fft_bin_output_speech_model_r6 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R6;
+float32_t *fft_bin_output_speech_model_r7 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_R7;
+float32_t *fft_bin_output_speech_model_g0 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G0;
+float32_t *fft_bin_output_speech_model_g1 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G1;
+float32_t *fft_bin_output_speech_model_g2 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G2;
+float32_t *fft_bin_output_speech_model_g3 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G3;
+float32_t *fft_bin_output_speech_model_g4 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G4;
+float32_t *fft_bin_output_speech_model_g5 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G5;
+float32_t *fft_bin_output_speech_model_g6 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G6;
+float32_t *fft_bin_output_speech_model_g7 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_G7;
+float32_t *fft_bin_output_speech_model_b0 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B0;
+float32_t *fft_bin_output_speech_model_b1 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B1;
+float32_t *fft_bin_output_speech_model_b2 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B2;
+float32_t *fft_bin_output_speech_model_b3 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B3;
+float32_t *fft_bin_output_speech_model_b4 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B4;
+float32_t *fft_bin_output_speech_model_b5 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B5;
+float32_t *fft_bin_output_speech_model_b6 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B6;
+float32_t *fft_bin_output_speech_model_b7 = (float32_t*) ADDR_FFT_BIN_OUTPUT_SPEECH_MODEL_B7;
+
+struct RGB_results_t rgb_results;
 //float32_t fft_bin_output_old[TEST_LENGTH_SAMPLES/2];
 
 /* ------------------------------------------------------------------
@@ -147,8 +192,10 @@ uint32_t fftSize_speech = SPEECH_TEST_LENGTH_SAMPLES;
 uint32_t ifftFlag = 0;
 uint32_t doBitReverse = 1;
 arm_cfft_instance_f32 varInstCfftF32;
-arm_cfft_instance_f32 varInstCfftF32_speech;
+//arm_cfft_instance_f32 varInstCfftF32_speech;
+arm_rfft_fast_instance_f32 varInstCfftF32_speech;
 arm_rfft_fast_instance_f32 varInstRfftF32_speech;
+uint16_t speech_analysis_count = 0;
 
 /* Reference index at which max energy of bin ocuurs */
 uint32_t refIndex = 213, testIndex = 0;
@@ -160,8 +207,12 @@ uint32_t refIndex = 213, testIndex = 0;
 float32_t maxValue;
 volatile uint8_t fft_ready = 0;
 
-int32_t fft_test(void)
-{
+const weights_red[]   = {1.0, 5.0, 5.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+const weights_green[] = {1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 80.0, 100.0};
+const weights_blue[]  = {1.0, 1.0, 10.0, 5.0, 1.0, 1.0, 5.0, 1.0};
+
+
+int32_t fft_test(void){
 
     arm_status status;
 
@@ -171,17 +222,25 @@ int32_t fft_test(void)
     //    delay(10000);
     //    //i++;
     //}
-    status=arm_cfft_init_f32(&varInstCfftF32,fftSize);
+    //status=arm_cfft_init_f32(&varInstCfftF32,fftSize);
 
-    /* Process the data through the CFFT/CIFFT module */
-    arm_cfft_f32(&varInstCfftF32, fft_buffer, ifftFlag, doBitReverse);
+    ///* Process the data through the CFFT/CIFFT module */
+    //arm_cfft_f32(&varInstCfftF32, fft_buffer, ifftFlag, doBitReverse);
 
-    /* Process the data through the Complex Magnitude Module for
-    calculating the magnitude at each bin */
-    arm_cmplx_mag_f32(fft_buffer, fft_bin_output, fftSize);
+    ///* Process the data through the Complex Magnitude Module for
+    //calculating the magnitude at each bin */
+    //arm_cmplx_mag_f32(fft_buffer, fft_bin_output, fftSize);
+
+
+
+    status=arm_rfft_fast_init_f32(&varInstCfftF32,fftSize/2);
+    arm_rfft_fast_f32(&varInstCfftF32, fft_buffer, fft_bin_output, 0);
+
+
+
 
     /* Calculates maxValue and returns corresponding BIN value */
-    arm_max_f32(fft_bin_output, fftSize, &maxValue, &testIndex);
+    //arm_max_f32(fft_bin_output, fftSize, &maxValue, &testIndex);
 
     status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
     
@@ -206,48 +265,88 @@ int32_t fft_test(void)
 
 void fft_speech_models(void){
     printf("Running speech FFT\n");
-    for (int i=0; i< fftSize_speech; i++){
-        fft_bin_output_speech_model_r[i] = 0.0;
-        fft_bin_output_speech_model_g[i] = 0.0;
-        fft_bin_output_speech_model_b[i] = 0.0;
-    }
     arm_status status;
     status = ARM_MATH_SUCCESS;
-    status=arm_cfft_init_f32(&varInstCfftF32_speech,fftSize_speech);
-    arm_cfft_f32(&varInstCfftF32_speech, speech_fft_model_r, ifftFlag, doBitReverse);
-    arm_cmplx_mag_f32(speech_fft_model_r, fft_bin_output_speech_model_r, fftSize_speech);
-    arm_max_f32(fft_bin_output_speech_model_r, fftSize_speech, &maxValue, &testIndex);
-    status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
+
+
+    status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r0, fft_bin_output_speech_model_r0, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r1, fft_bin_output_speech_model_r1, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r2, fft_bin_output_speech_model_r2, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r3, fft_bin_output_speech_model_r3, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r4, fft_bin_output_speech_model_r4, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r5, fft_bin_output_speech_model_r5, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r6, fft_bin_output_speech_model_r6, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r7, fft_bin_output_speech_model_r7, 0);
     
-    status = ARM_MATH_SUCCESS;
-    status=arm_cfft_init_f32(&varInstCfftF32_speech,fftSize_speech);
-    arm_cfft_f32(&varInstCfftF32_speech, speech_fft_model_g, ifftFlag, doBitReverse);
-    arm_cmplx_mag_f32(speech_fft_model_g, fft_bin_output_speech_model_g, fftSize_speech);
-    arm_max_f32(fft_bin_output_speech_model_g, fftSize_speech, &maxValue, &testIndex);
-    status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g0, fft_bin_output_speech_model_g0, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g1, fft_bin_output_speech_model_g1, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g2, fft_bin_output_speech_model_g2, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g3, fft_bin_output_speech_model_g3, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g4, fft_bin_output_speech_model_g4, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g5, fft_bin_output_speech_model_g5, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g6, fft_bin_output_speech_model_g6, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_g7, fft_bin_output_speech_model_g7, 0);
     
-    status = ARM_MATH_SUCCESS;
-    status=arm_cfft_init_f32(&varInstCfftF32_speech,fftSize_speech);
-    arm_cfft_f32(&varInstCfftF32_speech, speech_fft_model_b, ifftFlag, doBitReverse);
-    arm_cmplx_mag_f32(speech_fft_model_b, fft_bin_output_speech_model_b, fftSize_speech);
-    arm_max_f32(fft_bin_output_speech_model_b, fftSize_speech, &maxValue, &testIndex);
-    status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b0, fft_bin_output_speech_model_b0, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b1, fft_bin_output_speech_model_b1, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b2, fft_bin_output_speech_model_b2, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b3, fft_bin_output_speech_model_b3, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b4, fft_bin_output_speech_model_b4, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b5, fft_bin_output_speech_model_b5, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b6, fft_bin_output_speech_model_b6, 0);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_b7, fft_bin_output_speech_model_b7, 0);
+
+
+    //for (int i=0; i<fftSize_speech; i++){
+    //    fft_bin_output_speech_model_r[i] = fft_bin_output_speech_model_r[i];
+    //    fft_bin_output_speech_model_g[i] = fft_bin_output_speech_model_g[i];
+    //    fft_bin_output_speech_model_b[i] = fft_bin_output_speech_model_b[i];
+    //}
+
+    //for (int i=0; i<fftSize_speech*2; i++){
+    //    printf("%0.5f\n", fft_bin_output_speech_model_r0[i]);
+    //    delay(5000);
+    //}
+    //for (int i=0; i<fftSize_speech*2; i++){
+    //    printf("%0.5f\n", fft_bin_output_speech_model_g0[i]);
+    //    delay(5000);
+    //}
+    //for (int i=0; i<fftSize_speech*2; i++){
+    //    printf("%0.5f\n", fft_bin_output_speech_model_b0[i]);
+    //    delay(5000);
+    //}
 
     printf("Speech Model FFTs done\n");
 }
 
-void fft_speech_test(void){
-    printf("Running speech test FFT\n");
+
+void fft_speech_test(int iteration){
+    //printf("Running speech test FFT\n");
     for (int i=0; i< fftSize_speech; i++){
         fft_bin_output_speech_test[i] = 0.0;
     }
     arm_status status;
     status = ARM_MATH_SUCCESS;
-    status=arm_cfft_init_f32(&varInstCfftF32_speech,fftSize_speech);
-    arm_cfft_f32(&varInstCfftF32_speech, speech_fft_test, ifftFlag, doBitReverse);
-    arm_cmplx_mag_f32(speech_fft_test, fft_bin_output_speech_test, fftSize_speech);
-    arm_max_f32(fft_bin_output_speech_test, fftSize_speech, &maxValue, &testIndex);
-    status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
+    //status=arm_cfft_init_f32(&varInstCfftF32_speech,fftSize_speech);
+    //arm_cfft_f32(&varInstCfftF32_speech, speech_fft_test, ifftFlag, doBitReverse);
+    //arm_cmplx_mag_f32(speech_fft_test, fft_bin_output_speech_test, fftSize_speech);
+    //arm_max_f32(fft_bin_output_speech_test, fftSize_speech, &maxValue, &testIndex);
+    //status = (testIndex != refIndex) ? ARM_MATH_TEST_FAILURE : ARM_MATH_SUCCESS;
+
+
+    //for (int i=0; i<fftSize_speech*2; i++){
+    //    printf("%0.5f\n", speech_fft_test[i]);
+    //    delay(3000);
+    //}
+    status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
+    arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_test, fft_bin_output_speech_test, 0);
+
+    
+    //for (int i=0; i<fftSize_speech*2; i++){
+    //    printf("%0.5f\n", fft_bin_output_speech_test[i]);
+    //    delay(3000);
+    //}
 
     for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
         fft_bin_output_xcorr_r[i] = 0.0;
@@ -255,100 +354,165 @@ void fft_speech_test(void){
         fft_bin_output_xcorr_b[i] = 0.0;
     }
     
+    float32_t* fft_bin_output_speech_model_r;
+    float32_t* fft_bin_output_speech_model_g;
+    float32_t* fft_bin_output_speech_model_b;
+
+
+    switch(iteration){
+        case 0:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r0;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g0;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b0;
+            break;
+        case 1:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r1;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g1;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b1;
+            break;
+        case 2:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r2;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g2;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b2;
+            break;
+        case 3:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r3;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g3;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b3;
+            break;
+        case 4:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r4;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g4;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b4;
+            break;
+        case 5:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r5;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g5;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b5;
+            break;
+        case 6:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r6;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g6;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b6;
+            break;
+        case 7:
+            fft_bin_output_speech_model_r = fft_bin_output_speech_model_r7;
+            fft_bin_output_speech_model_g = fft_bin_output_speech_model_g7;
+            fft_bin_output_speech_model_b = fft_bin_output_speech_model_b7;
+            break;
+    }
+
+    
+    //for (int i=0; i<fftSize_speech; i++){
+    //    printf("%0.5f\n", fft_bin_output_speech_model_g[i]);
+    //    delay(5000);
+    //}
+
     for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
         fft_bin_input_xcorr_r[i] = fft_bin_output_speech_test[i]*fft_bin_output_speech_model_r[i];
         fft_bin_input_xcorr_g[i] = fft_bin_output_speech_test[i]*fft_bin_output_speech_model_g[i];
         fft_bin_input_xcorr_b[i] = fft_bin_output_speech_test[i]*fft_bin_output_speech_model_b[i];
     }
-//TODO try fftSize_speech/2 ? ifft might not be right. Try *2 also
+
+
+
     status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
     arm_rfft_fast_f32(&varInstRfftF32_speech, fft_bin_input_xcorr_r, fft_bin_output_xcorr_r, 1);
-    
-    status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
     arm_rfft_fast_f32(&varInstRfftF32_speech, fft_bin_input_xcorr_g, fft_bin_output_xcorr_g, 1);
-    
-    status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
     arm_rfft_fast_f32(&varInstRfftF32_speech, fft_bin_input_xcorr_b, fft_bin_output_xcorr_b, 1);
     
-    printf("Speech test FFT done\n");
+    //printf("Speech test FFT done\n");
 }
 
 
-void fft_compare_models_test(void){
-    float total_r, total_g, total_b;
-    total_r = 0.0;
-    total_g = 0.0;
-    total_b = 0.0;
-
-    for (int i=0; i<1024; i++){
-        total_r += abs(fft_bin_output_speech_test[i]-fft_bin_output_speech_model_r[i]);
-        total_g += abs(fft_bin_output_speech_test[i]-fft_bin_output_speech_model_g[i]);
-        total_b += abs(fft_bin_output_speech_test[i]-fft_bin_output_speech_model_b[i]);
-    }
-
-    float min = total_r;
-    if (min > total_g){
-        min = total_g;
-    }
-    if (min > total_b){
-        min = total_b;
-    }
-    
-    //printf("red: \t%0.1f\ngreen: \t%0.1f\nblue: \t%0.1f\nxxxxxx\n\n", total_r, total_g, total_b);
-   
-    if (min == total_r){
-        printf("min = red\n");
-    } else if (min == total_g){
-        printf("min = green\n");
-    } else if (min == total_b){
-        printf("min = blue\n");
-    }
-    //printf("red: \t%0.1f\ngreen: \t%0.1f\nblue: \t%0.1f\nxxxxxx\n\n", total_r, total_g, total_b);
-    printf("red: \t%0.3f\ngreen: \t%0.3f\nblue: \t%0.3f\n\n", total_r/min, total_g/min, total_b/min);
-}
-
-
-
-void speech_cross_correlation_test(void){
+void speech_cross_correlation_test(int iteration){
     float max_r, max_g, max_b, max_t;
+    float total_r, total_g, total_b;
     max_r = 0.0;
     max_g = 0.0;
-    max_b = 0.0;    
+    max_b = 0.0;      
 
-    //for (int i=0; i<4096; i++){
-    //    printf("%0.5f\n", fft_bin_output_xcorr_r[i]);
-    //    delay(3000);
-    //}
-
-    //for (int i=0; i<4096; i++){
-    //    printf("%0.5f\n", fft_bin_output_xcorr_g[i]);
-    //    delay(3000);
-    //}
-
-    //for (int i=0; i<4096; i++){
-    //    printf("%0.5f\n", fft_bin_output_xcorr_b[i]);
-    //    delay(6000);
-    //}
-
-    for (int i=0; i<1000; i++){
-        if (fft_bin_output_xcorr_r[i] > max_r){
-            max_r = fft_bin_output_xcorr_r[i];
+    if (iteration == 0){
+        for (uint8_t i=0; i<MAX_ITERATIONS; i++){
+            rgb_results.red.max[i] = -1000.0;
+            rgb_results.green.max[i] = -1000.0;
+            rgb_results.blue.max[i] = -1000.0;
         }
-        if (fft_bin_output_xcorr_g[i] > max_g){
-            max_g = fft_bin_output_xcorr_g[i];
-        }
-        if (fft_bin_output_xcorr_b[i] > max_b){
-            max_b = fft_bin_output_xcorr_b[i];
-        }
+        rgb_results.red.total = 0.0;
+        rgb_results.green.total = 0.0;
+        rgb_results.blue.total = 0.0;
     }
-    printf("cross correlation done\nmax_r: %0.2f\nmax_g: %0.2f\nmax_b: %0.2f\n", max_r, max_g, max_b);
-    if (max_r > max_g && max_r > max_b){
-        printf("max is red\n");
-    } else if (max_g > max_r && max_g > max_b){
-        printf("max is green\n");
-    } else if (max_b > max_r && max_b > max_g){
-        printf("max is blue\n");
+
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+        total_r += fft_bin_output_xcorr_r[i];
+        total_g += fft_bin_output_xcorr_g[i];
+        total_b += fft_bin_output_xcorr_b[i];
+        
+        if (fft_bin_output_xcorr_r[i] > rgb_results.red.max[iteration]){
+            rgb_results.red.max[iteration] = fft_bin_output_xcorr_r[i];
+        }
+        if (fft_bin_output_xcorr_g[i] > rgb_results.green.max[iteration]){
+            rgb_results.green.max[iteration] = fft_bin_output_xcorr_g[i];
+        }
+        if (fft_bin_output_xcorr_b[i] > rgb_results.blue.max[iteration]){
+            rgb_results.blue.max[iteration] = fft_bin_output_xcorr_b[i];
+        }
+
     }
+    //printf("RESULTS:\nred: \t%0.3f\ngreen: \t%0.3f\nblue: \t%0.3f\n\n", total_r, total_g, total_b);
+    
+    rgb_results.red.total += total_r;
+    rgb_results.green.total += total_g;
+    rgb_results.blue.total += total_b;
+
+    //printf("cross correlation done\n");
+
+    if (iteration == MAX_ITERATIONS-1){
+        float32_t max_r_tot, max_g_tot, max_b_tot;
+
+        for (uint8_t i=0; i<MAX_ITERATIONS; i++){
+            rgb_results.red.max[i] *= weights_red[i];
+            rgb_results.green.max[i] *= weights_green[i];
+            rgb_results.blue.max[i] *= weights_blue[i];
+        }
+
+        for (uint8_t i=0; i<MAX_ITERATIONS; i++){
+            max_r_tot += rgb_results.red.max[i];
+            max_g_tot += rgb_results.green.max[i];
+            max_b_tot += rgb_results.blue.max[i];
+        }
+        if (speech_analysis_count++){
+            printf("red   : [");
+            for (uint8_t i=0; i<MAX_ITERATIONS-1; i++){
+                printf("%0.2f ", rgb_results.red.max[i]);
+            }
+            printf("%0.2f] = %0.2f\n", rgb_results.red.max[MAX_ITERATIONS-1], max_r_tot);
+            printf("green : [");
+            for (uint8_t i=0; i<MAX_ITERATIONS-1; i++){
+                printf("%0.2f ", rgb_results.green.max[i]);
+            }
+            printf("%0.2f] = %0.2f\n", rgb_results.green.max[MAX_ITERATIONS-1], max_g_tot);
+            printf("blue  : [");
+            for (uint8_t i=0; i<MAX_ITERATIONS-1; i++){
+                printf("%0.2f ", rgb_results.blue.max[i]);
+            }
+            printf("%0.2f] = %0.2f\n", rgb_results.blue.max[MAX_ITERATIONS-1], max_b_tot);
+
+            if (max_r_tot >= max_b_tot && max_r_tot >= max_g_tot){
+                lcd_speech_draw_answer(RED);
+            } else if (max_b_tot >= max_r_tot && max_b_tot >= max_g_tot){
+                lcd_speech_draw_answer(BLUE);
+            } else if (max_g_tot >= max_r_tot && max_g_tot >= max_b_tot){
+                lcd_speech_draw_answer(YELLOW);
+            }
+        }
+
+        //delay_ms(1000);
+    }
+    
+
+
+
 }
 
 

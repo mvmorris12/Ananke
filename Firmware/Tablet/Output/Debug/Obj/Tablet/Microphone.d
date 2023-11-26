@@ -52,4 +52,5 @@ Output/Debug/Obj/Tablet/Microphone.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\complex_math_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\filtering_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\support_functions.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\dsp\quaternion_math_functions.h
+  C:\Projects\Ananke\Firmware\Tablet\include\dsp\quaternion_math_functions.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Colors.h

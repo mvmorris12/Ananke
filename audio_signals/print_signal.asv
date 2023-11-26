@@ -1,0 +1,179 @@
+clc;
+%% R0
+fprintf("const audio_signal_r0[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (r0(j*32+i) > 0)
+            fprintf("0x%08X, ", r0(j*32+i));
+        else 
+            % fprintf("0x%08X, ", ndec2hex(21908, 8));
+            fprintf("0x%s, ", ndec2hex(r0(j*32+i), 32));
+        end
+        % count = count+1;
+    end
+    fprintf("\n");
+end
+%% R1
+fprintf("const audio_signal_r1[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (r1(j*32+i) > 0)
+            fprintf("0x%08X, ", r1(j*32+i));
+        else 
+            % fprintf("0x%08X, ", ndec2hex(21908, 8));
+            fprintf("0x%s, ", ndec2hex(r1(j*32+i), 32));
+        end
+        % count = count+1;
+    end
+    fprintf("\n");
+end
+
+%% R2
+fprintf("const audio_signal_r2[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (r2(j*32+i) > 0)
+            fprintf("0x%08X, ", r2(j*32+i));
+        else 
+            % fprintf("0x%08X, ", ndec2hex(21908, 8));
+            fprintf("0x%s, ", ndec2hex(r2(j*32+i), 32));
+        end
+        % count = count+1;
+    end
+    fprintf("\n");
+end
+
+%% R3
+fprintf("const audio_signal_r3[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (r3(j*32+i) > 0)
+            fprintf("0x%08X, ", r3(j*32+i));
+        else 
+            % fprintf("0x%08X, ", ndec2hex(21908, 8));
+            fprintf("0x%s, ", ndec2hex(r3(j*32+i), 32));
+        end
+        % count = count+1;
+    end
+    fprintf("\n");
+end
+
+
+%% G0
+fprintf("const audio_signal_g0[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (g0(j*32+i) > 0)
+            fprintf("0x%08X, ", g0(j*32+i));
+        else 
+            % fprintf("0x%08X, ", ndec2hex(21908, 8));
+            fprintf("0x%s, ", ndec2hex(g0(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+%% G1
+fprintf("const audio_signal_r1[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (g1(j*32+i) > 0)
+            fprintf("0x%08X, ", g1(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(g1(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+%% G2
+fprintf("const audio_signal_r2[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (g2(j*32+i) > 0)
+            fprintf("0x%08X, ", g2(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(g2(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+%% G3
+fprintf("const audio_signal_r3[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (g3(j*32+i) > 0)
+            fprintf("0x%08X, ", g3(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(g3(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+
+%% B0
+fprintf("const audio_signal_r0[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (b0(j*32+i) > 0)
+            fprintf("0x%08X, ", b0(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(b0(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+%% B1
+fprintf("const audio_signal_r1[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (b1(j*32+i) > 0)
+            fprintf("0x%08X, ", b1(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(b1(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+%% B2
+fprintf("const audio_signal_r2[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (b2(j*32+i) > 0)
+            fprintf("0x%08X, ", b2(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(b2(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+%% B3
+fprintf("const audio_signal_r3[] = {\n");
+for j=0:31
+    fprintf("\t");
+    for i = 1:32
+        if (b3(j*32+i) > 0)
+            fprintf("0x%08X, ", b3(j*32+i));
+        else 
+            fprintf("0x%s, ", ndec2hex(b3(j*32+i), 32));
+        end
+    end
+    fprintf("\n");
+end
+
+
+

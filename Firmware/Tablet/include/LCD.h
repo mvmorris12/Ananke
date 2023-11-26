@@ -9,7 +9,8 @@
 #define HFP_4DLCD   (40U)   // Horizontal front porch in clocks
 #define HSW_4DLCD   (48U)   // HSYNC pulse width in clocks
 #define PPL_4DLCD   (800U)  // Actual pixels per line
-#define VBP_4DLCD   (10U)   // Vertical back porch in clocks
+//#define VBP_4DLCD   (10U)   // Vertical back porch in clocks
+#define VBP_4DLCD   (80U)   // Vertical back porch in clocks
 #define VFP_4DLCD   (200U)  // Vertical front porch in clocks
 #define VSW_4DLCD   (3U)    // VSYNC pulse width in clocks
 #define LPP_4DLCD   (480U)  // Lines per panel
@@ -113,6 +114,9 @@
 #define SPEECH_BUTTON_MICROPHONE_X2 (785)
 #define SPEECH_BUTTON_MICROPHONE_Y2 (465)
 
+#define SPEECH_ANSWER_X (422)
+#define SPEECH_ANSWER_Y (295)
+
 
 enum {
     DISPLAY_TRULY_240_320,
@@ -192,5 +196,7 @@ void lcd_speech_draw_buttons(void);
 void lcd_draw_speech_models(void);
 void lcd_draw_speech_buttons(void);
 void lcd_toggle_record_button(void);
-void lcd_speech_draw_test_signal(void);
+void lcd_speech_draw_test_signal(int iteration);
 void lcd_speech_clear_test_signal(void);
+void lcd_speech_clear_answer(void);
+void lcd_speech_draw_answer(uint32_t word);

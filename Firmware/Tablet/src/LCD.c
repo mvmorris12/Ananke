@@ -107,6 +107,8 @@ const uint8_t image_microphone[90][62] = {
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 };
 
+int xxtemp = 0;
+
 extern volatile unsigned char I2C_MasterBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned char I2C_SlaveBuffer[I2C_PORT_NUM][I2C_BUFSIZE];
 extern volatile unsigned int I2C_Count[I2C_PORT_NUM];
@@ -132,13 +134,58 @@ uint8_t get_touch_coordinates_block = 0;
 uint8_t record_button_status = FALSE;
 
 extern const int audio_signal_r[];
+extern const int audio_signal_r0[];
+extern const int audio_signal_r1[];
+extern const int audio_signal_r2[];
+extern const int audio_signal_r3[];
+extern const int audio_signal_r4[];
+extern const int audio_signal_r5[];
+extern const int audio_signal_r6[];
+extern const int audio_signal_r7[];
 extern const int audio_signal_g[];
+extern const int audio_signal_g0[];
+extern const int audio_signal_g1[];
+extern const int audio_signal_g2[];
+extern const int audio_signal_g3[];
+extern const int audio_signal_g4[];
+extern const int audio_signal_g5[];
+extern const int audio_signal_g6[];
+extern const int audio_signal_g7[];
 extern const int audio_signal_b[];
+extern const int audio_signal_b0[];
+extern const int audio_signal_b1[];
+extern const int audio_signal_b2[];
+extern const int audio_signal_b3[];
+extern const int audio_signal_b4[];
+extern const int audio_signal_b5[];
+extern const int audio_signal_b6[];
+extern const int audio_signal_b7[];
 extern volatile I2S_array_t *I2S_arr;
 extern fft_buffer_t *speech_fft_test;
-extern fft_buffer_t *speech_fft_model_r;
-extern fft_buffer_t *speech_fft_model_g;
-extern fft_buffer_t *speech_fft_model_b;
+extern fft_buffer_t *speech_fft_model_r0;
+extern fft_buffer_t *speech_fft_model_r1;
+extern fft_buffer_t *speech_fft_model_r2;
+extern fft_buffer_t *speech_fft_model_r3;
+extern fft_buffer_t *speech_fft_model_r4;
+extern fft_buffer_t *speech_fft_model_r5;
+extern fft_buffer_t *speech_fft_model_r6;
+extern fft_buffer_t *speech_fft_model_r7;
+extern fft_buffer_t *speech_fft_model_g0;
+extern fft_buffer_t *speech_fft_model_g1;
+extern fft_buffer_t *speech_fft_model_g2;
+extern fft_buffer_t *speech_fft_model_g3;
+extern fft_buffer_t *speech_fft_model_g4;
+extern fft_buffer_t *speech_fft_model_g5;
+extern fft_buffer_t *speech_fft_model_g6;
+extern fft_buffer_t *speech_fft_model_g7;
+extern fft_buffer_t *speech_fft_model_b0;
+extern fft_buffer_t *speech_fft_model_b1;
+extern fft_buffer_t *speech_fft_model_b2;
+extern fft_buffer_t *speech_fft_model_b3;
+extern fft_buffer_t *speech_fft_model_b4;
+extern fft_buffer_t *speech_fft_model_b5;
+extern fft_buffer_t *speech_fft_model_b6;
+extern fft_buffer_t *speech_fft_model_b7;
 
 extern volatile uint8_t run_fft_app;
 
@@ -367,6 +414,7 @@ void lcd_clear_screen(void){
     lcd_draw_rectangle(700,30,800,480,1,0,BLACK);
 }
 
+
 void touch_check(void){
     if (get_touch_coordinates_flag){
         get_touch_coordinates_flag = 0;
@@ -409,9 +457,11 @@ void touch_check(void){
             if (touch_x[0] > SPEECH_BUTTON_MICROPHONE_X1 && touch_x[0] < SPEECH_BUTTON_MICROPHONE_X2 && touch_y[0] > SPEECH_BUTTON_MICROPHONE_Y1 && touch_y[0] < SPEECH_BUTTON_MICROPHONE_Y2){
                 printf("SPEECH RECORD BUTTON PRESSED\n");
                 LPC_TIM1->TCR = (0x1 << 1);
+                mic_init();
+                delay_ms(50);
                 mic_start_speech_analyzer();
                 lcd_toggle_record_button();
-                lcd_speech_draw_test_signal();
+                //lcd_speech_draw_test_signal();
                 //fft_compare_models_test();
             }
             if (touch_x[0] > BUTTON_SPEECH_TO_FFT_X1 && touch_x[0] < BUTTON_SPEECH_TO_FFT_X2 && touch_y[0] > BUTTON_SPEECH_TO_FFT_Y1 && touch_y[0] < BUTTON_SPEECH_TO_FFT_Y2){
@@ -535,23 +585,29 @@ void lcd_draw_fft_graph(uint8_t init){
         lcd_draw_line(FFT_GRAPH_ORIGIN_X,FFT_GRAPH_Y_GRID_SPACING*i,750,FFT_GRAPH_Y_GRID_SPACING*i,2,GRAY_DARK);  // major y axes
     }
     //lcd_draw_text("0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16",FFT_GRAPH_ORIGIN_X,415,RED);
-    lcd_draw_text("0",FFT_GRAPH_ORIGIN_X-5,415,YELLOW);
-    lcd_draw_text("1",FFT_GRAPH_ORIGIN_X+28,415,YELLOW);
-    lcd_draw_text("2",FFT_GRAPH_ORIGIN_X+60,415,YELLOW);
-    lcd_draw_text("3",FFT_GRAPH_ORIGIN_X+92,415,YELLOW);
-    lcd_draw_text("4",FFT_GRAPH_ORIGIN_X+124,415,YELLOW);
-    lcd_draw_text("5",FFT_GRAPH_ORIGIN_X+156,415,YELLOW);
-    lcd_draw_text("6",FFT_GRAPH_ORIGIN_X+186,415,YELLOW);
-    lcd_draw_text("7",FFT_GRAPH_ORIGIN_X+218,415,YELLOW);
-    lcd_draw_text("8",FFT_GRAPH_ORIGIN_X+250,415,YELLOW);
-    lcd_draw_text("9",FFT_GRAPH_ORIGIN_X+282,415,YELLOW);
-    lcd_draw_text("10",FFT_GRAPH_ORIGIN_X+305,415,YELLOW);
-    lcd_draw_text("11",FFT_GRAPH_ORIGIN_X+339,415,YELLOW);
-    lcd_draw_text("12",FFT_GRAPH_ORIGIN_X+372,415,YELLOW);
-    lcd_draw_text("13",FFT_GRAPH_ORIGIN_X+404,415,YELLOW);
-    lcd_draw_text("14",FFT_GRAPH_ORIGIN_X+435,415,YELLOW);
-    lcd_draw_text("15",FFT_GRAPH_ORIGIN_X+465,415,YELLOW);
-    lcd_draw_text("16",FFT_GRAPH_ORIGIN_X+498,415,YELLOW);
+    lcd_draw_text("0",FFT_GRAPH_ORIGIN_X+2,415,YELLOW);
+    lcd_draw_text("1",FFT_GRAPH_ORIGIN_X+92,415,YELLOW);
+    lcd_draw_text("2",FFT_GRAPH_ORIGIN_X+186,415,YELLOW);
+    lcd_draw_text("3",FFT_GRAPH_ORIGIN_X+282,415,YELLOW);
+    lcd_draw_text("4",FFT_GRAPH_ORIGIN_X+372,415,YELLOW);
+    lcd_draw_text("5",FFT_GRAPH_ORIGIN_X+465,415,YELLOW);
+    //lcd_draw_text("0",FFT_GRAPH_ORIGIN_X-5,415,YELLOW);
+    //lcd_draw_text("1",FFT_GRAPH_ORIGIN_X+28,415,YELLOW);
+    //lcd_draw_text("2",FFT_GRAPH_ORIGIN_X+60,415,YELLOW);
+    //lcd_draw_text("3",FFT_GRAPH_ORIGIN_X+92,415,YELLOW);
+    //lcd_draw_text("4",FFT_GRAPH_ORIGIN_X+124,415,YELLOW);
+    //lcd_draw_text("5",FFT_GRAPH_ORIGIN_X+156,415,YELLOW);
+    //lcd_draw_text("6",FFT_GRAPH_ORIGIN_X+186,415,YELLOW);
+    //lcd_draw_text("7",FFT_GRAPH_ORIGIN_X+218,415,YELLOW);
+    //lcd_draw_text("8",FFT_GRAPH_ORIGIN_X+250,415,YELLOW);
+    //lcd_draw_text("9",FFT_GRAPH_ORIGIN_X+282,415,YELLOW);
+    //lcd_draw_text("10",FFT_GRAPH_ORIGIN_X+305,415,YELLOW);
+    //lcd_draw_text("11",FFT_GRAPH_ORIGIN_X+339,415,YELLOW);
+    //lcd_draw_text("12",FFT_GRAPH_ORIGIN_X+372,415,YELLOW);
+    //lcd_draw_text("13",FFT_GRAPH_ORIGIN_X+404,415,YELLOW);
+    //lcd_draw_text("14",FFT_GRAPH_ORIGIN_X+435,415,YELLOW);
+    //lcd_draw_text("15",FFT_GRAPH_ORIGIN_X+465,415,YELLOW);
+    //lcd_draw_text("16",FFT_GRAPH_ORIGIN_X+498,415,YELLOW);
     lcd_draw_text("KHZ",475,445,GRAY);
 
     for (uint8_t i=1; i<16; i++){
@@ -562,8 +618,15 @@ void lcd_draw_fft_graph(uint8_t init){
 void lcd_draw_fft_bins(float32_t max_val){
     float32_t scale;
     if (fft_scale_flag){
-        //scale = 148/(max_val);
-        scale = 175/(max_val);
+        float maxValue = 1.0;
+        for (int i=0; i<1024; i++){
+            if (fft_bin_output[i] > maxValue){
+                maxValue = fft_bin_output[i];
+            }
+        }
+        scale = 1.0/(maxValue);
+        //scale = 2.0;
+
     } else {
         scale = 1;
     }
@@ -578,8 +641,8 @@ void lcd_draw_fft_bins(float32_t max_val){
             x_coord_1 = x_coord_0+1;
             //float32_t bin_val = fft_bin_output[bin];
             //printf("%0.12f %0.12f\n", fft_bin_output[bin], fft_bin_output[bin+1]);
-            y_coord_0 = floor(FFT_SIGNAL_ORIGIN_Y-(fft_bin_output[bin]*scale));//*scale);
-            y_coord_1 = floor(FFT_SIGNAL_ORIGIN_Y-(fft_bin_output[bin+1]*scale));//*scale);
+            y_coord_0 = floor(FFT_SIGNAL_ORIGIN_Y-(abs(fft_bin_output[bin])*scale));//*scale);
+            y_coord_1 = floor(FFT_SIGNAL_ORIGIN_Y-(abs(fft_bin_output[bin+1])*scale));//*scale);
             
             if (y_coord_0 < FFT_GRAPH_TOP_PIXEL){
                 y_coord_0 = FFT_GRAPH_TOP_PIXEL;
@@ -635,36 +698,33 @@ void lcd_draw_audio_graph(uint8_t init){
 void lcd_draw_audio_signal(void){
     lcd_clear_audio_signal();
     uint8_t width = 1;
+    int offset = 0;
     uint16_t x_coord_0, x_coord_1;
     uint16_t y_coord_0, y_coord_1;
     audio_signal_output_old[511][0] = 749;
     audio_signal_output_old[511][1] = AUDIO_GRAPH_ORIGIN_Y;
     audio_signal_output_old[512][0] = 750;
     audio_signal_output_old[512][1] = AUDIO_GRAPH_ORIGIN_Y;
-    for (uint16_t bin=150; bin<(TEST_LENGTH_SAMPLES/4-1)+150; bin++){
+    //for (uint16_t bin=offset; bin<(TEST_LENGTH_SAMPLES/4-1)+offset; bin++){
+    for (uint16_t bin=offset; bin<511+offset; bin++){
         for (uint8_t i=0; i<width; i++){
-            x_coord_0 = AUDIO_SIGNAL_ORIGIN_X+bin-150;
+            x_coord_0 = AUDIO_SIGNAL_ORIGIN_X+bin-offset;
             x_coord_1 = x_coord_0+1;
-            //float32_t bin_val = fft_bin_output[bin];
-            //int test = I2S_arr_adjusted[bin];
-            //printf("%d\n%d\n\n", I2S_arr[bin]);
-            //        AUDIO_SIGNAL_ORIGIN_Y-I2SRXBuffer[bin+1]/2048);
+
             y_coord_0 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-((float)I2S_arr[bin]/2048.0*6.0));//*scale);
-            y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-((float)I2S_arr[bin+1]/2048.0*6.0));//*scale);
+            y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-((float)I2S_arr[(bin+1)]/2048.0*6.0));//*scale);
             
             if (y_coord_0 < 51){
                 y_coord_0 = 51;
             }
             if (y_coord_0 > 200){ 
-                //y_coord_1 = AUDIO_SIGNAL_ORIGIN_Y;
                 y_coord_0 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin]-262143)/2048.0*6.0));
             }
             if (y_coord_1 < 51){
                 y_coord_1 = 51;
             }
             if (y_coord_1 > 200){ 
-                //y_coord_1 = AUDIO_SIGNAL_ORIGIN_Y;
-                y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[bin+1]-262143)/2048.0*6.0));
+                y_coord_1 = floor((float)AUDIO_SIGNAL_ORIGIN_Y-(((float)I2S_arr[(bin+1)]-262143)/2048.0*6.0));
             }
 
             if (y_coord_0 < 51){
@@ -681,8 +741,8 @@ void lcd_draw_audio_signal(void){
 
             
             lcd_draw_line(x_coord_0, y_coord_0, x_coord_1, y_coord_1, 1, YELLOW);
-            audio_signal_output_old[bin-150][0] = x_coord_0;
-            audio_signal_output_old[bin-150][1] = y_coord_0;
+            audio_signal_output_old[bin-offset][0] = x_coord_0;
+            audio_signal_output_old[bin-offset][1] = y_coord_0;
         }
     }
 }
@@ -854,36 +914,58 @@ void lcd_draw_speech_models(void){
         datapoint0 = datapoint1;
     }
     
-    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES*2; i++){
-        speech_fft_model_r[i] = 0.0;
-        speech_fft_model_g[i] = 0.0;
-        speech_fft_model_b[i] = 0.0;
+    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+        speech_fft_model_r0[i] = 0.0;
+        speech_fft_model_r1[i] = 0.0;
+        speech_fft_model_r2[i] = 0.0;
+        speech_fft_model_r3[i] = 0.0;
+        speech_fft_model_g0[i] = 0.0;
+        speech_fft_model_g1[i] = 0.0;
+        speech_fft_model_g2[i] = 0.0;
+        speech_fft_model_g3[i] = 0.0;
+        speech_fft_model_b0[i] = 0.0;
+        speech_fft_model_b1[i] = 0.0;
+        speech_fft_model_b2[i] = 0.0;
+        speech_fft_model_b3[i] = 0.0;
     }
 
     for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
-        //speech_fft_model_r[i] = audio_signal_r[signal_start_red+i];
-        //speech_fft_model_g[i] = audio_signal_g[signal_start_green+i];
-        //speech_fft_model_b[i] = audio_signal_b[signal_start_blue+i];
-
-
-
-
-        
-        //if (I2S_arr[i] > (131072)){
-        //    fft_buffer[i*2] = ((float)I2S_arr[i]-262144)/65536;
-        //    //fft_buffer[i*2] = (((float)I2SRXBuffer[i]-262144)/65536);
-        //} else {
-        //    fft_buffer[i*2] = ((float)I2S_arr[i])/65536;
-        //    //fft_buffer[i*2] = (((float)I2SRXBuffer[i])/65536);
-        //}
-        speech_fft_model_r[i*2] = ((float)audio_signal_r[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
-        speech_fft_model_g[i*2] = ((float)audio_signal_g[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
-        speech_fft_model_b[i*2] = ((float)audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
-        //speech_fft_model_r[i*2] = ((float)audio_signal_r[i])/65536;
-        //speech_fft_model_g[i*2] = ((float)audio_signal_g[i])/65536;
-        //speech_fft_model_b[i*2] = ((float)audio_signal_b[i])/65536;
-        //printf("%d\n%d\n%0.2f\n%0.2f\n",i,audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1],((float)audio_signal_b[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536, speech_fft_model_b[i*2]);
+        speech_fft_model_r0[i] = ((float)audio_signal_r0[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r1[i] = ((float)audio_signal_r1[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r2[i] = ((float)audio_signal_r2[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r3[i] = ((float)audio_signal_r3[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r4[i] = ((float)audio_signal_r4[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r5[i] = ((float)audio_signal_r5[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r6[i] = ((float)audio_signal_r6[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_r7[i] = ((float)audio_signal_r7[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g0[i] = ((float)audio_signal_g0[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g1[i] = ((float)audio_signal_g1[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g2[i] = ((float)audio_signal_g2[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g3[i] = ((float)audio_signal_g3[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g4[i] = ((float)audio_signal_g4[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g5[i] = ((float)audio_signal_g5[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g6[i] = ((float)audio_signal_g6[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_g7[i] = ((float)audio_signal_g7[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b0[i] = ((float)audio_signal_b0[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b1[i] = ((float)audio_signal_b1[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b2[i] = ((float)audio_signal_b2[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b3[i] = ((float)audio_signal_b3[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b4[i] = ((float)audio_signal_b4[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b5[i] = ((float)audio_signal_b5[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b6[i] = ((float)audio_signal_b6[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
+        speech_fft_model_b7[i] = ((float)audio_signal_b7[SPEECH_TEST_LENGTH_SAMPLES-i-1])/65536;
     }
+    //for (int i=SPEECH_TEST_LENGTH_SAMPLES/2; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+    //    speech_fft_model_r[i] = 0.0;
+    //    speech_fft_model_g[i] = 0.0;
+    //    speech_fft_model_b[i] = 0.0;
+    //}
+    //for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+    //    //printf("%d\n", I2S_arr[signal_start_test+i]);
+    //    printf("%0.5f\n", speech_fft_model_g0[i]);
+    //    delay(5000);
+    //}
+    //int j = 0;
 }
 
 
@@ -927,19 +1009,20 @@ void lcd_toggle_record_button(void){
 }
 
 
-void lcd_speech_draw_test_signal(void){
+void lcd_speech_draw_test_signal(int iteration){
     lcd_draw_rectangle(SPEECH_GRAPH_TEST_X1,SPEECH_GRAPH_TEST_Y1,SPEECH_GRAPH_TEST_X2,SPEECH_GRAPH_TEST_Y2,0,2,GRAY_DARK);
     lcd_speech_clear_test_signal();
     int signal_start_test = 0;
-    signal_start_test = speech_find_audio_start("test");
-    uint16_t offset = 200;
+    //signal_start_test = speech_find_audio_start("test");
+    uint16_t offset = 0;
     float datapoint0 = 0.0;
     float datapoint1 = 0.0;
     float datapointe = 0.0;
     float slope = 0.0;
     float eq_b = 0.0;
-    datapoint0 = ((float)(I2S_arr[signal_start_test-offset]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-10);    
-    datapointe = ((float)(I2S_arr[signal_start_test-offset+255*16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-10);    
+    uint8_t graph_offset = 30;
+    datapoint0 = ((float)(I2S_arr[signal_start_test-offset]/131072.0*72*4)+SPEECH_GRAPH_TEST_Y_ORIGIN+graph_offset);    
+    datapointe = ((float)(I2S_arr[signal_start_test-offset+255*2]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN+graph_offset);    
     //audio_signal_test_current[0] = datapoint0;
     eq_b = ((datapointe-(float)SPEECH_GRAPH_TEST_Y_ORIGIN) - (datapoint0-(float)SPEECH_GRAPH_TEST_Y_ORIGIN))/2.0;
     
@@ -949,11 +1032,11 @@ void lcd_speech_draw_test_signal(void){
     //printf("slope %f\n", slope);
     
     //datapoint0 = ((float)(I2S_arr[signal_start_test-offset]/131072.0*72*6)*SPEECH_GRAPH_TEST_Y_ORIGIN-10)+eq_b;    
-    datapoint1 = ((float)(I2S_arr[signal_start_test-offset+16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-30)+slope*(16+1)+eq_b;
+    datapoint1 = ((float)(I2S_arr[signal_start_test-offset+16]/131072.0*72*4)+SPEECH_GRAPH_TEST_Y_ORIGIN+graph_offset)+slope*(16+1)+eq_b;
     datapoint0 = datapoint1;  
-    printf("%0.2f\n", datapoint0);
+    //printf("%0.2f\n", datapoint0);
     for (int i=1; i<256; i++){
-        datapoint1 = ((float)(I2S_arr[signal_start_test-offset+i*16]/131072.0*72*6)+SPEECH_GRAPH_TEST_Y_ORIGIN-30)+slope*(i+1)+eq_b;
+        datapoint1 = ((float)(I2S_arr[signal_start_test-offset+i*2]/131072.0*72*4)+SPEECH_GRAPH_TEST_Y_ORIGIN+graph_offset)+slope*(i+1)+eq_b;
         if (datapoint0 < SPEECH_GRAPH_TEST_Y1+2){
             datapoint0 = SPEECH_GRAPH_TEST_Y1+2;
         } else if (datapoint0 > SPEECH_GRAPH_TEST_Y2){
@@ -969,24 +1052,49 @@ void lcd_speech_draw_test_signal(void){
         datapoint0 = datapoint1;
         //audio_signal_test_current[i] = datapoint0;
     }
-    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES*2; i++){
-        speech_fft_test[i] = 0.0;
-    }
+    //for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+    //    speech_fft_test[i] = 0.0;
+    //}
     for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
-        speech_fft_test[i*2] = ((float)I2S_arr[signal_start_test+i])/65536;
+        //speech_fft_test[SPEECH_TEST_LENGTH_SAMPLES*2-i] = ((float)I2S_arr[signal_start_test+i])/65536;
+        speech_fft_test[i] = ((float)I2S_arr[i])/65536;
     }
 
-    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
-        printf("%d\n", I2S_arr[signal_start_test+i]);
-        delay(3000);
-    }
-
+    //if (iteration == xxtemp){
+    //    for (int i=0; i<SPEECH_TEST_LENGTH_SAMPLES; i++){
+    //        printf("%d\n", I2S_arr[i]);
+    //        //printf("%0.5f\n", speech_fft_test[i]);
+    //        delay(5000);
+    //    }
+    //    int ll = 0;
+    //}
     
-    fft_speech_test();
-    speech_cross_correlation_test();
+    fft_speech_test(iteration);
+    speech_cross_correlation_test(iteration);
 
 }
 
+
 void lcd_speech_clear_test_signal(void){
     lcd_draw_rectangle(SPEECH_GRAPH_TEST_X1+2,SPEECH_GRAPH_TEST_Y1+2,SPEECH_GRAPH_TEST_X2,SPEECH_GRAPH_TEST_Y2,1,0,BLACK);
+}
+
+
+void lcd_speech_clear_answer(void){
+    lcd_draw_rectangle(SPEECH_ANSWER_X, SPEECH_ANSWER_Y, SPEECH_ANSWER_X+100, SPEECH_ANSWER_Y+20, 1, 0, BLACK);
+}
+
+
+void lcd_speech_draw_answer(uint32_t word){
+    lcd_speech_clear_answer();
+    if (word == RED){
+        lcd_draw_text("RED", SPEECH_ANSWER_X+24, SPEECH_ANSWER_Y, RED);
+    } else if (word == YELLOW){
+        lcd_draw_text("YELLOW", SPEECH_ANSWER_X, SPEECH_ANSWER_Y, YELLOW);
+    } else if (word == BLUE){
+        lcd_draw_text("BLUE", SPEECH_ANSWER_X+19, SPEECH_ANSWER_Y, BLUE);
+    } else {
+        lcd_draw_text("ERROR", SPEECH_ANSWER_X+10, SPEECH_ANSWER_Y, GRAY_LIGHT);
+    }
+
 }

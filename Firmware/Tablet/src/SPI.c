@@ -28,6 +28,7 @@ volatile uint32_t interrupt0RxTimeoutStat = 0;
 volatile uint32_t interrupt1RxStat = 0;
 volatile uint32_t interrupt1OverRunStat = 0;
 volatile uint32_t interrupt1RxTimeoutStat = 0;
+volatile uint32_t *spibuff;
 
 /*****************************************************************************
 ** Function name:		SSP_IRQHandler
@@ -182,6 +183,9 @@ void SSP0_Init( void )
   }
 
   /* Enable the SSP Interrupt */
+  //LPC_SSP0->DMACR |= 0x01; 
+  //LPC_GPDMA->Config |= 0x01;
+  //LPC_GPDMA->EnbldChns |= 0x1 << 3;
   NVIC_EnableIRQ(SSP0_IRQn);
 	
   /* Device select as master, SSP Enabled */
