@@ -269,7 +269,13 @@ void fft_speech_models(void){
     status = ARM_MATH_SUCCESS;
 
 
-    status=arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
+
+
+    //arm_rfft_fast_instance_f32 varInstRfftF32_speech;
+    //uint16_t fftSize_speech = 512;
+    //uint8_t inverse_flag = 0;
+    //arm_status status;
+    status = arm_rfft_fast_init_f32(&varInstRfftF32_speech,fftSize_speech);
     arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r0, fft_bin_output_speech_model_r0, 0);
     arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r1, fft_bin_output_speech_model_r1, 0);
     arm_rfft_fast_f32(&varInstRfftF32_speech, speech_fft_model_r2, fft_bin_output_speech_model_r2, 0);

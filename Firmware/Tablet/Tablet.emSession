@@ -92,7 +92,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="93" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="81" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="94" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="76" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="25" y="31" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Microphone.c" useBinaryEdit="0" left="0" path="include/Microphone.h" selected="0" top="25" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="30" y="195" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="src/Microphone.c" selected="0" top="500" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="41" y="113" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="include/LCD.h" selected="0" top="2" codecName="Default"/>
@@ -100,7 +100,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="10" y="127" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/Interrupts.c" selected="0" top="116" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="107" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/RAM.c" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="20" y="58" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Apps/FFT.c" useBinaryEdit="0" left="0" path="include/FFT.h" selected="0" top="44" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="467" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="src/Apps/FFT.c" selected="0" top="79" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="286" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="src/Apps/FFT.c" selected="0" top="277" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Flash.c" useBinaryEdit="0" left="0" path="include/Flash.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="225" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/Flash.c" selected="0" top="203" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="4" y="187" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/main.c" useBinaryEdit="0" left="0" path="src/SPI.c" selected="0" top="168" codecName="Default"/>
@@ -112,6 +112,11 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="4" y="436" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Apps/FFT.c" useBinaryEdit="0" left="0" path="include/dsp/transform_functions.h" selected="0" top="439" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="40" y="166" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="src/I2C.c" selected="0" top="150" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="36" y="17" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/I2C.c" useBinaryEdit="0" left="0" path="include/I2C.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="456" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Apps/FFT.c" useBinaryEdit="0" left="0" path="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_rfft_fast_f32.c" selected="0" top="351" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="1167" useTextEdit="1" openedFrom="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_rfft_fast_f32.c" useBinaryEdit="0" left="0" path="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_cfft_f32.c" selected="0" top="784" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="155" useTextEdit="1" openedFrom="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_cfft_f32.c" useBinaryEdit="0" left="0" path="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_cfft_radix8_f32.c" selected="0" top="132" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="5" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Apps/Pathfinder.c" useBinaryEdit="0" left="0" path="include/Pathfinder.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="31" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/Apps/Pathfinder.c" selected="1" top="66" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="Tablet" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Projects/Ananke/Firmware/Tablet/src/Apps" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

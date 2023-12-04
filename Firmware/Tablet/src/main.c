@@ -22,6 +22,7 @@
 #include "getdatetime_var.h"
 
 #include "Cube.h"
+#include "Pathfinder.h"
 #include "Physics.h"
 #include "Pong.h"
 #include "Launcher.h"
@@ -166,7 +167,10 @@ int main(void) {
 
     //mic_start_fft();
 
-    speech_test();
+    //speech_test(); ////////// this one
+
+    pathfinder_run_app();
+
 
 
 
@@ -183,8 +187,8 @@ int main(void) {
 
     int i=0;
     while(1){
-        printf("%d\n", i++);
-        delay_ms(1000);
+        //printf("%d\n", i++);
+        //delay_ms(1000);
 
     }
 

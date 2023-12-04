@@ -1,27 +1,22 @@
-Output/Debug/Obj/Tablet/main.o: \
-  C:\Projects\Ananke\Firmware\Tablet\src\main.c \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdio.h \
+Output/Debug/Obj/Tablet/Pathfinder.o: \
+  C:\Projects\Ananke\Firmware\Tablet\src\Apps\Pathfinder.c \
+  C:\Projects\Ananke\Firmware\Tablet\include\Pathfinder.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdint.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_ConfDefaults.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_Conf.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_Arm_Conf.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdio.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\LCD.h \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\LPC177x_8x.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\core_cm3.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdint.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_version.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_gcc.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\mpu_armv7.h \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\system_LPC177x_8x.h \
-  C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\system_LPC177x_8x.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Accelerometer.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\ESP32.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Flash.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\FFT.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_types.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\string.h \
@@ -29,11 +24,6 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_FP.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\float.h \
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\limits.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\GPIO.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\LCD.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_memory.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\none.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math_types.h \
@@ -61,18 +51,4 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\filtering_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\support_functions.h \
   C:\Projects\Ananke\Firmware\Tablet\include\dsp\quaternion_math_functions.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\LEDs.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Microphone.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Power.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\RAM.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\RTC.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Speech.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\SPI.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\getdatetime.h \
-  C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Cube.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Pathfinder.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Physics.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Pong.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\Launcher.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Colors.h

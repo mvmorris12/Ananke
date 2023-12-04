@@ -108,6 +108,7 @@
         </folder>
         <file file_name="src/Apps/FFT.c" />
         <file file_name="src/Apps/Speech.c" />
+        <file file_name="src/Apps/Pathfinder.c" />
       </folder>
       <file file_name="src/Timer.c" />
     </folder>

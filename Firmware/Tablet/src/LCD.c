@@ -256,13 +256,13 @@ void lcd_draw_text(char *string, uint16_t x, uint16_t y, uint32_t color){
 }
 
 void lcd_test(void){
-    lcd_draw_line(50,50,100,400,2,0xFFFFFFFF);
-    //delay_long();
-    lcd_draw_line(60,50,110,400,2,RED);
-    //delay_long();
-    lcd_draw_line(70,50,120,400,2,GREEN);
-    //delay_long();
-    lcd_draw_line(80,50,130,400,2,BLUE);
+    //lcd_draw_line(50,50,100,400,2,0xFFFFFFFF);
+    ////delay_long();
+    //lcd_draw_line(60,50,110,400,2,RED);
+    ////delay_long();
+    //lcd_draw_line(70,50,120,400,2,GREEN);
+    ////delay_long();
+    //lcd_draw_line(80,50,130,400,2,BLUE);
     //delay_long();
     //lcd_draw_line(50,50,100,400,2,0xFFFFFFFF);
     //lcd_draw_line(50,200,400,200,0,0x00000000);

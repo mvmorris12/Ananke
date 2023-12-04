@@ -50,6 +50,7 @@
 "Output/Debug/Obj/Tablet/InterpolationFunctionsF16.o"
 "Output/Debug/Obj/Tablet/FFT.o"
 "Output/Debug/Obj/Tablet/Speech.o"
+"Output/Debug/Obj/Tablet/Pathfinder.o"
 "Output/Debug/Obj/Tablet/Timer.o"
 "Output/Debug/Obj/Tablet/SEGGER_THUMB_Startup.o"
 "Output/Debug/Obj/Tablet/LPC177x_8x_Vectors.o"
