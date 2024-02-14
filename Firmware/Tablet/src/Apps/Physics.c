@@ -57,7 +57,7 @@ void physics_add_body(uint16_t x, uint16_t y){
             body[bodies_idx].color = TEAL;
             break;
     }
-    lcd_draw_circle(body[bodies_idx].x, body[bodies_idx].y, BODY_RADIUS, body[bodies_idx].color);
+    lcd_draw_circle(body[bodies_idx].x, body[bodies_idx].y, BODY_RADIUS, body[bodies_idx].color, 0, WHITE);
     bodies_idx++;
 }
 
@@ -66,13 +66,13 @@ void physics_add_body(uint16_t x, uint16_t y){
 
 void physics_draw_bodies(void){
     for (uint16_t i=0; i<bodies_idx; i++){
-        lcd_draw_circle(body[i].x, body[i].y, BODY_RADIUS, body[i].color);
+        lcd_draw_circle(body[i].x, body[i].y, BODY_RADIUS, body[i].color, 0, WHITE);
     }
 }
 
 void physics_erase_bodies(void){
     for (uint16_t i=0; i<bodies_idx; i++){
-        lcd_draw_circle(body[i].x_prev, body[i].y_prev, BODY_RADIUS, BLACK);
+        lcd_draw_circle(body[i].x_prev, body[i].y_prev, BODY_RADIUS, BLACK, 0, BLACK);
     }
 }
 

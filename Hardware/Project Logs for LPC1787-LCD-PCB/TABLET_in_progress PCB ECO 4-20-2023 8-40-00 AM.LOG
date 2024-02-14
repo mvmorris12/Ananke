@@ -1,0 +1,40 @@
+Added Component: Designator=R72(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES00031"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "21.8kO"; VariantName = "[No Variations]"
+Added Component: Designator=S6(PANASONIC EVP-AA002K)
+Add component (AddParameter): Name = "Contact Rating @ Voltage"; Value = "0.02A @ 15VDC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "BUT00002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic Electronic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "EVP-AA002K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Force"; Value = "100gf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "4-Lead SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Button"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "P13347SCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "667-EVP-AA002K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Function"; Value = "Off-Mom"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "SPST-NO"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R72-1
+Added Pin To Net: NetName=VDD_3.3 Pin=S6-1
+Added Pin To Net: NetName=VDD_3.3 Pin=S6-1
+Added Pin To Net: NetName=INT_TEST2 Pin=A1-61
+Added Pin To Net: NetName=INT_TEST2 Pin=R72-2
+Added Pin To Net: NetName=INT_TEST2 Pin=S6-2
+Added Pin To Net: NetName=INT_TEST2 Pin=S6-2
+Added Net: Name=INT_TEST2

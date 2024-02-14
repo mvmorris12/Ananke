@@ -1,0 +1,77 @@
+Removed Pin From Net: NetName=XTAL_32_1 Pin=C32-1
+Removed Pin From Net: NetName=GND Pin=C32-2
+Removed Pin From Net: NetName=GND Pin=C33-1
+Removed Pin From Net: NetName=XTAL_32_2 Pin=C33-2
+Removed Pin From Net: NetName=GND Pin=U1-41_10
+Removed Pin From Net: NetName=GND Pin=U1-41_11
+Removed Pin From Net: NetName=GND Pin=U1-41_12
+Removed Pin From Net: NetName=GND Pin=U1-41_13
+Removed Pin From Net: NetName=GND Pin=U1-41_14
+Removed Pin From Net: NetName=GND Pin=U1-41_15
+Removed Pin From Net: NetName=GND Pin=U1-41_16
+Removed Pin From Net: NetName=GND Pin=U1-41_17
+Removed Pin From Net: NetName=GND Pin=U1-41_18
+Removed Pin From Net: NetName=GND Pin=U1-41_19
+Removed Pin From Net: NetName=GND Pin=U1-41_20
+Removed Pin From Net: NetName=GND Pin=U1-41_21
+Removed Pin From Net: NetName=XTAL_32_2 Pin=Y1-4
+Removed Member From Class: ClassName=Designator Member=C32
+Removed Member From Class: ClassName=Designator Member=C33
+Change Component Footprint: Designator=Y1 Old Footprint=PERICOM G43270021 New Footprint=EPSON FC135R
+Change component parameters: Designator = "Y1" ("Y1"); Footprint = "PERICOM G43270021"; UniqueID = "\RAYGIIMQ\WOQFDERB\NDYGKKGV" ("\RAYGIIMQ\WOQFDERB\NDYGKKGV")
+Change component parameters (AddParameter): Name = "Device ID"; Value = "XTL00004"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ESR"; Value = "50kO"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Load Capacitance"; Value = "9pF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "EPSON"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer P/N"; Value = "FC-135R 32.7680KF-AC3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Mode"; Value = "Fundamental"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-20°C ~ 70°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2-SMD, No Lead"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Type"; Value = "XTAL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1 P/N"; Value = "SER4075TR-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2 P/N"; Value = "732-5R32.7680KF-AC3
+729-G43270021"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10ppm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "32.7680kHz"; VariantName = "[No Variations]"
+Added Component: Designator=C23(CAP 0402_1005)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP0004E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Walsin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "0402N9R0B500CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0402 (1005 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "1292-0402N9R0B500CTTR-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "791-0402N9R0B500CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "C0G, NP0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "9pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C24(CAP 0402_1005)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP0004E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Walsin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "0402N9R0B500CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0402 (1005 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "1292-0402N9R0B500CTTR-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "791-0402N9R0B500CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "C0G, NP0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "9pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C23-1
+Added Pin To Net: NetName=XTAL_32_1 Pin=C23-2
+Added Pin To Net: NetName=GND Pin=C24-1
+Added Pin To Net: NetName=XTAL_32_2 Pin=C24-2
+Added Pin To Net: NetName=XTAL_32_2 Pin=Y1-2
+Added Member To Class: ClassName=Designator Member=Component C23 9pF
+Added Member To Class: ClassName=Designator Member=Component C24 9pF

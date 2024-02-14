@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetMK1_1 Pin=R67-2
+Removed Pin From Net: NetName=NetA1_18 Pin=R72-2
+Removed Pin From Net: NetName=GND Pin=S1_1-1
+Removed Pin From Net: NetName=NetA1_35 Pin=S1_1-3
+Removed Pin From Net: NetName=GND Pin=S2-1
+Removed Pin From Net: NetName=NetA1_157 Pin=S2-3
+Removed Pin From Net: NetName=GND Pin=S3-2
+Removed Pin From Net: NetName=NetC98_1 Pin=S3-4
+Added Pin To Net: NetName=NetA1_18 Pin=MK1-6
+Added Pin To Net: NetName=NetMK1_1 Pin=R66-2
+Added Pin To Net: NetName=NetMK1_1 Pin=R68-2
+Added Member To Class: ClassName=Designator Member=Component A1 NXP LPC1787FDB208

@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=R64-2
+Removed Pin From Net: NetName=GND Pin=R65-2
+Removed Member From Class: ClassName=Designator Member=R64
+Removed Member From Class: ClassName=Designator Member=R65
+Added Pin To Net: NetName=GND Pin=J23-4
+Added Pin To Net: NetName=GND Pin=J23-S
+Added Pin To Net: NetName=GND Pin=J23-S
+Added Pin To Net: NetName=GND Pin=J23-S
+Added Pin To Net: NetName=GND Pin=J23-S
+Added Pin To Net: NetName=GND Pin=J23-S
+Added Pin To Net: NetName=GND Pin=J23-S

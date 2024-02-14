@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=VDD_3.3 Pin=D18-3
+Removed Pin From Net: NetName=NetA1_98 Pin=R33-1
+Removed Pin From Net: NetName=NetA1_100 Pin=R40-1
+Added Component: Designator=Db(LEDSC270X320X110-4N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IN-S128TATRGB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1210 Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IN-S128TATRGB/Inolux/view-part/3219922/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VDD_3.3 Pin=Db-1
+Added Pin To Net: NetName=NetA1_100 Pin=R33-1
+Added Pin To Net: NetName=NetA1_98 Pin=R40-1
+Added Pin To Net: NetName=NetDb_2 Pin=Db-2
+Added Pin To Net: NetName=NetDb_2 Pin=R34-2
+Added Net: Name=NetDb_2
+Added Pin To Net: NetName=NetDb_3 Pin=Db-3
+Added Pin To Net: NetName=NetDb_3 Pin=R41-2
+Added Net: Name=NetDb_3
+Added Pin To Net: NetName=NetDb_4 Pin=Db-4
+Added Pin To Net: NetName=NetDb_4 Pin=R30-2
+Added Net: Name=NetDb_4

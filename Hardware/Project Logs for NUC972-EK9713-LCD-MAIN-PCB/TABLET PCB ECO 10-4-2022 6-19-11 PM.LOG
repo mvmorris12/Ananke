@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=IC10-206
+Removed Pin From Net: NetName=VDD_1.2_10 Pin=IC10-207
+Added Pin To Net: NetName=NetC20_1 Pin=IC4-16
+Added Pin To Net: NetName=VDD_1.2_1 Pin=IC10-203
+Added Pin To Net: NetName=VDD_1.2_10 Pin=IC10-204
+Change Room Name: Old Name=Designator_11 New Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

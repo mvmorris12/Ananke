@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=BAT_ANODE Pin=C107-1
+Change Component Footprint: Designator=MK1 Old Footprint=MIC_DMM-4026-B-I2S-R New Footprint=DMM-4026
+Change Component Comment : Designator=MK1 Old Comment=DMM-4026-B-I2S-R New Comment=DMM-4026
+Change component parameters: Designator = "MK1" ("MK1"); Footprint = "MIC_DMM-4026-B-I2S-R"; UniqueID = "\AQQHBZQA" ("\AQQHBZQA")
+Change component parameters (AddParameter): Name = "Bandwidth"; Value = "35Hz ~ 20.0kHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DMM-4026-B-I2S-R/PUI+Audio%252C+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current - Supply"; Value = "170µA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device ID"; Value = "MIC00001"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "668-DMM-4026-B-I2S-RCT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Direction"; Value = "Omnidirectional"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Impedance"; Value = "355O"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "TDK InvenSense"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer P/N"; Value = "ICS-40638"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "PUI Audio, Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DMM-4026-B-I2S-R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 105°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Output Type"; Value = "Differential Analog"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "5-Pad Custom SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Type"; Value = "IC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/DMM-4026-B-I2S-R/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "S/N Ratio"; Value = "63dB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Sensitivity"; Value = "-43dB ±1dB @ 94dB SPL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DMM-4026-B-I2S-R/PUI+Audio%252C+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1 P/N"; Value = "1428-ICS-40638CT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2 P/N"; Value = "410-ICS-40638"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "MEMS Microphone"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Supply"; Value = "1.52V ~ 3.63V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC20_1 Pin=IC4-16
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

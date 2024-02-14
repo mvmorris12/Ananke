@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R21-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R22-2
+Added Pin To Net: NetName=V3_COIN Pin=BAT1-4
+Added Pin To Net: NetName=NetC20_1 Pin=IC4-16
+Added Pin To Net: NetName=V3_COIN Pin=IC10-66
+Added Pin To Net: NetName=VDD_1.2_1 Pin=IC10-204
+Added Pin To Net: NetName=NetIC10_71 Pin=IC11-4
+Added Pin To Net: NetName=NetIC10_83 Pin=IC12-12
+Added Pin To Net: NetName=NetIC15_1 Pin=U2-21
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

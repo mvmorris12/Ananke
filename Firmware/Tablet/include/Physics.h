@@ -13,7 +13,7 @@ typedef struct physics_bodies_struct{
     uint16_t v_prev; // velocity
     uint16_t a_prev; // acceleration
     uint32_t color;
-};
+} physics_bodies_struct;
 
 
 #define BODY_RADIUS     30

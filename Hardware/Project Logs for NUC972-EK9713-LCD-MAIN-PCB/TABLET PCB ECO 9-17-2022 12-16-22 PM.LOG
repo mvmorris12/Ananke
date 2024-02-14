@@ -1,0 +1,179 @@
+Removed Pin From Net: NetName=NetC?_1 Pin=C?-1
+Removed Pin From Net: NetName=VD33 Pin=IC?-10
+Removed Pin From Net: NetName=GND Pin=IC?-11
+Removed Pin From Net: NetName=VD12 Pin=IC?-12
+Removed Pin From Net: NetName=VD18 Pin=IC?-14
+Added Component: Designator=IC?(NUVOTON QFP216)
+Add component (AddParameter): Name = "Current - Receiving"; Value = "5.5mA ~ 10.4mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current - Transmitting"; Value = "5.5mA ~ 15.2mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Data Rate (Max)"; Value = "2Mbps"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "SOC00004"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "2.412GHz ~ 2.484GHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GPIO"; Value = "45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nuvoton Technology Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "NUC972DF71Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Memory Size"; Value = "384kB Flash, 512kB RAM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP-216"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "IC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Output"; Value = "21dBm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Sensitivity"; Value = "-98.4dBm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "816-NUC980DK71Y-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "LCD SOC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Supply"; Value = "1.7V ~ 3.6V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-2
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-3
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-3
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-6
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-7
+Added Pin To Net: NetName=VD33 Pin=IC?-10
+Added Pin To Net: NetName=GND Pin=IC?-11
+Added Pin To Net: NetName=NetIC?_12 Pin=IC?-12
+Added Pin To Net: NetName=VD12 Pin=IC?-12
+Added Pin To Net: NetName=GND Pin=IC?-13
+Added Pin To Net: NetName=NetIC?_14 Pin=IC?-14
+Added Pin To Net: NetName=VD18 Pin=IC?-14
+Added Pin To Net: NetName=GND Pin=IC?-15
+Added Pin To Net: NetName=VD18 Pin=IC?-16
+Added Pin To Net: NetName=GND Pin=IC?-17
+Added Pin To Net: NetName=VD18 Pin=IC?-18
+Added Pin To Net: NetName=GND Pin=IC?-19
+Added Pin To Net: NetName=VD33 Pin=IC?-20
+Added Pin To Net: NetName=VD12 Pin=IC?-21
+Added Pin To Net: NetName=NetIC?_26 Pin=IC?-26
+Added Pin To Net: NetName=NetIC?_27 Pin=IC?-27
+Added Pin To Net: NetName=NetIC?_28 Pin=IC?-28
+Added Pin To Net: NetName=NetIC?_29 Pin=IC?-29
+Added Pin To Net: NetName=NetIC?_30 Pin=IC?-30
+Added Pin To Net: NetName=NetIC?_31 Pin=IC?-31
+Added Pin To Net: NetName=NetIC?_32 Pin=IC?-32
+Added Pin To Net: NetName=NetIC?_33 Pin=IC?-33
+Added Pin To Net: NetName=NetIC?_34 Pin=IC?-34
+Added Pin To Net: NetName=NetIC?_35 Pin=IC?-35
+Added Pin To Net: NetName=NetIC?_36 Pin=IC?-36
+Added Pin To Net: NetName=NetIC?_37 Pin=IC?-37
+Added Pin To Net: NetName=NetIC?_38 Pin=IC?-38
+Added Pin To Net: NetName=NetIC?_39 Pin=IC?-39
+Added Pin To Net: NetName=NetIC?_40 Pin=IC?-40
+Added Pin To Net: NetName=NetIC?_41 Pin=IC?-41
+Added Pin To Net: NetName=NetIC?_42 Pin=IC?-42
+Added Pin To Net: NetName=NetIC?_43 Pin=IC?-43
+Added Pin To Net: NetName=VD33 Pin=IC?-44
+Added Pin To Net: NetName=NetIC?_45 Pin=IC?-45
+Added Pin To Net: NetName=NetIC?_46 Pin=IC?-46
+Added Pin To Net: NetName=NetIC?_47 Pin=IC?-47
+Added Pin To Net: NetName=NetIC?_48 Pin=IC?-48
+Added Pin To Net: NetName=NetIC?_49 Pin=IC?-49
+Added Pin To Net: NetName=NetIC?_50 Pin=IC?-50
+Added Pin To Net: NetName=NetIC?_51 Pin=IC?-51
+Added Pin To Net: NetName=NetIC?_52 Pin=IC?-52
+Added Pin To Net: NetName=NetIC?_53 Pin=IC?-53
+Added Pin To Net: NetName=NetIC?_54 Pin=IC?-54
+Added Pin To Net: NetName=GND Pin=IC?-58
+Added Pin To Net: NetName=VD33 Pin=IC?-59
+Added Pin To Net: NetName=NetIC?_66 Pin=IC?-66
+Added Pin To Net: NetName=VD33 Pin=IC?-80
+Added Pin To Net: NetName=GND Pin=IC?-81
+Added Pin To Net: NetName=VD12 Pin=IC?-82
+Added Pin To Net: NetName=VD12 Pin=IC?-102
+Added Pin To Net: NetName=GND Pin=IC?-103
+Added Pin To Net: NetName=VD33 Pin=IC?-104
+Added Pin To Net: NetName=NetIC?_6 Pin=IC?-112
+Added Pin To Net: NetName=NetIC?_5 Pin=IC?-113
+Added Pin To Net: NetName=VD33 Pin=IC?-144
+Added Pin To Net: NetName=GND Pin=IC?-145
+Added Pin To Net: NetName=VD12 Pin=IC?-146
+Added Pin To Net: NetName=GND Pin=IC?-147
+Added Pin To Net: NetName=VD18 Pin=IC?-148
+Added Pin To Net: NetName=GND Pin=IC?-149
+Added Pin To Net: NetName=VD18 Pin=IC?-150
+Added Pin To Net: NetName=GND Pin=IC?-151
+Added Pin To Net: NetName=VD18 Pin=IC?-152
+Added Pin To Net: NetName=GND Pin=IC?-153
+Added Pin To Net: NetName=VD33 Pin=IC?-154
+Added Pin To Net: NetName=VD12 Pin=IC?-163
+Added Pin To Net: NetName=VD12 Pin=IC?-164
+Added Pin To Net: NetName=GND Pin=IC?-165
+Added Pin To Net: NetName=VD12 Pin=IC?-166
+Added Pin To Net: NetName=VD33 Pin=IC?-183
+Added Pin To Net: NetName=GND Pin=IC?-186
+Added Pin To Net: NetName=GND Pin=IC?-202
+Added Pin To Net: NetName=VD12 Pin=IC?-203
+Added Pin To Net: NetName=VD12 Pin=IC?-204
+Added Pin To Net: NetName=GND Pin=IC?-205
+Added Pin To Net: NetName=VD33 Pin=IC?-208
+Added Pin To Net: NetName=VD12 Pin=IC?-210
+Added Pin To Net: NetName=GND Pin=IC?-211
+Added Pin To Net: NetName=VD33 Pin=IC?-214
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 12.5pF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 8pF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 12.5pF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component Y? 32.7680kHz
+Change Room Name: Old Name=Designator_7 New Name=Designator
+Change Room Name: Old Name=Designator_6 New Name=Designator
+Change Room Name: Old Name=Designator_5 New Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

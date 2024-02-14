@@ -1,0 +1,15 @@
+Change Component Designator: OldDesignator=D1 NewDesignator=D10
+Change Component Designator: OldDesignator=D2 NewDesignator=D9
+Change Component Designator: OldDesignator=D3 NewDesignator=D8
+Change Component Designator: OldDesignator=D4 NewDesignator=D7
+Change Component Designator: OldDesignator=D5 NewDesignator=D6
+Change Component Designator: OldDesignator=D6 NewDesignator=D5
+Change Component Designator: OldDesignator=D7 NewDesignator=D1
+Change Component Designator: OldDesignator=D8 NewDesignator=D2
+Change Component Designator: OldDesignator=D9 NewDesignator=D3
+Change Component Designator: OldDesignator=D10 NewDesignator=D4
+Change Component Designator: OldDesignator=D17 NewDesignator=D19
+Change Component Designator: OldDesignator=D18 NewDesignator=D17
+Change Component Designator: OldDesignator=D19 NewDesignator=D18
+Change Pin Propagation Delay: Pin=IC6-1 Old Delay=100ps New Delay=0ps
+Change Pin Propagation Delay: Pin=IC7-1 Old Delay=0ps New Delay=100ps

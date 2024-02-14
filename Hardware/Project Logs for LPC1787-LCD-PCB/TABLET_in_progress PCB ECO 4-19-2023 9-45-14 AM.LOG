@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=NetA1_27 Pin=A1-27
+Added Pin To Net: NetName=NetA1_27 Pin=IC16-2
+Added Net: Name=NetA1_27
+Added Pin To Net: NetName=NetA1_28 Pin=A1-28
+Added Pin To Net: NetName=NetA1_28 Pin=IC16-24
+Added Net: Name=NetA1_28

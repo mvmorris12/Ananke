@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: TABLET_Rev_02.GBR   6/20/2023  11:25:46 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTS                Top Solder                              
+.GTL                Top Layer1                              
+.G1                 PWR_Top                                 
+.G2                 GND_Top                                 
+.G3                 Middle_top                              
+.G4                 Middle_Bottom                           
+.G5                 GND_Bottom                              
+.G6                 PWR_Bottom                              
+.GBL                Bottom Layer8                           
+.GBS                Bottom Solder                           
+.GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
+.GM2                LCD                                     
+.GM6                Board Shape                             
+.GM13               Mechanical 13                           
+.GM15               Mechanical 15                           
+.GKO                Keep-Out Layer                          
+------------------------------------------------------------------------------------------

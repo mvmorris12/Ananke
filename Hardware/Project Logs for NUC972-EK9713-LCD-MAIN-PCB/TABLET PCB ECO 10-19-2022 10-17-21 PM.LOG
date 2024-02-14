@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=BAT_ANODE Pin=D1-1
+Removed Pin From Net: NetName=NetD1_2 Pin=D1-2
+Removed Pin From Net: NetName=NetD1_3 Pin=D1-3
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetIC14_3
+Change Net Name : Old Net Name=NetD1_3 New Net Name=NetIC14_4

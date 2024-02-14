@@ -1,0 +1,14 @@
+Added Pin To Net: NetName=VDD_10 Pin=DS1-2
+Added Pin To Net: NetName=VDD_3.3 Pin=DS1-4
+Added Pin To Net: NetName=VDD_3.3 Pin=DS1-31
+Added Pin To Net: NetName=VDD_3.3 Pin=DS2-10
+Added Pin To Net: NetName=NetC20_1 Pin=IC4-16
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

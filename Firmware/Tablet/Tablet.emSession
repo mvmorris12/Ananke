@@ -4,9 +4,30 @@
  <Breakpoints groups="Breakpoints;V7M Exceptions" active_group="Breakpoints">
   <BreakpointListItem trigger="" line="148" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/DSP/Examples/ARM/arm_fft_bin_example_f32.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="161" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/DSP/Examples/ARM/arm_fft_bin_example_f32.c" useHWbreakpoint="false"/>
+<<<<<<< Updated upstream
   <BreakpointListItem trigger="" line="56" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/FFT.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="582" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/FFT.c" useHWbreakpoint="false"/>
   <BreakpointListItem trigger="" line="89" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="src/main.c" useHWbreakpoint="false"/>
+=======
+  <BreakpointListItem trigger="" line="308" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="309" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="313" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="315" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="319" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="323" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="327" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="366" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="370" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="428" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="432" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="443" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="447" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="456" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="460" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/Apps/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="56" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="582" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="src/FFT.c" useHWbreakpoint="false"/>
+  <BreakpointListItem trigger="" line="90" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="2" filename="src/main.c" useHWbreakpoint="false"/>
+>>>>>>> Stashed changes
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
@@ -81,6 +102,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
+<<<<<<< Updated upstream
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="94" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/RAM.c" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="59" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="104" y="83" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/LCD.c" useBinaryEdit="0" left="0" path="include/LCD.h" selected="0" top="75" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="49" y="337" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/Interrupts.c" useBinaryEdit="0" left="0" path="src/LCD.c" selected="1" top="333" codecName="Default"/>
@@ -116,6 +138,11 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="848" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/arm_cfft_f32.c" selected="0" top="837" codecName=""/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="254" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="include/dsp/fast_math_functions.h" selected="0" top="243" codecName=""/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="253" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c" selected="0" top="242" codecName=""/>
+=======
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="167" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="147" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="1" useTextEdit="1" openedFrom="C:/Projects/Ananke/Firmware/Tablet/src/main.c" useBinaryEdit="0" left="0" path="include/Pathfinder.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="82" y="372" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/Apps/Pathfinder.c" selected="1" top="340" codecName="Default"/>
+>>>>>>> Stashed changes
  </Files>
  <ARMCrossStudioWindow activeProject="Tablet" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Projects/Ananke/Firmware/Tablet/include" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

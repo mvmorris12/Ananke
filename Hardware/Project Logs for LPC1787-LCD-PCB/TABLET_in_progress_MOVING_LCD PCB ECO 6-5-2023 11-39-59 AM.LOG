@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NetA1_94 Pin=IC18-1
+Removed Pin From Net: NetName=NetA1_96 Pin=IC18-2
+Removed Pin From Net: NetName=VDD_3.3 Pin=IC18-3
+Removed Pin From Net: NetName=GND Pin=IC18-4

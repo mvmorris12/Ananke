@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=VDD_3.3 Pin=DS1-4
+Removed Pin From Net: NetName=VDD_3.3 Pin=DS1-31
+Removed Pin From Net: NetName=VDD_3.3 Pin=DS2-10
+Added Pin To Net: NetName=NetD1_1 Pin=IC4-16
+Change Room Name: Old Name=Designator_7 New Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=BAT_CATHODE Pin=C11-2
+Removed Pin From Net: NetName=BAT_CATHODE Pin=IC3-2
+Removed Pin From Net: NetName=NetIC20_1 Pin=U2-8
+Removed Pin From Net: NetName=NetIC14_1 Pin=U2-9
+Removed Pin From Net: NetName=NetIC10_91 Pin=U2-19
+Removed Pin From Net: NetName=NetIC21_1 Pin=U2-20
+Removed Pin From Net: NetName=NetIC15_1 Pin=U2-21
+Removed Pin From Net: NetName=NetIC18_1 Pin=U2-22
+Removed Pin From Net: NetName=NetIC17_1 Pin=U2-25
+Added Pin To Net: NetName=NetIC14_1 Pin=U2-8
+Added Pin To Net: NetName=NetIC17_1 Pin=U2-9
+Added Pin To Net: NetName=NetIC10_91 Pin=U2-18
+Added Pin To Net: NetName=NetIC21_1 Pin=U2-19
+Added Pin To Net: NetName=NetIC15_1 Pin=U2-20
+Added Pin To Net: NetName=NetIC18_1 Pin=U2-21
+Added Pin To Net: NetName=NetIC20_1 Pin=U2-22
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=NetC11_2 Pin=IC3-2
+Added Net: Name=NetC11_2

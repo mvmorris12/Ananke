@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Projects\ESP32-S3-LPC1787-TFT-LCD\ESP32-S3-LPC1787FDB208-LCD-PCB\TABLET_in_progress_MOVING_LCD.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=tablet_in_progress_moving_lcd-roundholes.txt|DrillLayers=gtl,g1,g2,g3,g4,g5,g6,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=tablet_in_progress_moving_lcd-slotholes.txt|DrillLayers=gtl,g1,g2,g3,g4,g5,g6,gbl

@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetJ23_S Pin=C107-1
+Removed Pin From Net: NetName=NetJ23_S Pin=C107-2
+Removed Pin From Net: NetName=NetJ23_S Pin=IC2-1
+Removed Pin From Net: NetName=NetJ23_S Pin=IC2-3
+Removed Pin From Net: NetName=NetJ23_S Pin=MK1-3
+Removed Pin From Net: NetName=NetJ23_S Pin=MK1-4
+Removed Pin From Net: NetName=GND Pin=MK1-7
+Removed Pin From Net: NetName=GND Pin=R60-2
+Removed Pin From Net: NetName=NetJ23_S Pin=R61-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C107-1
+Added Pin To Net: NetName=GND Pin=C107-2
+Added Pin To Net: NetName=NetA1_107 Pin=IC2-1
+Added Pin To Net: NetName=GND Pin=IC2-2
+Added Pin To Net: NetName=NetIC2_3 Pin=IC2-3
+Added Pin To Net: NetName=NetMK1_1 Pin=MK1-1
+Added Pin To Net: NetName=GND Pin=MK1-2
+Added Pin To Net: NetName=VDD_3.3 Pin=MK1-3
+Added Pin To Net: NetName=NetIC2_3 Pin=MK1-4
+Added Pin To Net: NetName=NetA1_16 Pin=MK1-5
+Added Pin To Net: NetName=NetA1_18 Pin=MK1-6
+Added Pin To Net: NetName=NetA1_14 Pin=MK1-7
+Added Pin To Net: NetName=NetA1_14 Pin=R60-2
+Added Pin To Net: NetName=GND Pin=R61-1
+Added Pin To Net: NetName=NetA1_107 Pin=R61-2
+Added Pin To Net: NetName=NetA1_115 Pin=R66-1
+Added Pin To Net: NetName=NetMK1_1 Pin=R66-2
+Added Member To Class: ClassName=Designator Member=Component R66 0O

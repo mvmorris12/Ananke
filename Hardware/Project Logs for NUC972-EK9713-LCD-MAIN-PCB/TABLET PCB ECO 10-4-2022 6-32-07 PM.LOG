@@ -1,0 +1,20 @@
+Added Component: Designator=U1(TO-92-TO92127P495H2044-3)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DS18B20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC20_1 Pin=IC4-16
+Added Pin To Net: NetName=BAT_ANODE Pin=U1-1
+Added Pin To Net: NetName=NetIC10_121 Pin=U1-2
+Added Pin To Net: NetName=VDD_1.8_1 Pin=U1-3
+Change Room Name: Old Name=Designator_11 New Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=VDD_3.3 Pin=D17-3
+Removed Pin From Net: NetName=VDD_3.3 Pin=D19-3
+Added Component: Designator=Ds(LEDSC270X320X110-4N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IN-S128TATRGB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1210 Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IN-S128TATRGB/Inolux/view-part/3219922/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Dw(LEDSC270X320X110-4N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "IN-S128TATRGB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1210 Inolux"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/IN-S128TATRGB/Inolux/view-part/3219922/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VDD_3.3 Pin=Ds-1
+Added Pin To Net: NetName=VDD_3.3 Pin=Dw-1
+Added Pin To Net: NetName=NetDs_2 Pin=Ds-2
+Added Pin To Net: NetName=NetDs_2 Pin=R33-2
+Added Net: Name=NetDs_2
+Added Pin To Net: NetName=NetDs_3 Pin=Ds-3
+Added Pin To Net: NetName=NetDs_3 Pin=R40-2
+Added Net: Name=NetDs_3
+Added Pin To Net: NetName=NetDs_4 Pin=Ds-4
+Added Pin To Net: NetName=NetDs_4 Pin=R36-2
+Added Net: Name=NetDs_4
+Added Pin To Net: NetName=NetDw_2 Pin=Dw-2
+Added Pin To Net: NetName=NetDw_2 Pin=R35-2
+Added Net: Name=NetDw_2
+Added Pin To Net: NetName=NetDw_3 Pin=Dw-3
+Added Pin To Net: NetName=NetDw_3 Pin=R42-2
+Added Net: Name=NetDw_3
+Added Pin To Net: NetName=NetDw_4 Pin=Dw-4
+Added Pin To Net: NetName=NetDw_4 Pin=R37-2
+Added Net: Name=NetDw_4

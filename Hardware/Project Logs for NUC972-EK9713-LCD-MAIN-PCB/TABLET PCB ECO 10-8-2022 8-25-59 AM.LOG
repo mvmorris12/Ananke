@@ -1,0 +1,64 @@
+Added Component: Designator=DS1(4DLCD-70800480-CTP-CLB 40 PIN)
+Add component (AddParameter): Name = "Color"; Value = "Green/Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "LED00008"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "If - Forward Current"; Value = "20mA Green, 20mA Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Color"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "156125RV73000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Ribbon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "4-SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "LED"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "732-11429-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "710-156125RV73000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "LCD DISPLAY"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vf - Forward Voltage"; Value = "2.1V Green, 2V Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wavelength"; Value = "571nm Green, 624nm Red"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BAT_ANODE Pin=DS1-1
+Added Pin To Net: NetName=VDD_10 Pin=DS1-2
+Added Pin To Net: NetName=BAT_ANODE Pin=DS1-3
+Added Pin To Net: NetName=VDD_3.3 Pin=DS1-4
+Added Pin To Net: NetName=NetDS1_5 Pin=DS1-5
+Added Pin To Net: NetName=NetDS1_6 Pin=DS1-6
+Added Pin To Net: NetName=NetDS1_7 Pin=DS1-7
+Added Pin To Net: NetName=NetDS1_8 Pin=DS1-8
+Added Pin To Net: NetName=NetDS1_9 Pin=DS1-9
+Added Pin To Net: NetName=NetDS1_10 Pin=DS1-10
+Added Pin To Net: NetName=NetDS1_11 Pin=DS1-11
+Added Pin To Net: NetName=NetDS1_12 Pin=DS1-12
+Added Pin To Net: NetName=NetDS1_13 Pin=DS1-13
+Added Pin To Net: NetName=NetDS1_14 Pin=DS1-14
+Added Pin To Net: NetName=NetDS1_15 Pin=DS1-15
+Added Pin To Net: NetName=NetDS1_16 Pin=DS1-16
+Added Pin To Net: NetName=NetDS1_17 Pin=DS1-17
+Added Pin To Net: NetName=NetDS1_18 Pin=DS1-18
+Added Pin To Net: NetName=NetDS1_19 Pin=DS1-19
+Added Pin To Net: NetName=NetDS1_20 Pin=DS1-20
+Added Pin To Net: NetName=NetDS1_21 Pin=DS1-21
+Added Pin To Net: NetName=NetDS1_22 Pin=DS1-22
+Added Pin To Net: NetName=NetDS1_23 Pin=DS1-23
+Added Pin To Net: NetName=NetDS1_24 Pin=DS1-24
+Added Pin To Net: NetName=NetDS1_25 Pin=DS1-25
+Added Pin To Net: NetName=NetDS1_26 Pin=DS1-26
+Added Pin To Net: NetName=NetDS1_27 Pin=DS1-27
+Added Pin To Net: NetName=NetDS1_28 Pin=DS1-28
+Added Pin To Net: NetName=BAT_ANODE Pin=DS1-29
+Added Pin To Net: NetName=NetDS1_30 Pin=DS1-30
+Added Pin To Net: NetName=VDD_3.3 Pin=DS1-31
+Added Pin To Net: NetName=NetDS1_32 Pin=DS1-32
+Added Pin To Net: NetName=NetDS1_33 Pin=DS1-33
+Added Pin To Net: NetName=NetDS1_34 Pin=DS1-34
+Added Pin To Net: NetName=BAT_ANODE Pin=DS1-36
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

@@ -1,0 +1,348 @@
+Added Component: Designator=C110(CAP 0603_1608)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00045"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C2012JB0J106M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-7891-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "80-C0603C273K3R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "6.3V"; VariantName = "[No Variations]"
+Added Component: Designator=J12(TEST POINT)
+Add component (AddParameter): Name = "Connector Type"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating (Amps)"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "CON00015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material Flammability Rating"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions Loaded"; Value = "All"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch - Mating"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Style"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "Test Point"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Added Component: Designator=J13(TEST POINT)
+Add component (AddParameter): Name = "Connector Type"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating (Amps)"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "CON00015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material Flammability Rating"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions Loaded"; Value = "All"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch - Mating"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Style"; Value = "Pad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "Test Point"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Added Component: Designator=J14(10129383920001ALF)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10129383.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "9.85mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Amphenol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "10129383-920001ALF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "649-1012938392001ALF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/10129383-920001ALF?qs=0lQeLiL1qyYBAdDlPKGYtg%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R92(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES00033"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "0O"; VariantName = "[No Variations]"
+Added Component: Designator=R93(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R94(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R95(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R96(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R97(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R98(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R99(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R100(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R101(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=R102(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES0002B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10kO"; VariantName = "[No Variations]"
+Added Component: Designator=S4(SW_DS04-254-2-05BK-SMT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CUI_purchase_URL"; Value = "https://www.cuidevices.com/product/switches/dip-switches/ds04-254-smt-series?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CUI Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DS04-254-2-05BK-SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DS04-254-2-05BK-SMT/CUI%20Devices/view-part/4467312/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S5(SW_DS04-254-2-05BK-SMT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CUI_purchase_URL"; Value = "https://www.cuidevices.com/product/switches/dip-switches/ds04-254-smt-series?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "CUI Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DS04-254-2-05BK-SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DS04-254-2-05BK-SMT/CUI%20Devices/view-part/4467312/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BAT_ANODE Pin=C110-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C110-2
+Added Pin To Net: NetName=NetIC11_6 Pin=J12-1
+Added Pin To Net: NetName=NetIC11_5 Pin=J13-1
+Added Pin To Net: NetName=VDD_3.3 Pin=J14-A1
+Added Pin To Net: NetName=NetIC11_142 Pin=J14-A2
+Added Pin To Net: NetName=NetIC11_141 Pin=J14-A3
+Added Pin To Net: NetName=NetIC11_140 Pin=J14-A4
+Added Pin To Net: NetName=NetIC11_139 Pin=J14-A5
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-A6
+Added Pin To Net: NetName=NetIC11_138 Pin=J14-A7
+Added Pin To Net: NetName=NetC96_2 Pin=J14-A8
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B2
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B3
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B4
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B5
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B6
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B7
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B8
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B9
+Added Pin To Net: NetName=BAT_ANODE Pin=J14-B10
+Added Pin To Net: NetName=VDD_3.3 Pin=R92-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R93-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R94-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R95-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R96-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R97-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R98-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R99-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R100-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R101-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R102-1
+Added Pin To Net: NetName=NetIC11_50 Pin=S4-1B
+Added Pin To Net: NetName=NetIC11_51 Pin=S4-2B
+Added Pin To Net: NetName=NetIC11_52 Pin=S4-3B
+Added Pin To Net: NetName=NetIC11_53 Pin=S4-4B
+Added Pin To Net: NetName=NetIC11_54 Pin=S4-5B
+Added Pin To Net: NetName=NetIC11_45 Pin=S5-1B
+Added Pin To Net: NetName=NetIC11_46 Pin=S5-2B
+Added Pin To Net: NetName=NetIC11_47 Pin=S5-3B
+Added Pin To Net: NetName=NetIC11_48 Pin=S5-4B
+Added Pin To Net: NetName=NetIC11_49 Pin=S5-5B
+Added Pin To Net: NetName=XTAL_12_2 Pin=Y2-1
+Added Pin To Net: NetName=XTAL_12_1 Pin=Y2-2
+Added Pin To Net: NetName=NetJ14_B1 Pin=J14-B1
+Added Pin To Net: NetName=NetJ14_B1 Pin=R92-2
+Added Net: Name=NetJ14_B1
+Added Pin To Net: NetName=NetR93_2 Pin=R93-2
+Added Pin To Net: NetName=NetR93_2 Pin=S5-1A
+Added Net: Name=NetR93_2
+Added Pin To Net: NetName=NetR94_2 Pin=R94-2
+Added Pin To Net: NetName=NetR94_2 Pin=S5-2A
+Added Net: Name=NetR94_2
+Added Pin To Net: NetName=NetR95_2 Pin=R95-2
+Added Pin To Net: NetName=NetR95_2 Pin=S5-3A
+Added Net: Name=NetR95_2
+Added Pin To Net: NetName=NetR96_2 Pin=R96-2
+Added Pin To Net: NetName=NetR96_2 Pin=S5-4A
+Added Net: Name=NetR96_2
+Added Pin To Net: NetName=NetR97_2 Pin=R97-2
+Added Pin To Net: NetName=NetR97_2 Pin=S5-5A
+Added Net: Name=NetR97_2
+Added Pin To Net: NetName=NetR98_2 Pin=R98-2
+Added Pin To Net: NetName=NetR98_2 Pin=S4-1A
+Added Net: Name=NetR98_2
+Added Pin To Net: NetName=NetR99_2 Pin=R99-2
+Added Pin To Net: NetName=NetR99_2 Pin=S4-2A
+Added Net: Name=NetR99_2
+Added Pin To Net: NetName=NetR100_2 Pin=R100-2
+Added Pin To Net: NetName=NetR100_2 Pin=S4-3A
+Added Net: Name=NetR100_2
+Added Pin To Net: NetName=NetR101_2 Pin=R101-2
+Added Pin To Net: NetName=NetR101_2 Pin=S4-4A
+Added Net: Name=NetR101_2
+Added Pin To Net: NetName=NetR102_2 Pin=R102-2
+Added Pin To Net: NetName=NetR102_2 Pin=S4-5A
+Added Net: Name=NetR102_2

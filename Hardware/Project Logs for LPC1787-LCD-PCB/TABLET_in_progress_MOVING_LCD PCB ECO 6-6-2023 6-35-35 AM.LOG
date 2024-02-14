@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=BAT1-1
+Removed Pin From Net: NetName=NetA1_38 Pin=BAT1-4
+Added Component: Designator=BT1(BAT_BS-3)
+Add component (AddParameter): Name = "Availability"; Value = "Warning"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "MPD (Memory"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BS-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/BS-3/Memory%20Protection%20Devices/view-part/2280959/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BT1-NEG
+Added Pin To Net: NetName=NetA1_38 Pin=BT1-POS

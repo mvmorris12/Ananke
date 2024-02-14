@@ -1,0 +1,14 @@
+Added Pin To Net: NetName=BAT_ANODE Pin=C18-1
+Added Pin To Net: NetName=BAT_ANODE Pin=C19-1
+Added Pin To Net: NetName=BAT_ANODE Pin=C24-1
+Added Pin To Net: NetName=BAT_ANODE Pin=C25-1
+Added Pin To Net: NetName=BAT_ANODE Pin=IC5-4
+Added Pin To Net: NetName=BAT_ANODE Pin=IC5-6
+Added Pin To Net: NetName=BAT_ANODE Pin=IC6-4
+Added Pin To Net: NetName=BAT_ANODE Pin=IC6-6
+Added Pin To Net: NetName=NetDS1_6 Pin=IC18-1
+Added Pin To Net: NetName=NetDS1_6 Pin=IC18-2
+Added Pin To Net: NetName=VDD_3.3 Pin=IC18-3
+Added Pin To Net: NetName=BAT_ANODE Pin=IC18-4
+Added Pin To Net: NetName=BAT_ANODE Pin=R9-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R14-1

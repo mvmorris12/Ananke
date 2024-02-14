@@ -1,0 +1,53 @@
+Removed Pin From Net: NetName=NetDS2_6 Pin=IC10-2
+Removed Pin From Net: NetName=NetDS2_7 Pin=IC10-4
+Removed Pin From Net: NetName=VDD_3.0_COIN_RTC Pin=IC11-5
+Removed Pin From Net: NetName=NetDS2_7 Pin=R28-1
+Removed Pin From Net: NetName=NetDS2_6 Pin=R30-1
+Change Component Comment : Designator=IC27 Old Comment=' New Comment=2Gbit Memory
+Added Component: Designator=R68(RES 0603_1608 RF)
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "RES00033"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?CRCW0603820KFKEAC?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.100W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "?541-5568-1-ND?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "71-CRCW0603820KFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "0O"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BAT_ANODE Pin=C8-2
+Added Pin To Net: NetName=BAT_ANODE Pin=C9-2
+Added Pin To Net: NetName=BAT_ANODE Pin=C10-2
+Added Pin To Net: NetName=BAT_ANODE Pin=C48-2
+Added Pin To Net: NetName=BAT_ANODE Pin=C49-2
+Added Pin To Net: NetName=BAT_ANODE Pin=D5-4
+Added Pin To Net: NetName=BAT_ANODE Pin=IC2-21
+Added Pin To Net: NetName=BAT_ANODE Pin=IC9-7
+Added Pin To Net: NetName=NetDS2_6 Pin=IC10-1
+Added Pin To Net: NetName=NetDS2_6 Pin=IC10-4
+Added Pin To Net: NetName=BAT_ANODE Pin=IC10-212
+Added Pin To Net: NetName=NetDS2_6 Pin=IC11-8
+Added Pin To Net: NetName=NetDS2_6 Pin=IC30-1
+Added Pin To Net: NetName=BAT_ANODE Pin=J4-1
+Added Pin To Net: NetName=BAT_ANODE Pin=J7-1
+Added Pin To Net: NetName=NetDS2_6 Pin=J11-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R19-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R20-1
+Added Pin To Net: NetName=BAT_ANODE Pin=R21-1
+Added Pin To Net: NetName=NetDS2_6 Pin=R28-1
+Added Pin To Net: NetName=NetDS2_6 Pin=R31-1
+Added Pin To Net: NetName=VDD_3.0_COIN_RTC Pin=R68-1
+Added Pin To Net: NetName=NetIC10_2 Pin=IC10-2
+Added Pin To Net: NetName=NetIC10_2 Pin=R30-1
+Added Net: Name=NetIC10_2
+Added Pin To Net: NetName=NetIC11_5 Pin=IC11-5
+Added Pin To Net: NetName=NetIC11_5 Pin=R68-2
+Added Net: Name=NetIC11_5
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ5_1 Pin=R22-2
+Added Net: Name=NetJ5_1

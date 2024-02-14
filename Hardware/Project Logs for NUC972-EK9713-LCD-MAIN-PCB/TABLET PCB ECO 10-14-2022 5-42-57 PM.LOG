@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC15-2
+Added Pin To Net: NetName=V3_COIN_GND Pin=IC15-2
+Added Net: Name=V3_COIN_GND

@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
 #define TIMESTAMP_AT_FLASH_SEC  (39)
 #define TIMESTAMP_AT_FLASH_MIN  (47)
 #define TIMESTAMP_AT_FLASH_HR   (15)
 #define TIMESTAMP_AT_FLASH_DAY  (5)
 #define TIMESTAMP_AT_FLASH_DATE (11)
 #define TIMESTAMP_AT_FLASH_MON  (8)
+=======
+#define TIMESTAMP_AT_FLASH_SEC  (56)
+#define TIMESTAMP_AT_FLASH_MIN  (10)
+#define TIMESTAMP_AT_FLASH_HR   (22)
+#define TIMESTAMP_AT_FLASH_DAY  (2)
+#define TIMESTAMP_AT_FLASH_DATE (19)
+#define TIMESTAMP_AT_FLASH_MON  (12)
+>>>>>>> Stashed changes
 #define TIMESTAMP_AT_FLASH_YR   (2023)

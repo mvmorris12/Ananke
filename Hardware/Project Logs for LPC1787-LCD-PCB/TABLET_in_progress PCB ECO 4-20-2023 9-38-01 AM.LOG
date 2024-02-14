@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=GND Pin=S1_1-1
+Removed Pin From Net: NetName=NetA1_35 Pin=S1_1-3
+Removed Pin From Net: NetName=GND Pin=S4-2
+Removed Pin From Net: NetName=GND Pin=S4-2
+Change component parameters: Designator = "S4" ("S4"); Footprint = "PANASONIC EVP-AA002K"; UniqueID = "\RAYGIIMQ\WOQFDERB\GZBWEWQW" ("\RAYGIIMQ\WOQFDERB\GZBWEWQW")
+Change component parameters (AddParameter): Name = "Contact Rating @ Voltage"; Value = "0.05A @ 24VDC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device ID"; Value = "GPTS202312B"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity ALCOSWITCH Switches"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer P/N"; Value = "FSM4JSMASTR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Force"; Value = "160gf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 105°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "4-Lead SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Type"; Value = "Button"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1 P/N"; Value = "450-2141-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2 P/N"; Value = "506-1-1977223-0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Switch Function"; Value = "Off-Mom"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "SPST-NO"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetA1_110 Pin=S4-2
+Added Pin To Net: NetName=NetA1_110 Pin=S4-2
+Added Member To Class: ClassName=Designator Member=Component S5 SPST-NO
+Added Member To Class: ClassName=Designator Member=Component S6 SPST-NO

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VDD_5_USB Pin=IC11-212
+Added Pin To Net: NetName=NetIC11_212 Pin=IC11-212
+Added Pin To Net: NetName=NetIC11_212 Pin=J3-1
+Added Pin To Net: NetName=NetIC11_212 Pin=R22-2
+Added Net: Name=NetIC11_212

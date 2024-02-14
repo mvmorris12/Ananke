@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetIC11_1 Pin=IC18-1
+Added Pin To Net: NetName=NetIC11_3 Pin=IC18-2
+Added Pin To Net: NetName=VDD_3.3 Pin=IC18-3
+Added Pin To Net: NetName=BAT_ANODE Pin=IC18-4

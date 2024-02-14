@@ -1,0 +1,66 @@
+Added Component: Designator=L1(IND_SPM6530T-1R0M120)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SPM6530T-1R0M120"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "NON STANDARD-2 TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/SPM6530T-1R0M120/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=L3(IND_SPM6530T-1R0M120)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SPM6530T-1R0M120"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "NON STANDARD-2 TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/SPM6530T-1R0M120/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=L4(IND_SPM6530T-1R0M120)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SPM6530T-1R0M120"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "NON STANDARD-2 TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/SPM6530T-1R0M120/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/SPM6530T-1R0M120/TDK/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=MK1(MIC_DMM-4026-B-I2S-R)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DMM-4026-B-I2S-R/PUI+Audio%252C+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "668-DMM-4026-B-I2S-RCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "PUI Audio, Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DMM-4026-B-I2S-R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "PUI Audio, Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/DMM-4026-B-I2S-R/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DMM-4026-B-I2S-R/PUI+Audio%252C+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_2 Pin=IC4-16
+Added Pin To Net: NetName=NetDS2_6 Pin=IC10-2
+Added Pin To Net: NetName=NetDS2_6 Pin=IC11-7
+Added Pin To Net: NetName=NetDS2_6 Pin=J29-1
+Added Pin To Net: NetName=NetIC1_3 Pin=L1-1
+Added Pin To Net: NetName=VDD_1.8_1 Pin=L1-2
+Added Pin To Net: NetName=NetIC5_3 Pin=L3-1
+Added Pin To Net: NetName=VDD_1.2_1 Pin=L3-2
+Added Pin To Net: NetName=NetIC7_3 Pin=L4-1
+Added Pin To Net: NetName=VDD_1.8_1 Pin=L4-2
+Added Pin To Net: NetName=NetMK1_1 Pin=MK1-1
+Added Pin To Net: NetName=BAT_ANODE Pin=MK1-2
+Added Pin To Net: NetName=VDD_1.8_1 Pin=MK1-3
+Added Pin To Net: NetName=NetIC28_3 Pin=MK1-4
+Added Pin To Net: NetName=NetIC10_5 Pin=MK1-5
+Added Pin To Net: NetName=NetMK1_6 Pin=MK1-6
+Added Pin To Net: NetName=NetIC10_7 Pin=MK1-7
+Added Pin To Net: NetName=NetDS2_6 Pin=R32-1
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

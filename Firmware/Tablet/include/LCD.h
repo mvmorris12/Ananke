@@ -79,7 +79,7 @@ void InitLCDPorts(void);
 void lcd_fill_screen(uint32_t color);
 void lcd_draw_pixel(uint16_t x, uint16_t y, uint32_t color);
 void lcd_draw_line(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t thickness, uint32_t color);
-void lcd_draw_circle(int16_t xm, int16_t ym, int16_t r, uint32_t color);
+void lcd_draw_circle(int16_t xm, int16_t ym, int16_t r, uint32_t border_color, uint8_t fill, uint32_t fill_color);
 void lcd_draw_square(uint16_t x, uint16_t y, uint16_t thickness, uint32_t color);
 void lcd_draw_rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t fill, uint8_t width, uint32_t color);
 void lcd_draw_text(char *string, uint16_t x, uint16_t y, uint32_t color);
@@ -92,4 +92,22 @@ void lcd_draw_audio_graph(uint8_t init);
 void lcd_process_audio_signal(void);
 void lcd_draw_audio_signal(void);
 void lcd_clear_audio_signal(void);
+<<<<<<< Updated upstream
 void lcd_fft_draw_buttons(void);
+=======
+
+void lcd_fft_draw_buttons(void);
+void lcd_toggle_fft_scale_button(void);
+void lcd_toggle_pause_button(void);
+void lcd_speech_draw_buttons(void);
+
+void lcd_draw_speech_models(void);
+void lcd_draw_speech_buttons(void);
+void lcd_toggle_record_button(void);
+void lcd_speech_draw_test_signal(int iteration);
+void lcd_speech_clear_test_signal(void);
+void lcd_speech_clear_answer(void);
+void lcd_speech_draw_answer(uint32_t word);
+
+void lcd_pf_draw_buttons(void);
+>>>>>>> Stashed changes

@@ -69,6 +69,11 @@ Output/Debug/Obj/Tablet/main.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\getdatetime.h \
   C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Cube.h \
+<<<<<<< Updated upstream
+=======
+  C:\Projects\Ananke\Firmware\Tablet\include\Pathfinder.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+>>>>>>> Stashed changes
   C:\Projects\Ananke\Firmware\Tablet\include\Physics.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Pong.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Launcher.h \

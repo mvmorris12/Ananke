@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=BAT_ANODE Pin=C11-2
+Added Pin To Net: NetName=BAT_ANODE Pin=IC2-11
+Added Pin To Net: NetName=BAT_ANODE Pin=IC2-12
+Added Pin To Net: NetName=BAT_ANODE Pin=IC3-2
+Added Pin To Net: NetName=NetIC10_162 Pin=IC28-1
+Added Pin To Net: NetName=BAT_ANODE Pin=J1-1
+Added Pin To Net: NetName=NetIC10_162 Pin=R61-2

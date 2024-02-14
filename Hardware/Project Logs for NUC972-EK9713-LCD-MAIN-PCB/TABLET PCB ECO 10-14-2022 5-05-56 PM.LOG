@@ -1,0 +1,232 @@
+Removed Member From Class: ClassName=Designator Member=D2
+Removed Member From Class: ClassName=Designator Member=D12
+Removed Member From Class: ClassName=Designator Member=R39
+Removed Member From Class: ClassName=Designator Member=S1
+Change Net Name : Old Net Name=NetC107_2 New Net Name=NetC103_2
+Change Net Name : Old Net Name=NetC108_2 New Net Name=NetC104_2
+Change Net Name : Old Net Name=NetD1_1 New Net Name=NetD12_1
+Change Net Name : Old Net Name=NetD2_2 New Net Name=NetD4_2
+Change Net Name : Old Net Name=NetD4_A New Net Name=NetD11_A
+Change Net Name : Old Net Name=NetD5_2 New Net Name=NetD1_2
+Change Net Name : Old Net Name=NetD5_3 New Net Name=NetD1_3
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD19_1
+Change Net Name : Old Net Name=NetD6_2 New Net Name=NetD19_2
+Change Net Name : Old Net Name=NetD6_4 New Net Name=NetD19_4
+Change Net Name : Old Net Name=NetD7_1 New Net Name=NetD18_1
+Change Net Name : Old Net Name=NetD7_2 New Net Name=NetD18_2
+Change Net Name : Old Net Name=NetD7_4 New Net Name=NetD18_4
+Change Net Name : Old Net Name=NetD8_1 New Net Name=NetD17_1
+Change Net Name : Old Net Name=NetD8_2 New Net Name=NetD17_2
+Change Net Name : Old Net Name=NetD8_4 New Net Name=NetD17_4
+Change Net Name : Old Net Name=NetD9_1 New Net Name=NetD16_1
+Change Net Name : Old Net Name=NetD9_2 New Net Name=NetD16_2
+Change Net Name : Old Net Name=NetD9_4 New Net Name=NetD16_4
+Change Net Name : Old Net Name=NetD10_1 New Net Name=NetD15_1
+Change Net Name : Old Net Name=NetD10_2 New Net Name=NetD15_2
+Change Net Name : Old Net Name=NetD10_4 New Net Name=NetD15_4
+Change Net Name : Old Net Name=NetD11_1 New Net Name=NetD14_1
+Change Net Name : Old Net Name=NetD11_2 New Net Name=NetD14_2
+Change Net Name : Old Net Name=NetD11_4 New Net Name=NetD14_4
+Change Net Name : Old Net Name=NetD12_1 New Net Name=NetD13_1
+Change Net Name : Old Net Name=NetD12_2 New Net Name=NetD13_2
+Change Net Name : Old Net Name=NetD12_4 New Net Name=NetD13_4
+Change Net Name : Old Net Name=NetD13_2 New Net Name=NetD2_2
+Change Net Name : Old Net Name=NetD14_1 New Net Name=NetD6_1
+Change Net Name : Old Net Name=NetD14_2 New Net Name=NetD6_2
+Change Net Name : Old Net Name=NetD14_4 New Net Name=NetD6_4
+Change Net Name : Old Net Name=NetD15_1 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetD15_2 New Net Name=NetD5_2
+Change Net Name : Old Net Name=NetD15_4 New Net Name=NetD5_4
+Change Net Name : Old Net Name=NetD16_1 New Net Name=NetD8_1
+Change Net Name : Old Net Name=NetD16_2 New Net Name=NetD8_2
+Change Net Name : Old Net Name=NetD16_4 New Net Name=NetD8_4
+Change Net Name : Old Net Name=NetD17_1 New Net Name=NetD7_1
+Change Net Name : Old Net Name=NetD17_2 New Net Name=NetD7_2
+Change Net Name : Old Net Name=NetD17_4 New Net Name=NetD7_4
+Change Net Name : Old Net Name=NetD18_1 New Net Name=NetD10_1
+Change Net Name : Old Net Name=NetD18_2 New Net Name=NetD10_2
+Change Net Name : Old Net Name=NetD18_4 New Net Name=NetD10_4
+Change Net Name : Old Net Name=NetD19_1 New Net Name=NetD9_1
+Change Net Name : Old Net Name=NetD19_2 New Net Name=NetD9_2
+Change Net Name : Old Net Name=NetD19_4 New Net Name=NetD9_4
+Change Net Name : Old Net Name=NetDS1_5 New Net Name=NetDS2_5
+Change Net Name : Old Net Name=NetDS1_6 New Net Name=NetDS2_6
+Change Net Name : Old Net Name=NetDS1_7 New Net Name=NetDS2_7
+Change Net Name : Old Net Name=NetDS1_8 New Net Name=NetDS2_8
+Change Net Name : Old Net Name=NetDS1_9 New Net Name=NetDS2_9
+Change Net Name : Old Net Name=NetDS1_10 New Net Name=NetDS2_10
+Change Net Name : Old Net Name=NetDS1_11 New Net Name=NetDS2_11
+Change Net Name : Old Net Name=NetDS1_12 New Net Name=NetDS2_12
+Change Net Name : Old Net Name=NetDS1_13 New Net Name=NetDS2_13
+Change Net Name : Old Net Name=NetDS1_14 New Net Name=NetDS2_14
+Change Net Name : Old Net Name=NetDS1_15 New Net Name=NetDS2_15
+Change Net Name : Old Net Name=NetDS1_16 New Net Name=NetDS2_16
+Change Net Name : Old Net Name=NetDS1_17 New Net Name=NetDS2_17
+Change Net Name : Old Net Name=NetDS1_18 New Net Name=NetDS2_18
+Change Net Name : Old Net Name=NetDS1_19 New Net Name=NetDS2_19
+Change Net Name : Old Net Name=NetDS1_20 New Net Name=NetDS2_20
+Change Net Name : Old Net Name=NetDS1_21 New Net Name=NetDS2_21
+Change Net Name : Old Net Name=NetDS1_22 New Net Name=NetDS2_22
+Change Net Name : Old Net Name=NetDS1_23 New Net Name=NetDS2_23
+Change Net Name : Old Net Name=NetDS1_24 New Net Name=NetDS2_24
+Change Net Name : Old Net Name=NetDS1_25 New Net Name=NetDS2_25
+Change Net Name : Old Net Name=NetDS1_26 New Net Name=NetDS2_26
+Change Net Name : Old Net Name=NetDS1_27 New Net Name=NetDS2_27
+Change Net Name : Old Net Name=NetDS1_28 New Net Name=NetDS2_28
+Change Net Name : Old Net Name=NetDS1_30 New Net Name=NetDS2_30
+Change Net Name : Old Net Name=NetDS1_32 New Net Name=NetDS2_32
+Change Net Name : Old Net Name=NetDS1_33 New Net Name=NetDS2_33
+Change Net Name : Old Net Name=NetDS1_34 New Net Name=NetDS2_34
+Change Net Name : Old Net Name=NetDS2_3 New Net Name=NetDS1_3
+Change Net Name : Old Net Name=NetDS2_5 New Net Name=NetDS1_5
+Change Net Name : Old Net Name=NetDS2_6 New Net Name=NetDS1_6
+Change Net Name : Old Net Name=NetDS2_7 New Net Name=NetDS1_7
+Change Net Name : Old Net Name=NetIC1_3 New Net Name=NetIC4_3
+Change Net Name : Old Net Name=NetIC1_7 New Net Name=NetIC4_7
+Change Net Name : Old Net Name=NetIC1_8 New Net Name=NetIC4_8
+Change Net Name : Old Net Name=NetIC2_5 New Net Name=NetIC16_5
+Change Net Name : Old Net Name=NetIC2_7 New Net Name=NetIC16_7
+Change Net Name : Old Net Name=NetIC2_8 New Net Name=NetIC16_8
+Change Net Name : Old Net Name=NetIC2_9 New Net Name=NetIC7_1
+Change Net Name : Old Net Name=NetIC2_10 New Net Name=NetIC16_10
+Change Net Name : Old Net Name=NetIC2_15 New Net Name=NetIC16_15
+Change Net Name : Old Net Name=NetIC7_3 New Net Name=NetIC6_3
+Change Net Name : Old Net Name=NetIC7_7 New Net Name=NetIC6_7
+Change Net Name : Old Net Name=NetIC9_8 New Net Name=NetIC14_8
+Change Net Name : Old Net Name=NetIC9_9 New Net Name=NetIC14_9
+Change Net Name : Old Net Name=NetIC10_2 New Net Name=NetIC11_2
+Change Net Name : Old Net Name=NetIC10_5 New Net Name=NetIC11_5
+Change Net Name : Old Net Name=NetIC10_6 New Net Name=NetIC11_6
+Change Net Name : Old Net Name=NetIC10_7 New Net Name=NetIC11_7
+Change Net Name : Old Net Name=NetIC10_8 New Net Name=NetIC11_8
+Change Net Name : Old Net Name=NetIC10_9 New Net Name=NetIC11_9
+Change Net Name : Old Net Name=NetIC10_22 New Net Name=NetIC11_22
+Change Net Name : Old Net Name=NetIC10_23 New Net Name=NetIC11_23
+Change Net Name : Old Net Name=NetIC10_56 New Net Name=NetIC3_1
+Change Net Name : Old Net Name=NetIC10_60 New Net Name=NetIC11_60
+Change Net Name : Old Net Name=NetIC10_61 New Net Name=NetIC11_61
+Change Net Name : Old Net Name=NetIC10_62 New Net Name=NetIC11_62
+Change Net Name : Old Net Name=NetIC10_63 New Net Name=NetIC11_63
+Change Net Name : Old Net Name=NetIC10_64 New Net Name=NetIC11_64
+Change Net Name : Old Net Name=NetIC10_65 New Net Name=NetIC11_65
+Change Net Name : Old Net Name=NetIC10_67 New Net Name=NetIC11_67
+Change Net Name : Old Net Name=NetIC10_68 New Net Name=NetIC11_68
+Change Net Name : Old Net Name=NetIC10_71 New Net Name=NetIC11_71
+Change Net Name : Old Net Name=NetIC10_72 New Net Name=NetIC10_4
+Change Net Name : Old Net Name=NetIC10_73 New Net Name=NetIC10_9
+Change Net Name : Old Net Name=NetIC10_75 New Net Name=NetIC11_75
+Change Net Name : Old Net Name=NetIC10_76 New Net Name=NetIC11_76
+Change Net Name : Old Net Name=NetIC10_77 New Net Name=NetIC11_77
+Change Net Name : Old Net Name=NetIC10_78 New Net Name=NetIC11_78
+Change Net Name : Old Net Name=NetIC10_79 New Net Name=NetIC11_79
+Change Net Name : Old Net Name=NetIC10_83 New Net Name=NetIC10_12
+Change Net Name : Old Net Name=NetIC10_84 New Net Name=NetIC1_1
+Change Net Name : Old Net Name=NetIC10_85 New Net Name=NetIC11_85
+Change Net Name : Old Net Name=NetIC10_86 New Net Name=NetIC11_86
+Change Net Name : Old Net Name=NetIC10_87 New Net Name=NetIC11_87
+Change Net Name : Old Net Name=NetIC10_88 New Net Name=NetIC11_88
+Change Net Name : Old Net Name=NetIC10_89 New Net Name=NetIC11_89
+Change Net Name : Old Net Name=NetIC10_90 New Net Name=NetIC11_90
+Change Net Name : Old Net Name=NetIC10_91 New Net Name=NetIC11_91
+Change Net Name : Old Net Name=NetIC10_92 New Net Name=NetIC10_13
+Change Net Name : Old Net Name=NetIC10_93 New Net Name=NetIC10_14
+Change Net Name : Old Net Name=NetIC10_94 New Net Name=NetIC10_1
+Change Net Name : Old Net Name=NetIC10_95 New Net Name=NetIC11_95
+Change Net Name : Old Net Name=NetIC10_96 New Net Name=NetIC11_96
+Change Net Name : Old Net Name=NetIC10_97 New Net Name=NetIC11_97
+Change Net Name : Old Net Name=NetIC10_98 New Net Name=NetIC11_98
+Change Net Name : Old Net Name=NetIC10_99 New Net Name=NetIC11_99
+Change Net Name : Old Net Name=NetIC10_100 New Net Name=NetIC11_100
+Change Net Name : Old Net Name=NetIC10_101 New Net Name=NetIC11_101
+Change Net Name : Old Net Name=NetIC10_105 New Net Name=NetIC11_105
+Change Net Name : Old Net Name=NetIC10_106 New Net Name=NetIC11_106
+Change Net Name : Old Net Name=NetIC10_107 New Net Name=NetIC11_107
+Change Net Name : Old Net Name=NetIC10_108 New Net Name=NetIC11_108
+Change Net Name : Old Net Name=NetIC10_111 New Net Name=NetIC9_1
+Change Net Name : Old Net Name=NetIC10_112 New Net Name=NetIC9_6
+Change Net Name : Old Net Name=NetIC10_113 New Net Name=NetIC9_5
+Change Net Name : Old Net Name=NetIC10_114 New Net Name=NetIC9_2
+Change Net Name : Old Net Name=NetIC10_115 New Net Name=NetIC9_3
+Change Net Name : Old Net Name=NetIC10_116 New Net Name=NetIC9_7
+Change Net Name : Old Net Name=NetIC10_123 New Net Name=NetIC11_123
+Change Net Name : Old Net Name=NetIC10_124 New Net Name=NetIC11_124
+Change Net Name : Old Net Name=NetIC10_125 New Net Name=NetIC11_125
+Change Net Name : Old Net Name=NetIC10_126 New Net Name=NetIC11_126
+Change Net Name : Old Net Name=NetIC10_127 New Net Name=NetIC11_127
+Change Net Name : Old Net Name=NetIC10_128 New Net Name=NetIC11_128
+Change Net Name : Old Net Name=NetIC10_129 New Net Name=NetIC11_129
+Change Net Name : Old Net Name=NetIC10_130 New Net Name=NetIC11_130
+Change Net Name : Old Net Name=NetIC10_131 New Net Name=NetIC11_131
+Change Net Name : Old Net Name=NetIC10_132 New Net Name=NetIC11_132
+Change Net Name : Old Net Name=NetIC10_133 New Net Name=NetIC11_133
+Change Net Name : Old Net Name=NetIC10_134 New Net Name=NetIC11_134
+Change Net Name : Old Net Name=NetIC10_135 New Net Name=NetIC11_135
+Change Net Name : Old Net Name=NetIC10_136 New Net Name=NetIC11_136
+Change Net Name : Old Net Name=NetIC10_137 New Net Name=NetIC11_137
+Change Net Name : Old Net Name=NetIC10_138 New Net Name=NetIC11_138
+Change Net Name : Old Net Name=NetIC10_139 New Net Name=NetIC11_139
+Change Net Name : Old Net Name=NetIC10_140 New Net Name=NetIC11_140
+Change Net Name : Old Net Name=NetIC10_141 New Net Name=NetIC11_141
+Change Net Name : Old Net Name=NetIC10_142 New Net Name=NetIC11_142
+Change Net Name : Old Net Name=NetIC10_161 New Net Name=NetIC11_161
+Change Net Name : Old Net Name=NetIC10_162 New Net Name=NetIC2_1
+Change Net Name : Old Net Name=NetIC10_171 New Net Name=NetIC11_171
+Change Net Name : Old Net Name=NetIC10_172 New Net Name=NetIC11_172
+Change Net Name : Old Net Name=NetIC10_173 New Net Name=NetIC11_173
+Change Net Name : Old Net Name=NetIC10_174 New Net Name=NetIC11_174
+Change Net Name : Old Net Name=NetIC10_175 New Net Name=NetIC11_175
+Change Net Name : Old Net Name=NetIC10_176 New Net Name=NetIC11_176
+Change Net Name : Old Net Name=NetIC10_198 New Net Name=NetIC11_198
+Change Net Name : Old Net Name=NetIC10_209 New Net Name=NetIC11_209
+Change Net Name : Old Net Name=NetIC10_213 New Net Name=NetIC11_213
+Change Net Name : Old Net Name=NetIC10_215 New Net Name=NetIC11_215
+Change Net Name : Old Net Name=NetIC10_216 New Net Name=NetIC11_216
+Change Net Name : Old Net Name=NetIC11_5 New Net Name=NetIC15_5
+Change Net Name : Old Net Name=NetIC28_3 New Net Name=NetIC2_3
+Change Net Name : Old Net Name=NetJ4_4 New Net Name=NetJ42_4
+Change Net Name : Old Net Name=NetJ4_S New Net Name=NetJ42_S
+Change Net Name : Old Net Name=NetJ5_1 New Net Name=NetJ3_1
+Change Net Name : Old Net Name=NetJ7_2 New Net Name=NetJ43_2
+Change Net Name : Old Net Name=NetJ7_3 New Net Name=NetJ43_3
+Change Net Name : Old Net Name=NetJ7_4 New Net Name=NetJ43_4
+Change Net Name : Old Net Name=NetJ7_S New Net Name=NetJ43_S
+Change Net Name : Old Net Name=NetJ45_2 New Net Name=NetJ44_2
+Change Net Name : Old Net Name=NetJ45_3 New Net Name=NetJ44_3
+Change Net Name : Old Net Name=NetR37_1 New Net Name=NetR30_1
+Change Net Name : Old Net Name=NetR38_1 New Net Name=NetR37_1
+Change Net Name : Old Net Name=NetR67_2 New Net Name=NetR67_1
+Change Net Name : Old Net Name=NetR75_1 New Net Name=NetR77_1
+Change Net Name : Old Net Name=NetR76_1 New Net Name=NetR75_1
+Change Net Name : Old Net Name=NetR77_1 New Net Name=NetR76_1
+Change Net Name : Old Net Name=NetR78_1 New Net Name=NetR84_1
+Change Net Name : Old Net Name=NetR79_1 New Net Name=NetR85_1
+Change Net Name : Old Net Name=NetR80_1 New Net Name=NetR82_1
+Change Net Name : Old Net Name=NetR81_1 New Net Name=NetR83_1
+Change Net Name : Old Net Name=NetR82_1 New Net Name=NetR80_1
+Change Net Name : Old Net Name=NetR83_1 New Net Name=NetR81_1
+Change Net Name : Old Net Name=NetR84_1 New Net Name=NetR78_1
+Change Net Name : Old Net Name=NetR85_1 New Net Name=NetR79_1
+Change Net Name : Old Net Name=NetR86_1 New Net Name=NetR87_1
+Change Net Name : Old Net Name=NetR87_1 New Net Name=NetR88_1
+Change Net Name : Old Net Name=NetR88_1 New Net Name=NetR89_1
+Change Net Name : Old Net Name=NetR89_1 New Net Name=NetR86_1
+Added Member To Class: ClassName=Designator Member=Component D5 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D8 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D9 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D10 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D13 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D15 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D17 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component D18 B38G3RGB-10D0003H2U1930
+Added Member To Class: ClassName=Designator Member=Component R30 30O
+Added Member To Class: ClassName=Designator Member=Component R37 30O
+Added Member To Class: ClassName=Designator Member=Component R38 100kO
+Added Member To Class: ClassName=Designator Member=Component R75 30O
+Added Member To Class: ClassName=Designator Member=Component R78 130O
+Added Member To Class: ClassName=Designator Member=Component R79 130O
+Added Member To Class: ClassName=Designator Member=Component R80 30O
+Added Member To Class: ClassName=Designator Member=Component R83 30O
+Added Member To Class: ClassName=Designator Member=Component R87 30O
+Added Member To Class: ClassName=Designator Member=Component R89 30O
+Added Member To Class: ClassName=Designator Member=Component S1_1 SPST-NO
+Added Member To Class: ClassName=Designator Member=Component S3 SPST-NO

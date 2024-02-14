@@ -1,0 +1,53 @@
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C3-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C4-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C94-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C95-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C99-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C100-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C101-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C102-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C103-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C104-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C105-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=C106-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D7-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D8-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D9-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D10-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D11-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=D12-1
+Added Pin To Net: NetName=VDD_3.3_1 Pin=DS1-4
+Added Pin To Net: NetName=VDD_3.3_1 Pin=DS1-31
+Added Pin To Net: NetName=VDD_3.3_1 Pin=DS2-10
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC1-5
+Added Pin To Net: NetName=NetD1_1 Pin=IC4-16
+Added Pin To Net: NetName=BAT_ANODE Pin=IC11-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC12-5
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC12-8
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC26-8
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC27-12
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC27-34
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC27-37
+Added Pin To Net: NetName=VDD_3.3_1 Pin=IC27-39
+Added Pin To Net: NetName=VDD_3.3_1 Pin=L1-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=MK1-3
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R2-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R33-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R39-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R42-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R58-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R59-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=R63-2
+Added Pin To Net: NetName=VDD_3.3_1 Pin=U1-3
+Added Pin To Net: NetName=VDD_3.3_1 Pin=U2-2
+Change Net Name : Old Net Name=VDD_3.3_1 New Net Name=VDD_3.3
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

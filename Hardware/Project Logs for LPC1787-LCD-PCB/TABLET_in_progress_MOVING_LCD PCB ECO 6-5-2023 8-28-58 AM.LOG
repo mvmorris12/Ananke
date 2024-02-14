@@ -1,0 +1,326 @@
+Removed Pin From Net: NetName=GND Pin=C99-1
+Removed Pin From Net: NetName=VDD_3.3 Pin=C99-2
+Removed Pin From Net: NetName=GND Pin=C100-1
+Removed Pin From Net: NetName=VDD_3.3 Pin=C100-2
+Removed Pin From Net: NetName=NetA1_107 Pin=IC2-1
+Removed Pin From Net: NetName=NetA1_191 Pin=IC5-1
+Removed Pin From Net: NetName=SPI0_MISO Pin=IC9-2
+Removed Pin From Net: NetName=GND Pin=IC9-4
+Removed Pin From Net: NetName=SPI0_MOSI Pin=IC9-5
+Removed Pin From Net: NetName=SPI0_CLK Pin=IC9-6
+Removed Pin From Net: NetName=NetA1_195 Pin=IC9-7
+Removed Pin From Net: NetName=VDD_3.3 Pin=IC9-8
+Removed Pin From Net: NetName=NetA1_53 Pin=IC15-4
+Removed Pin From Net: NetName=NetA1_27 Pin=IC16-2
+Removed Pin From Net: NetName=NetA1_28 Pin=IC16-24
+Removed Pin From Net: NetName=NetA1_6 Pin=J3-2
+Removed Pin From Net: NetName=NetA1_10 Pin=J3-4
+Removed Pin From Net: NetName=GND Pin=J3-5
+Removed Pin From Net: NetName=NetA1_2 Pin=J3-6
+Removed Pin From Net: NetName=NetA1_191 Pin=J14-1
+Removed Pin From Net: NetName=NetA1_13 Pin=J21-1
+Removed Pin From Net: NetName=NetA1_103 Pin=J22-1
+Removed Pin From Net: NetName=NetA1_19 Pin=J24-1
+Removed Pin From Net: NetName=NetA1_21 Pin=J27-1
+Removed Pin From Net: NetName=NetA1_23 Pin=J30-1
+Removed Pin From Net: NetName=NetA1_25 Pin=J32-1
+Removed Pin From Net: NetName=NetA1_54 Pin=J35-1
+Removed Pin From Net: NetName=NetA1_43 Pin=J46-1
+Removed Pin From Net: NetName=NetA1_49 Pin=J49-1
+Removed Pin From Net: NetName=NetA1_208 Pin=R21-1
+Removed Pin From Net: NetName=NetA1_154 Pin=R23-1
+Removed Pin From Net: NetName=NetA1_131 Pin=R26-1
+Removed Pin From Net: NetName=NetA1_130 Pin=R27-1
+Removed Pin From Net: NetName=NetA1_168 Pin=R47-2
+Removed Pin From Net: NetName=NetA1_166 Pin=R48-2
+Removed Pin From Net: NetName=NetA1_170 Pin=R49-2
+Removed Pin From Net: NetName=NetA1_176 Pin=R50-2
+Removed Pin From Net: NetName=NetA1_138 Pin=R51-2
+Removed Pin From Net: NetName=NetA1_136 Pin=R52-2
+Removed Pin From Net: NetName=NetA1_134 Pin=R53-2
+Removed Pin From Net: NetName=NetA1_132 Pin=R54-2
+Removed Pin From Net: NetName=NetA1_164 Pin=R55-2
+Removed Pin From Net: NetName=NetA1_162 Pin=R56-2
+Removed Pin From Net: NetName=NetA1_70 Pin=R57-2
+Removed Pin From Net: NetName=NetA1_107 Pin=R61-2
+Removed Pin From Net: NetName=NetA1_72 Pin=R70-2
+Removed Pin From Net: NetName=NetA1_74 Pin=R71-2
+Removed Pin From Net: NetName=NetA1_76 Pin=R75-2
+Removed Pin From Net: NetName=NetA1_78 Pin=R76-2
+Removed Pin From Net: NetName=NetA1_80 Pin=R77-2
+Removed Pin From Net: NetName=NetA1_160 Pin=R78-2
+Removed Pin From Net: NetName=NetA1_158 Pin=R79-2
+Removed Pin From Net: NetName=NetA1_106 Pin=R80-2
+Removed Pin From Net: NetName=NetA1_102 Pin=R81-2
+Removed Pin From Net: NetName=NetA1_82 Pin=R82-2
+Removed Pin From Net: NetName=NetA1_88 Pin=R83-2
+Removed Pin From Net: NetName=NetA1_90 Pin=R84-2
+Removed Pin From Net: NetName=NetA1_92 Pin=R85-2
+Removed Pin From Net: NetName=NetA1_150 Pin=R86-2
+Removed Pin From Net: NetName=NetA1_140 Pin=R87-2
+Removed Pin From Net: NetName=NetA1_144 Pin=R88-2
+Removed Pin From Net: NetName=NetA1_142 Pin=R89-2
+Removed Member From Class: ClassName=Designator Member=J3
+Removed Member From Class: ClassName=Designator Member=J14
+Removed Member From Class: ClassName=Designator Member=J17
+Removed Member From Class: ClassName=Designator Member=J21
+Removed Member From Class: ClassName=Designator Member=J22
+Removed Member From Class: ClassName=Designator Member=J24
+Removed Member From Class: ClassName=Designator Member=J27
+Removed Member From Class: ClassName=Designator Member=J30
+Removed Member From Class: ClassName=Designator Member=J32
+Removed Member From Class: ClassName=Designator Member=J35
+Removed Member From Class: ClassName=Designator Member=J46
+Removed Member From Class: ClassName=Designator Member=J49
+Removed Member From Class: ClassName=Designator Member=R21
+Removed Member From Class: ClassName=Designator Member=R23
+Removed Member From Class: ClassName=Designator Member=R24
+Removed Member From Class: ClassName=Designator Member=R26
+Removed Member From Class: ClassName=Designator Member=R27
+Added Component: Designator=C32(CAP 0603_1608)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00007"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C0603C105K8RACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-11133-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "80-C0603C105K8R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "1µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "10V"; VariantName = "[No Variations]"
+Added Component: Designator=C33(CAP 0603_1608 RF)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00039"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-C0603C104M4RACAUTOCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "0.1µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=C52(CAP 0603_1608)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00007"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C0603C105K8RACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-11133-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "80-C0603C105K8R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "1µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "10V"; VariantName = "[No Variations]"
+Added Component: Designator=C53(CAP 0603_1608 RF)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00039"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-C0603C104M4RACAUTOCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "0.1µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=U2(*WIN_TSOP-54_WIN)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/W9812G6KH-6/Winbond+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Winbond Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "W9812G6KH-6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TSOP-54 Winbond Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search?q=W9812G6KH-6&ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/W9812G6KH-6/Winbond+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BAT1-1
+Added Pin To Net: NetName=GND Pin=C32-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C32-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C33-1
+Added Pin To Net: NetName=GND Pin=C33-2
+Added Pin To Net: NetName=GND Pin=C52-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C52-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C53-1
+Added Pin To Net: NetName=GND Pin=C53-2
+Added Pin To Net: NetName=NetA1_168 Pin=DS2-5
+Added Pin To Net: NetName=NetA1_166 Pin=DS2-6
+Added Pin To Net: NetName=NetA1_170 Pin=DS2-7
+Added Pin To Net: NetName=NetA1_176 Pin=DS2-8
+Added Pin To Net: NetName=NetA1_138 Pin=DS2-9
+Added Pin To Net: NetName=NetA1_136 Pin=DS2-10
+Added Pin To Net: NetName=NetA1_134 Pin=DS2-11
+Added Pin To Net: NetName=NetA1_132 Pin=DS2-12
+Added Pin To Net: NetName=NetA1_164 Pin=DS2-13
+Added Pin To Net: NetName=NetA1_162 Pin=DS2-14
+Added Pin To Net: NetName=NetA1_70 Pin=DS2-15
+Added Pin To Net: NetName=NetA1_72 Pin=DS2-16
+Added Pin To Net: NetName=NetA1_74 Pin=DS2-17
+Added Pin To Net: NetName=NetA1_76 Pin=DS2-18
+Added Pin To Net: NetName=NetA1_78 Pin=DS2-19
+Added Pin To Net: NetName=NetA1_80 Pin=DS2-20
+Added Pin To Net: NetName=NetA1_160 Pin=DS2-21
+Added Pin To Net: NetName=NetA1_158 Pin=DS2-22
+Added Pin To Net: NetName=NetA1_106 Pin=DS2-23
+Added Pin To Net: NetName=NetA1_102 Pin=DS2-24
+Added Pin To Net: NetName=NetA1_82 Pin=DS2-25
+Added Pin To Net: NetName=NetA1_88 Pin=DS2-26
+Added Pin To Net: NetName=NetA1_90 Pin=DS2-27
+Added Pin To Net: NetName=NetA1_92 Pin=DS2-28
+Added Pin To Net: NetName=NetA1_150 Pin=DS2-30
+Added Pin To Net: NetName=NetA1_154 Pin=DS2-31
+Added Pin To Net: NetName=NetA1_140 Pin=DS2-32
+Added Pin To Net: NetName=NetA1_144 Pin=DS2-33
+Added Pin To Net: NetName=NetA1_142 Pin=DS2-34
+Added Pin To Net: NetName=NetA1_195 Pin=IC5-1
+Added Pin To Net: NetName=GND Pin=IC15-2
+Added Pin To Net: NetName=NetA1_54 Pin=IC15-4
+Added Pin To Net: NetName=NetA1_19 Pin=IC16-2
+Added Pin To Net: NetName=NetA1_25 Pin=IC16-24
+Added Pin To Net: NetName=NetA1_130 Pin=U1-18
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-1
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-3
+Added Pin To Net: NetName=GND Pin=U2-6
+Added Pin To Net: NetName=NetA1_13 Pin=U2-8
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-9
+Added Pin To Net: NetName=NetA1_23 Pin=U2-11
+Added Pin To Net: NetName=GND Pin=U2-12
+Added Pin To Net: NetName=NetA1_27 Pin=U2-13
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-14
+Added Pin To Net: NetName=NetA1_49 Pin=U2-15
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-27
+Added Pin To Net: NetName=GND Pin=U2-28
+Added Pin To Net: NetName=NetA1_103 Pin=U2-29
+Added Pin To Net: NetName=NetA1_107 Pin=U2-30
+Added Pin To Net: NetName=NetA1_131 Pin=U2-34
+Added Pin To Net: NetName=NetA1_53 Pin=U2-37
+Added Pin To Net: NetName=NetA1_43 Pin=U2-39
+Added Pin To Net: NetName=GND Pin=U2-41
+Added Pin To Net: NetName=NetA1_191 Pin=U2-42
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-43
+Added Pin To Net: NetName=GND Pin=U2-46
+Added Pin To Net: NetName=NetA1_208 Pin=U2-47
+Added Pin To Net: NetName=VDD_3.3 Pin=U2-49
+Added Pin To Net: NetName=NetA1_21 Pin=U2-51
+Added Pin To Net: NetName=GND Pin=U2-52
+Added Pin To Net: NetName=NetA1_28 Pin=U2-53
+Added Pin To Net: NetName=GND Pin=U2-54
+Change Net Name : Old Net Name=SPI0_CLK New Net Name=NetA1_128
+Change Net Name : Old Net Name=SPI0_MISO New Net Name=NetA1_126
+Change Net Name : Old Net Name=SPI0_MOSI New Net Name=NetA1_124
+Added Pin To Net: NetName=NetA1_1 Pin=A1-1
+Added Pin To Net: NetName=NetA1_1 Pin=U2-48
+Added Net: Name=NetA1_1
+Added Pin To Net: NetName=NetA1_3 Pin=A1-3
+Added Pin To Net: NetName=NetA1_3 Pin=U2-7
+Added Net: Name=NetA1_3
+Added Pin To Net: NetName=NetA1_7 Pin=A1-7
+Added Pin To Net: NetName=NetA1_7 Pin=U2-50
+Added Net: Name=NetA1_7
+Added Pin To Net: NetName=NetA1_17 Pin=A1-17
+Added Pin To Net: NetName=NetA1_17 Pin=U2-10
+Added Net: Name=NetA1_17
+Added Pin To Net: NetName=NetA1_59 Pin=A1-59
+Added Pin To Net: NetName=NetA1_59 Pin=U2-38
+Added Net: Name=NetA1_59
+Added Pin To Net: NetName=NetA1_75 Pin=A1-75
+Added Pin To Net: NetName=NetA1_75 Pin=U2-23
+Added Net: Name=NetA1_75
+Added Pin To Net: NetName=NetA1_79 Pin=A1-79
+Added Pin To Net: NetName=NetA1_79 Pin=U2-24
+Added Net: Name=NetA1_79
+Added Pin To Net: NetName=NetA1_83 Pin=A1-83
+Added Pin To Net: NetName=NetA1_83 Pin=U2-25
+Added Net: Name=NetA1_83
+Added Pin To Net: NetName=NetA1_87 Pin=A1-87
+Added Pin To Net: NetName=NetA1_87 Pin=U2-17
+Added Net: Name=NetA1_87
+Added Pin To Net: NetName=NetA1_95 Pin=A1-95
+Added Pin To Net: NetName=NetA1_95 Pin=U2-18
+Added Net: Name=NetA1_95
+Added Pin To Net: NetName=NetA1_97 Pin=A1-97
+Added Pin To Net: NetName=NetA1_97 Pin=U2-26
+Added Net: Name=NetA1_97
+Added Pin To Net: NetName=NetA1_113 Pin=A1-113
+Added Pin To Net: NetName=NetA1_113 Pin=U2-31
+Added Net: Name=NetA1_113
+Added Pin To Net: NetName=NetA1_119 Pin=A1-119
+Added Pin To Net: NetName=NetA1_119 Pin=U2-20
+Added Net: Name=NetA1_119
+Added Pin To Net: NetName=NetA1_121 Pin=A1-121
+Added Pin To Net: NetName=NetA1_121 Pin=U2-32
+Added Net: Name=NetA1_121
+Added Pin To Net: NetName=NetA1_127 Pin=A1-127
+Added Pin To Net: NetName=NetA1_127 Pin=U2-33
+Added Net: Name=NetA1_127
+Added Pin To Net: NetName=NetA1_135 Pin=A1-135
+Added Pin To Net: NetName=NetA1_135 Pin=U2-22
+Added Net: Name=NetA1_135
+Added Pin To Net: NetName=NetA1_139 Pin=A1-139
+Added Pin To Net: NetName=NetA1_139 Pin=U2-21
+Added Net: Name=NetA1_139
+Added Pin To Net: NetName=NetA1_145 Pin=A1-145
+Added Pin To Net: NetName=NetA1_145 Pin=U2-35
+Added Net: Name=NetA1_145
+Added Pin To Net: NetName=NetA1_179 Pin=A1-179
+Added Pin To Net: NetName=NetA1_179 Pin=U2-16
+Added Net: Name=NetA1_179
+Added Pin To Net: NetName=NetA1_187 Pin=A1-187
+Added Pin To Net: NetName=NetA1_187 Pin=U2-19
+Added Net: Name=NetA1_187
+Added Pin To Net: NetName=NetA1_197 Pin=A1-197
+Added Pin To Net: NetName=NetA1_197 Pin=U2-2
+Added Net: Name=NetA1_197
+Added Pin To Net: NetName=NetA1_199 Pin=A1-199
+Added Pin To Net: NetName=NetA1_199 Pin=U2-44
+Added Net: Name=NetA1_199
+Added Pin To Net: NetName=NetA1_201 Pin=A1-201
+Added Pin To Net: NetName=NetA1_201 Pin=U2-4
+Added Net: Name=NetA1_201
+Added Pin To Net: NetName=NetA1_203 Pin=A1-203
+Added Pin To Net: NetName=NetA1_203 Pin=R90-2
+Added Net: Name=NetA1_203
+Added Pin To Net: NetName=NetA1_205 Pin=A1-205
+Added Pin To Net: NetName=NetA1_205 Pin=U2-45
+Added Net: Name=NetA1_205
+Added Pin To Net: NetName=NetA1_207 Pin=A1-207
+Added Pin To Net: NetName=NetA1_207 Pin=U2-5
+Added Net: Name=NetA1_207
+Added Pin To Net: NetName=NetIC2_1 Pin=IC2-1
+Added Pin To Net: NetName=NetIC2_1 Pin=R61-2
+Added Net: Name=NetIC2_1
+Added Pin To Net: NetName=NetJ33_01 Pin=J33-01
+Added Pin To Net: NetName=NetJ33_01 Pin=R6-1
+Added Net: Name=NetJ33_01
+Added Pin To Net: NetName=NetJ33_10 Pin=J33-10
+Added Pin To Net: NetName=NetJ33_10 Pin=R25-1
+Added Net: Name=NetJ33_10
+Added Member To Class: ClassName=Designator Member=Component C40 10µF
+Added Member To Class: ClassName=Designator Member=Component C41 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C76 10µF
+Added Member To Class: ClassName=Designator Member=Component C77 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C84 10µF
+Added Member To Class: ClassName=Designator Member=Component C85 0.1µF
+Added Member To Class: ClassName=Designator Member=Component D6 YELLOW
+Added Member To Class: ClassName=Designator Member=Component D7 GREEN
+Added Member To Class: ClassName=Designator Member=Component IC6 NEXPERIA MOSFET N-CH SOT-323
+Added Member To Class: ClassName=Designator Member=Component R97 30O
+Added Member To Class: ClassName=Designator Member=Component R98 69.8O
+Added Member To Class: ClassName=Designator Member=Component R102 1MO

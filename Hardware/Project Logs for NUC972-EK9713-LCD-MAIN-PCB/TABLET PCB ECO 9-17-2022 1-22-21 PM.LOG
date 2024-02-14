@@ -1,0 +1,86 @@
+Added Component: Designator=BAT?(RENATA NL5077B)
+Add component (AddParameter): Name = "Battery Cell Size"; Value = "Coin, 24.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "BCL00005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "MPD (Memory Protection Devices)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "?BS-2450?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Cells"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Battery Holder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Style"; Value = "PC Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "BS-2450-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "24.5mm Coin Cell (×1)"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetBAT?_1 Pin=BAT?-1
+Added Net: Name=NetBAT?_1
+Added Pin To Net: NetName=NetBAT?_4 Pin=BAT?-4
+Added Net: Name=NetBAT?_4
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 12.5pF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 8pF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 12.5pF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 0.1µF
+Added Member To Class: ClassName=Designator Member=Component C? 10µF
+Added Member To Class: ClassName=Designator Member=Component Y? 32.7680kHz
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=BAT_ANODE Pin=IC15-2
+Change Net Name : Old Net Name=VDD_3.0_COIN_RTC New Net Name=VDD_3.0_COIN
+Added Pin To Net: NetName=VDD_3.0_COIN_RTC Pin=BAT1-1
+Added Net: Name=VDD_3.0_COIN_RTC

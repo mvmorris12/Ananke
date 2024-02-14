@@ -1,0 +1,18 @@
+Removed Member From Class: ClassName=Designator Member=J11
+Removed Member From Class: ClassName=Designator Member=J13
+Added Component: Designator=BT1(BAT_BS-3)
+Add component (AddParameter): Name = "Availability"; Value = "Warning"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "MPD (Memory"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BS-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/BS-3/Memory%20Protection%20Devices/view-part/2280959/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BT1-NEG
+Added Pin To Net: NetName=NetA1_38 Pin=BT1-POS
+Added Pin To Net: NetName=NetIC14_20 Pin=IC14-20
+Added Pin To Net: NetName=NetIC14_20 Pin=U1-37
+Added Net: Name=NetIC14_20
+Added Pin To Net: NetName=NetIC14_21 Pin=IC14-21
+Added Pin To Net: NetName=NetIC14_21 Pin=U1-36
+Added Net: Name=NetIC14_21

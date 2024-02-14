@@ -1,0 +1,37 @@
+Added Component: Designator=DS2(4DLCD-70800480-CTP-CLB 10 PIN)
+Add component (AddParameter): Name = "Color"; Value = "Green/Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "LED00009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "If - Forward Current"; Value = "20mA Green, 20mA Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lens Color"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "156125RV73000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Ribbon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "4-SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "LED"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "732-11429-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "710-156125RV73000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "LCD DISPLAY"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vf - Forward Voltage"; Value = "2.1V Green, 2V Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Viewing Angle"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wavelength"; Value = "571nm Green, 624nm Red"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDS2_3 Pin=DS2-3
+Added Pin To Net: NetName=BAT_ANODE Pin=DS2-4
+Added Pin To Net: NetName=NetDS2_5 Pin=DS2-5
+Added Pin To Net: NetName=NetDS2_6 Pin=DS2-6
+Added Pin To Net: NetName=NetDS2_7 Pin=DS2-7
+Added Pin To Net: NetName=BAT_ANODE Pin=DS2-8
+Added Pin To Net: NetName=BAT_ANODE Pin=DS2-9
+Added Pin To Net: NetName=VDD_3.3 Pin=DS2-10
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

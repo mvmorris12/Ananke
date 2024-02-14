@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=C9 Old Footprint=CAP 0805_2012 New Footprint=0805_2012 RF
+Change Component Footprint: Designator=C13 Old Footprint=CAP 0805_2012 New Footprint=0805_2012 RF
+Change Component Footprint: Designator=R11 Old Footprint=RES 0603_1608 RF New Footprint=0603_1608 RF
+Change Component Footprint: Designator=R12 Old Footprint=RES 0603_1608 RF New Footprint=0603_1608 RF
+Change Component Comment: Designator=S1 Old Comment=SPDT-3 PIN [ON/OFF] New Comment=SPDT-3 PIN
+Change Component Kind : Designator=R12 Old Kind=Standard New Kind=Standard (No BOM)
+Change Component Kind : Designator=R11 Old Kind=Standard New Kind=Standard (No BOM)
+Change Component Kind : Designator=C13 Old Kind=Standard New Kind=Standard (No BOM)
+Change Component Kind : Designator=C9 Old Kind=Standard New Kind=Standard (No BOM)
+Change Pin Designator/Name:  Old Designator=IC4-6 Old Name=GND New Designator =VIN New Name=16
+Change Pin Designator/Name:  Old Designator=IC4-17 Old Name=VOUT New Designator =GND New Name=6

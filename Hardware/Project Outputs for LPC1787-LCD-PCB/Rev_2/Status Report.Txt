@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [LPC1787-LCD-PCB.PrjPcb]
+   Generated File[TABLET_Rev_02-RoundHoles.TXT]
+   Generated File[TABLET_Rev_02-SlotHoles.TXT]
+   Generated File[TABLET_Rev_02.LDP]
+   Generated File[TABLET_Rev_02.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:26:22 PM On 6/20/2023

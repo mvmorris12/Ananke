@@ -1,0 +1,19 @@
+Added Component: Designator=Y1(PERICOM G43270021)
+Add component (AddParameter): Name = "Device ID"; Value = "XTL00002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ESR"; Value = "50KO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Load Capacitance"; Value = "12pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "G43270021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Mode"; Value = "Fundamental"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "4-SMD, No Lead"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "XTAL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "G43270021TR-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "729-G43270021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20ppm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "32.7680kHz"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=XTAL_32_1 Pin=Y1-1
+Added Pin To Net: NetName=XTAL_32_2 Pin=Y1-2

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=XTAL_12_1 Pin=Y2-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=Y2-2
+Removed Pin From Net: NetName=XTAL_12_2 Pin=Y2-3
+Removed Pin From Net: NetName=BAT_ANODE Pin=Y2-4
+Added Pin To Net: NetName=XTAL_12_2 Pin=Y2-1
+Added Pin To Net: NetName=XTAL_12_1 Pin=Y2-2

@@ -1,0 +1,495 @@
+Removed Pin From Net: NetName=V3_COIN_GND Pin=BAT1-1
+Removed Pin From Net: NetName=V3_COIN Pin=BAT1-4
+Removed Pin From Net: NetName=BAT_ANODE Pin=C1-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C2-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C3-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C3-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C4-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C4-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C6-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C7-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C8-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C9-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C10-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C11-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C12-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C13-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C14-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C15-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C16-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C17-1
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=C18-2
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=C19-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C21-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C22-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C23-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C24-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C25-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C26-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C27-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C28-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C29-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C94-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C95-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C96-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C97-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C98-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C99-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C99-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C100-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C100-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C101-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C101-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C102-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C102-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C103-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C103-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C104-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C104-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C105-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C105-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C106-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=C106-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=C107-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=C108-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D7-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D8-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D9-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D10-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D11-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=D12-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS1-1
+Removed Pin From Net: NetName=VDD_10 Pin=DS1-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS1-3
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=DS1-4
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS1-29
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=DS1-31
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS1-36
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS2-4
+Removed Pin From Net: NetName=NetDS2_6 Pin=DS2-6
+Removed Pin From Net: NetName=NetDS2_7 Pin=DS2-7
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS2-8
+Removed Pin From Net: NetName=BAT_ANODE Pin=DS2-9
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=DS2-10
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC1-4
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC1-5
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC1-6
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-16
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-17
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-22
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-24
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-25
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=IC5-5
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC6-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC7-5
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC8-4
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC8-5
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC8-6
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC8-7
+Removed Pin From Net: NetName=NetIC8_3 Pin=IC10-24
+Removed Pin From Net: NetName=NetDS2_3 Pin=IC10-25
+Removed Pin From Net: NetName=NetDS1_34 Pin=IC10-26
+Removed Pin From Net: NetName=NetDS1_33 Pin=IC10-27
+Removed Pin From Net: NetName=NetDS1_32 Pin=IC10-28
+Removed Pin From Net: NetName=NetDS1_30 Pin=IC10-29
+Removed Pin From Net: NetName=NetDS1_28 Pin=IC10-30
+Removed Pin From Net: NetName=NetDS1_27 Pin=IC10-31
+Removed Pin From Net: NetName=NetDS1_26 Pin=IC10-32
+Removed Pin From Net: NetName=NetDS1_25 Pin=IC10-33
+Removed Pin From Net: NetName=NetDS1_24 Pin=IC10-34
+Removed Pin From Net: NetName=NetDS1_23 Pin=IC10-35
+Removed Pin From Net: NetName=NetDS1_22 Pin=IC10-36
+Removed Pin From Net: NetName=NetDS1_21 Pin=IC10-37
+Removed Pin From Net: NetName=NetDS1_20 Pin=IC10-38
+Removed Pin From Net: NetName=NetDS1_19 Pin=IC10-39
+Removed Pin From Net: NetName=NetDS1_18 Pin=IC10-40
+Removed Pin From Net: NetName=NetDS1_17 Pin=IC10-41
+Removed Pin From Net: NetName=NetDS1_16 Pin=IC10-42
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-43
+Removed Pin From Net: NetName=NetDS1_14 Pin=IC10-45
+Removed Pin From Net: NetName=NetDS1_13 Pin=IC10-46
+Removed Pin From Net: NetName=NetDS1_12 Pin=IC10-47
+Removed Pin From Net: NetName=NetDS1_11 Pin=IC10-48
+Removed Pin From Net: NetName=NetDS1_10 Pin=IC10-49
+Removed Pin From Net: NetName=NetDS1_9 Pin=IC10-50
+Removed Pin From Net: NetName=NetDS1_8 Pin=IC10-51
+Removed Pin From Net: NetName=NetDS1_7 Pin=IC10-52
+Removed Pin From Net: NetName=NetDS1_6 Pin=IC10-53
+Removed Pin From Net: NetName=NetDS1_5 Pin=IC10-54
+Removed Pin From Net: NetName=V3_COIN Pin=IC10-66
+Removed Pin From Net: NetName=NetDS2_5 Pin=IC10-74
+Removed Pin From Net: NetName=NetC96_2 Pin=IC10-143
+Removed Pin From Net: NetName=NetIC10_71 Pin=IC11-4
+Removed Pin From Net: NetName=NetDS2_6 Pin=IC11-7
+Removed Pin From Net: NetName=NetIC10_1 Pin=IC11-8
+Removed Pin From Net: NetName=NetIC10_94 Pin=IC12-1
+Removed Pin From Net: NetName=NetIC10_72 Pin=IC12-4
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC12-5
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC12-8
+Removed Pin From Net: NetName=NetIC10_73 Pin=IC12-9
+Removed Pin From Net: NetName=NetIC10_83 Pin=IC12-12
+Removed Pin From Net: NetName=NetIC10_92 Pin=IC12-13
+Removed Pin From Net: NetName=NetIC10_93 Pin=IC12-14
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC13-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC16-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC19-2
+Removed Pin From Net: NetName=NetIC10_174 Pin=IC22-1
+Removed Pin From Net: NetName=NetIC10_172 Pin=IC23-1
+Removed Pin From Net: NetName=NetIC10_171 Pin=IC24-1
+Removed Pin From Net: NetName=NetIC10_173 Pin=IC25-1
+Removed Pin From Net: NetName=NetIC10_105 Pin=IC26-1
+Removed Pin From Net: NetName=NetIC10_114 Pin=IC26-2
+Removed Pin From Net: NetName=NetIC10_115 Pin=IC26-3
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC26-4
+Removed Pin From Net: NetName=NetIC10_113 Pin=IC26-5
+Removed Pin From Net: NetName=NetIC10_112 Pin=IC26-6
+Removed Pin From Net: NetName=NetIC10_116 Pin=IC26-7
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC26-8
+Removed Pin From Net: NetName=NetIC10_136 Pin=IC27-7
+Removed Pin From Net: NetName=NetIC10_135 Pin=IC27-8
+Removed Pin From Net: NetName=NetIC10_131 Pin=IC27-9
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC27-12
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC27-13
+Removed Pin From Net: NetName=NetIC10_133 Pin=IC27-16
+Removed Pin From Net: NetName=NetIC10_132 Pin=IC27-17
+Removed Pin From Net: NetName=NetIC10_134 Pin=IC27-18
+Removed Pin From Net: NetName=NetIC10_137 Pin=IC27-19
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC27-25
+Removed Pin From Net: NetName=NetIC10_123 Pin=IC27-29
+Removed Pin From Net: NetName=NetIC10_124 Pin=IC27-30
+Removed Pin From Net: NetName=NetIC10_125 Pin=IC27-31
+Removed Pin From Net: NetName=NetIC10_126 Pin=IC27-32
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC27-34
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC27-36
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC27-37
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=IC27-39
+Removed Pin From Net: NetName=NetIC10_127 Pin=IC27-41
+Removed Pin From Net: NetName=NetIC10_128 Pin=IC27-42
+Removed Pin From Net: NetName=NetIC10_129 Pin=IC27-43
+Removed Pin From Net: NetName=NetIC10_130 Pin=IC27-44
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC27-48
+Removed Pin From Net: NetName=NetIC10_162 Pin=IC28-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC28-2
+Removed Pin From Net: NetName=NetIC10_86 Pin=IC29-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC29-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=J1-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-5
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=BAT_ANODE Pin=J45-S
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=L1-2
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=L3-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=L4-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=MK1-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=MK1-3
+Removed Pin From Net: NetName=NetIC10_5 Pin=MK1-5
+Removed Pin From Net: NetName=NetIC10_7 Pin=MK1-7
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R2-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R3-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R4-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R5-1
+Removed Pin From Net: NetName=VDD_1.2_1 Pin=R6-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R8-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R10-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R13-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R17-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R32-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R33-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R36-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R37-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R38-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R39-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R42-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R43-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R44-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R45-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R48-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R49-1
+Removed Pin From Net: NetName=NetIC10_174 Pin=R50-2
+Removed Pin From Net: NetName=NetIC10_172 Pin=R51-2
+Removed Pin From Net: NetName=NetIC10_171 Pin=R52-2
+Removed Pin From Net: NetName=NetIC10_173 Pin=R53-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R54-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R55-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R56-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R57-1
+Removed Pin From Net: NetName=NetIC10_136 Pin=R58-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R58-2
+Removed Pin From Net: NetName=NetIC10_137 Pin=R59-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R59-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R60-1
+Removed Pin From Net: NetName=NetIC10_7 Pin=R60-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=R61-1
+Removed Pin From Net: NetName=NetIC10_162 Pin=R61-2
+Removed Pin From Net: NetName=NetIC10_86 Pin=R62-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R62-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=R63-2
+Removed Pin From Net: NetName=NetR67_2 Pin=R69-1
+Removed Pin From Net: NetName=NetIC10_5 Pin=R70-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=R71-2
+Removed Pin From Net: NetName=NetIC10_6 Pin=R72-2
+Removed Pin From Net: NetName=NetR68_1 Pin=R73-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=S2-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=S3-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=S4-1
+Removed Pin From Net: NetName=BAT_ANODE Pin=U1-1
+Removed Pin From Net: NetName=NetIC10_122 Pin=U1-2
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=U1-3
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-1
+Removed Pin From Net: NetName=VDD_1.8_1 Pin=U2-2
+Removed Pin From Net: NetName=NetIC20_1 Pin=U2-8
+Removed Pin From Net: NetName=NetIC14_1 Pin=U2-9
+Removed Pin From Net: NetName=NetIC10_94 Pin=U2-12
+Removed Pin From Net: NetName=NetIC10_93 Pin=U2-17
+Removed Pin From Net: NetName=NetIC10_92 Pin=U2-18
+Removed Pin From Net: NetName=NetIC10_91 Pin=U2-19
+Removed Pin From Net: NetName=NetIC21_1 Pin=U2-20
+Removed Pin From Net: NetName=NetIC15_1 Pin=U2-21
+Removed Pin From Net: NetName=NetIC18_1 Pin=U2-22
+Removed Pin From Net: NetName=NetC98_1 Pin=U2-27
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-40
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_1
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_2
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_3
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_4
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_5
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_6
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_7
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_8
+Removed Pin From Net: NetName=BAT_ANODE Pin=U2-41_9
+Added Pin To Net: NetName=NetD1_1 Pin=IC4-16
+Change Net Name : Old Net Name=BAT_ANODE New Net Name=GND
+Change Net Name : Old Net Name=NetDS2_6 New Net Name=NetIC10_2
+Change Net Name : Old Net Name=NetDS2_7 New Net Name=NetIC10_4
+Change Net Name : Old Net Name=VBAT_PIN New Net Name=VBAT_SWITCH
+Added Pin To Net: NetName=BAT_ANODE Pin=J1-2
+Added Net: Name=BAT_ANODE
+Added Pin To Net: NetName=NetDS2_6 Pin=DS2-6
+Added Net: Name=NetDS2_6
+Added Pin To Net: NetName=NetDS2_7 Pin=DS2-7
+Added Net: Name=NetDS2_7
+Added Pin To Net: NetName=NetIC10_24 Pin=IC10-24
+Added Net: Name=NetIC10_24
+Added Pin To Net: NetName=NetIC10_25 Pin=IC10-25
+Added Net: Name=NetIC10_25
+Added Pin To Net: NetName=NetIC10_26 Pin=IC10-26
+Added Net: Name=NetIC10_26
+Added Pin To Net: NetName=NetIC10_27 Pin=IC10-27
+Added Net: Name=NetIC10_27
+Added Pin To Net: NetName=NetIC10_28 Pin=IC10-28
+Added Net: Name=NetIC10_28
+Added Pin To Net: NetName=NetIC10_29 Pin=IC10-29
+Added Net: Name=NetIC10_29
+Added Pin To Net: NetName=NetIC10_30 Pin=IC10-30
+Added Net: Name=NetIC10_30
+Added Pin To Net: NetName=NetIC10_31 Pin=IC10-31
+Added Net: Name=NetIC10_31
+Added Pin To Net: NetName=NetIC10_32 Pin=IC10-32
+Added Net: Name=NetIC10_32
+Added Pin To Net: NetName=NetIC10_33 Pin=IC10-33
+Added Net: Name=NetIC10_33
+Added Pin To Net: NetName=NetIC10_34 Pin=IC10-34
+Added Net: Name=NetIC10_34
+Added Pin To Net: NetName=NetIC10_35 Pin=IC10-35
+Added Net: Name=NetIC10_35
+Added Pin To Net: NetName=NetIC10_36 Pin=IC10-36
+Added Net: Name=NetIC10_36
+Added Pin To Net: NetName=NetIC10_37 Pin=IC10-37
+Added Net: Name=NetIC10_37
+Added Pin To Net: NetName=NetIC10_38 Pin=IC10-38
+Added Net: Name=NetIC10_38
+Added Pin To Net: NetName=NetIC10_39 Pin=IC10-39
+Added Net: Name=NetIC10_39
+Added Pin To Net: NetName=NetIC10_40 Pin=IC10-40
+Added Net: Name=NetIC10_40
+Added Pin To Net: NetName=NetIC10_41 Pin=IC10-41
+Added Net: Name=NetIC10_41
+Added Pin To Net: NetName=NetIC10_42 Pin=IC10-42
+Added Net: Name=NetIC10_42
+Added Pin To Net: NetName=NetIC10_43 Pin=IC10-43
+Added Net: Name=NetIC10_43
+Added Pin To Net: NetName=NetIC10_45 Pin=IC10-45
+Added Net: Name=NetIC10_45
+Added Pin To Net: NetName=NetIC10_46 Pin=IC10-46
+Added Net: Name=NetIC10_46
+Added Pin To Net: NetName=NetIC10_47 Pin=IC10-47
+Added Net: Name=NetIC10_47
+Added Pin To Net: NetName=NetIC10_48 Pin=IC10-48
+Added Net: Name=NetIC10_48
+Added Pin To Net: NetName=NetIC10_49 Pin=IC10-49
+Added Net: Name=NetIC10_49
+Added Pin To Net: NetName=NetIC10_50 Pin=IC10-50
+Added Net: Name=NetIC10_50
+Added Pin To Net: NetName=NetIC10_51 Pin=IC10-51
+Added Net: Name=NetIC10_51
+Added Pin To Net: NetName=NetIC10_52 Pin=IC10-52
+Added Net: Name=NetIC10_52
+Added Pin To Net: NetName=NetIC10_53 Pin=IC10-53
+Added Net: Name=NetIC10_53
+Added Pin To Net: NetName=NetIC10_54 Pin=IC10-54
+Added Net: Name=NetIC10_54
+Added Pin To Net: NetName=NetIC10_74 Pin=IC10-74
+Added Net: Name=NetIC10_74
+Added Pin To Net: NetName=NetIC10_143 Pin=IC10-143
+Added Net: Name=NetIC10_143
+Added Pin To Net: NetName=NetIC11_4 Pin=IC11-4
+Added Net: Name=NetIC11_4
+Added Pin To Net: NetName=NetIC11_7 Pin=IC11-7
+Added Net: Name=NetIC11_7
+Added Pin To Net: NetName=NetIC11_8 Pin=IC11-8
+Added Net: Name=NetIC11_8
+Added Pin To Net: NetName=NetIC12_1 Pin=IC12-1
+Added Net: Name=NetIC12_1
+Added Pin To Net: NetName=NetIC12_4 Pin=IC12-4
+Added Net: Name=NetIC12_4
+Added Pin To Net: NetName=NetIC12_9 Pin=IC12-9
+Added Net: Name=NetIC12_9
+Added Pin To Net: NetName=NetIC12_12 Pin=IC12-12
+Added Net: Name=NetIC12_12
+Added Pin To Net: NetName=NetIC12_13 Pin=IC12-13
+Added Net: Name=NetIC12_13
+Added Pin To Net: NetName=NetIC12_14 Pin=IC12-14
+Added Net: Name=NetIC12_14
+Added Pin To Net: NetName=NetIC22_1 Pin=IC22-1
+Added Pin To Net: NetName=NetIC22_1 Pin=R50-2
+Added Net: Name=NetIC22_1
+Added Pin To Net: NetName=NetIC23_1 Pin=IC23-1
+Added Pin To Net: NetName=NetIC23_1 Pin=R51-2
+Added Net: Name=NetIC23_1
+Added Pin To Net: NetName=NetIC24_1 Pin=IC24-1
+Added Pin To Net: NetName=NetIC24_1 Pin=R52-2
+Added Net: Name=NetIC24_1
+Added Pin To Net: NetName=NetIC25_1 Pin=IC25-1
+Added Pin To Net: NetName=NetIC25_1 Pin=R53-2
+Added Net: Name=NetIC25_1
+Added Pin To Net: NetName=NetIC26_1 Pin=IC26-1
+Added Net: Name=NetIC26_1
+Added Pin To Net: NetName=NetIC26_2 Pin=IC26-2
+Added Net: Name=NetIC26_2
+Added Pin To Net: NetName=NetIC26_3 Pin=IC26-3
+Added Net: Name=NetIC26_3
+Added Pin To Net: NetName=NetIC26_5 Pin=IC26-5
+Added Net: Name=NetIC26_5
+Added Pin To Net: NetName=NetIC26_6 Pin=IC26-6
+Added Net: Name=NetIC26_6
+Added Pin To Net: NetName=NetIC26_7 Pin=IC26-7
+Added Net: Name=NetIC26_7
+Added Pin To Net: NetName=NetIC27_7 Pin=IC27-7
+Added Pin To Net: NetName=NetIC27_7 Pin=R58-1
+Added Net: Name=NetIC27_7
+Added Pin To Net: NetName=NetIC27_8 Pin=IC27-8
+Added Net: Name=NetIC27_8
+Added Pin To Net: NetName=NetIC27_9 Pin=IC27-9
+Added Net: Name=NetIC27_9
+Added Pin To Net: NetName=NetIC27_16 Pin=IC27-16
+Added Net: Name=NetIC27_16
+Added Pin To Net: NetName=NetIC27_17 Pin=IC27-17
+Added Net: Name=NetIC27_17
+Added Pin To Net: NetName=NetIC27_18 Pin=IC27-18
+Added Net: Name=NetIC27_18
+Added Pin To Net: NetName=NetIC27_19 Pin=IC27-19
+Added Pin To Net: NetName=NetIC27_19 Pin=R59-1
+Added Net: Name=NetIC27_19
+Added Pin To Net: NetName=NetIC27_29 Pin=IC27-29
+Added Net: Name=NetIC27_29
+Added Pin To Net: NetName=NetIC27_30 Pin=IC27-30
+Added Net: Name=NetIC27_30
+Added Pin To Net: NetName=NetIC27_31 Pin=IC27-31
+Added Net: Name=NetIC27_31
+Added Pin To Net: NetName=NetIC27_32 Pin=IC27-32
+Added Net: Name=NetIC27_32
+Added Pin To Net: NetName=NetIC27_41 Pin=IC27-41
+Added Net: Name=NetIC27_41
+Added Pin To Net: NetName=NetIC27_42 Pin=IC27-42
+Added Net: Name=NetIC27_42
+Added Pin To Net: NetName=NetIC27_43 Pin=IC27-43
+Added Net: Name=NetIC27_43
+Added Pin To Net: NetName=NetIC27_44 Pin=IC27-44
+Added Net: Name=NetIC27_44
+Added Pin To Net: NetName=NetIC28_1 Pin=IC28-1
+Added Pin To Net: NetName=NetIC28_1 Pin=R61-2
+Added Net: Name=NetIC28_1
+Added Pin To Net: NetName=NetIC29_1 Pin=IC29-1
+Added Pin To Net: NetName=NetIC29_1 Pin=R62-1
+Added Net: Name=NetIC29_1
+Added Pin To Net: NetName=NetMK1_5 Pin=MK1-5
+Added Pin To Net: NetName=NetMK1_5 Pin=R70-1
+Added Net: Name=NetMK1_5
+Added Pin To Net: NetName=NetMK1_7 Pin=MK1-7
+Added Pin To Net: NetName=NetMK1_7 Pin=R60-2
+Added Net: Name=NetMK1_7
+Added Pin To Net: NetName=NetR69_1 Pin=R69-1
+Added Net: Name=NetR69_1
+Added Pin To Net: NetName=NetR72_2 Pin=R72-2
+Added Net: Name=NetR72_2
+Added Pin To Net: NetName=NetR73_2 Pin=R73-2
+Added Net: Name=NetR73_2
+Added Pin To Net: NetName=NetU1_2 Pin=U1-2
+Added Net: Name=NetU1_2
+Added Pin To Net: NetName=NetU2_8 Pin=U2-8
+Added Net: Name=NetU2_8
+Added Pin To Net: NetName=NetU2_9 Pin=U2-9
+Added Net: Name=NetU2_9
+Added Pin To Net: NetName=NetU2_12 Pin=U2-12
+Added Net: Name=NetU2_12
+Added Pin To Net: NetName=NetU2_17 Pin=U2-17
+Added Net: Name=NetU2_17
+Added Pin To Net: NetName=NetU2_18 Pin=U2-18
+Added Net: Name=NetU2_18
+Added Pin To Net: NetName=NetU2_19 Pin=U2-19
+Added Net: Name=NetU2_19
+Added Pin To Net: NetName=NetU2_20 Pin=U2-20
+Added Net: Name=NetU2_20
+Added Pin To Net: NetName=NetU2_21 Pin=U2-21
+Added Net: Name=NetU2_21
+Added Pin To Net: NetName=NetU2_22 Pin=U2-22
+Added Net: Name=NetU2_22
+Added Pin To Net: NetName=NetU2_27 Pin=U2-27
+Added Net: Name=NetU2_27
+Added Pin To Net: NetName=VDD_1.2 Pin=C18-2
+Added Pin To Net: NetName=VDD_1.2 Pin=C19-2
+Added Pin To Net: NetName=VDD_1.2 Pin=IC5-5
+Added Pin To Net: NetName=VDD_1.2 Pin=L3-2
+Added Pin To Net: NetName=VDD_1.2 Pin=R6-2
+Added Net: Name=VDD_1.2
+Added Pin To Net: NetName=VDD_1.8 Pin=C24-2
+Added Pin To Net: NetName=VDD_1.8 Pin=C25-2
+Added Pin To Net: NetName=VDD_1.8 Pin=IC7-5
+Added Pin To Net: NetName=VDD_1.8 Pin=L4-2
+Added Pin To Net: NetName=VDD_1.8 Pin=R13-2
+Added Net: Name=VDD_1.8
+Added Pin To Net: NetName=VDD_3.0_COIN Pin=IC10-66
+Added Net: Name=VDD_3.0_COIN
+Added Pin To Net: NetName=VDD_3.3 Pin=C99-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C100-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C101-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C102-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C103-2
+Added Pin To Net: NetName=VDD_3.3 Pin=C104-1
+Added Pin To Net: NetName=VDD_3.3 Pin=IC26-8
+Added Pin To Net: NetName=VDD_3.3 Pin=IC27-12
+Added Pin To Net: NetName=VDD_3.3 Pin=IC27-34
+Added Pin To Net: NetName=VDD_3.3 Pin=IC27-37
+Added Pin To Net: NetName=VDD_3.3 Pin=IC27-39
+Added Pin To Net: NetName=VDD_3.3 Pin=R58-2
+Added Pin To Net: NetName=VDD_3.3 Pin=R59-2
+Added Net: Name=VDD_3.3
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

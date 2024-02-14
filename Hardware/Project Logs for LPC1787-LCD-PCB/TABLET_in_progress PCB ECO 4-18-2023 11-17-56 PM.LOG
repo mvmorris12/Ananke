@@ -1,0 +1,37 @@
+Added Component: Designator=C25(CAP 0603_1608 RF)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP00039"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "399-C0603C104M4RACAUTOCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "C0603C104M4RACAUTO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "0.1µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=U(SON50P200X200X80-9N)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "MAX17048G+T10CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Maxim Integrated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser-Purchase-URL"; Value = "https://snapeda.com/shop?store=Mouser&id=329239"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MAX17048G+T10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TDFN-8 Maxim"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MAX17048G+T10/Maxim%20Integrated/view-part/329239/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C25-1
+Added Pin To Net: NetName=BAT_CATHODE Pin=C25-2
+Added Pin To Net: NetName=GND Pin=U-1
+Added Pin To Net: NetName=BAT_CATHODE Pin=U-2
+Added Pin To Net: NetName=BAT_CATHODE Pin=U-3
+Added Pin To Net: NetName=GND Pin=U-4
+Added Pin To Net: NetName=GND Pin=U-6
+Added Pin To Net: NetName=NetA1_96 Pin=U-7
+Added Pin To Net: NetName=NetA1_94 Pin=U-8
+Added Pin To Net: NetName=GND Pin=U-9
+Added Pin To Net: NetName=NetA1_12 Pin=A1-12
+Added Pin To Net: NetName=NetA1_12 Pin=U-5
+Added Net: Name=NetA1_12

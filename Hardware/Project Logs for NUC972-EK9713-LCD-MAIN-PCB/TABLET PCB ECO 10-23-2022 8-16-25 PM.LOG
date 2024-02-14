@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=VDD_C3 Pin=IC15-5
+Added Pin To Net: NetName=VDD_C3 Pin=R69-2
+Added Net: Name=VDD_C3

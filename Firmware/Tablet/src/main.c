@@ -101,6 +101,7 @@ int main(void) {
     I2C1_Init(1);   // rtc
     SSP0_Init();
 
+
     esp32_init(); 
 
     RTC_Init();  // just for on-board RTC
@@ -131,6 +132,7 @@ int main(void) {
     lcd_draw_time();
 
     //lcd_block_test(150,25,600,400);
+
     delay_short();
     lcd_vfp_interrupt_enable();
 
@@ -155,7 +157,32 @@ int main(void) {
 
     //cube_run_app();
     //physics_run_app();
+<<<<<<< Updated upstream
     mic_start_fft();
+=======
+
+
+
+    //mic_start_fft(); ////////// live audio analysis
+    //speech_detection_app(); ////////// speech recognition
+    pathfinder_run_app(); ////////// pathfinding
+
+
+
+
+    //for (int i=0; i<16000; i++){
+    //    printf("%d\n",i);
+    //    delay(1000);
+    //}
+    //mic_start_speech_analyzer();
+
+
+    //flash_test();
+    //flash_write_audio(NULL, 0);
+
+
+    int i=0;
+>>>>>>> Stashed changes
     while(1){
 
     }

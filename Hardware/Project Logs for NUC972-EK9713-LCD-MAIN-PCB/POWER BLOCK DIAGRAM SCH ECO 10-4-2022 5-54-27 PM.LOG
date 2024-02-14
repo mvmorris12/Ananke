@@ -1,0 +1,4 @@
+Change Pin Designator/Name:  Old Designator=IC10-206 Old Name=USB1_DM New Designator =PC.1 -- NAND_DATA1  New Name=124
+Change Pin Designator/Name:  Old Designator=IC10-207 Old Name=USB1_DP New Designator =CORE_VDD New Name=203
+Change Pin Designator/Name:  Old Designator=IC10-203 Old Name=CORE_VDD New Designator =USB1_DM New Name=206
+Change Pin Designator/Name:  Old Designator=IC10-204 Old Name=CORE_VDDUSBPLL1_VDD New Designator =USB1_DP New Name=207

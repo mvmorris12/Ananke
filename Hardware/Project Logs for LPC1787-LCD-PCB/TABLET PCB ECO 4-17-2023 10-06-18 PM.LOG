@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=VBAT_DIODE Pin=C26-2
+Removed Pin From Net: NetName=VBAT_DIODE Pin=IC8-10
+Removed Pin From Net: NetName=VBAT_DIODE Pin=L5-1
+Added Pin To Net: NetName=VDD_3.3 Pin=C26-2
+Added Pin To Net: NetName=VDD_3.3 Pin=IC8-10
+Added Pin To Net: NetName=VDD_3.3 Pin=L5-1

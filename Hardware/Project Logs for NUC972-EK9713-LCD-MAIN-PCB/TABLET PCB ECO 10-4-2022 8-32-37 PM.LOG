@@ -1,0 +1,76 @@
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-16
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-17
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-18
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-19
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-20
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-21
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-22
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-23
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-24
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-25
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-26
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-27
+Removed Pin From Net: NetName=NetDS1_15 Pin=DS1-28
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-30
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-31
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-32
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-33
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-34
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-35
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-36
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-37
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-38
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-39
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-40
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-41
+Removed Pin From Net: NetName=NetDS1_15 Pin=IC10-42
+Added Pin To Net: NetName=NetD1_1 Pin=IC4-16
+Added Pin To Net: NetName=NetDS1_16 Pin=DS1-16
+Added Pin To Net: NetName=NetDS1_16 Pin=IC10-42
+Added Net: Name=NetDS1_16
+Added Pin To Net: NetName=NetDS1_17 Pin=DS1-17
+Added Pin To Net: NetName=NetDS1_17 Pin=IC10-41
+Added Net: Name=NetDS1_17
+Added Pin To Net: NetName=NetDS1_18 Pin=DS1-18
+Added Pin To Net: NetName=NetDS1_18 Pin=IC10-40
+Added Net: Name=NetDS1_18
+Added Pin To Net: NetName=NetDS1_19 Pin=DS1-19
+Added Pin To Net: NetName=NetDS1_19 Pin=IC10-39
+Added Net: Name=NetDS1_19
+Added Pin To Net: NetName=NetDS1_20 Pin=DS1-20
+Added Pin To Net: NetName=NetDS1_20 Pin=IC10-38
+Added Net: Name=NetDS1_20
+Added Pin To Net: NetName=NetDS1_21 Pin=DS1-21
+Added Pin To Net: NetName=NetDS1_21 Pin=IC10-37
+Added Net: Name=NetDS1_21
+Added Pin To Net: NetName=NetDS1_22 Pin=DS1-22
+Added Pin To Net: NetName=NetDS1_22 Pin=IC10-36
+Added Net: Name=NetDS1_22
+Added Pin To Net: NetName=NetDS1_23 Pin=DS1-23
+Added Pin To Net: NetName=NetDS1_23 Pin=IC10-35
+Added Net: Name=NetDS1_23
+Added Pin To Net: NetName=NetDS1_24 Pin=DS1-24
+Added Pin To Net: NetName=NetDS1_24 Pin=IC10-34
+Added Net: Name=NetDS1_24
+Added Pin To Net: NetName=NetDS1_25 Pin=DS1-25
+Added Pin To Net: NetName=NetDS1_25 Pin=IC10-33
+Added Net: Name=NetDS1_25
+Added Pin To Net: NetName=NetDS1_26 Pin=DS1-26
+Added Pin To Net: NetName=NetDS1_26 Pin=IC10-32
+Added Net: Name=NetDS1_26
+Added Pin To Net: NetName=NetDS1_27 Pin=DS1-27
+Added Pin To Net: NetName=NetDS1_27 Pin=IC10-31
+Added Net: Name=NetDS1_27
+Added Pin To Net: NetName=NetDS1_28 Pin=DS1-28
+Added Pin To Net: NetName=NetDS1_28 Pin=IC10-30
+Added Net: Name=NetDS1_28
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

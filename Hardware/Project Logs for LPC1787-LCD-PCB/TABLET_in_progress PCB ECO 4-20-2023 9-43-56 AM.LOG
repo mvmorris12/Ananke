@@ -1,0 +1,21 @@
+Added Component: Designator=S4(TE FSM4JSMA)
+Add component (AddParameter): Name = "Contact Rating @ Voltage"; Value = "0.05A @ 24VDC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device ID"; Value = "GPTS202312B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TE Connectivity ALCOSWITCH Switches"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "FSM4JSMASTR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Force"; Value = "160gf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "4-Lead SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Button"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "450-2141-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "506-1-1977223-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Function"; Value = "Off-Mom"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "SPST-NO"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetA1_110 Pin=S4-1
+Added Pin To Net: NetName=NetA1_110 Pin=S4-2
+Added Pin To Net: NetName=GND Pin=S4-3
+Added Pin To Net: NetName=GND Pin=S4-4
+Added Member To Class: ClassName=Designator Member=Component S4 SPST-NO

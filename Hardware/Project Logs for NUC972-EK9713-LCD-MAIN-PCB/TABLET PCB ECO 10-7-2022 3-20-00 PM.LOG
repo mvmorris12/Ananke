@@ -1,0 +1,89 @@
+Removed Pin From Net: NetName=NetIC10_123 Pin=IC10-124
+Removed Pin From Net: NetName=NetIC10_123 Pin=IC27-30
+Removed Pin From Net: NetName=NetIC10_142 Pin=J39-1
+Removed Pin From Net: NetName=NetIC10_141 Pin=J41-1
+Removed Pin From Net: NetName=NetIC10_123 Pin=J43-1
+Removed Pin From Net: NetName=NetIC10_140 Pin=J58-1
+Removed Pin From Net: NetName=NetIC10_139 Pin=J60-1
+Removed Pin From Net: NetName=NetIC10_138 Pin=J61-1
+Removed Pin From Net: NetName=NetIC10_122 Pin=J62-1
+Removed Pin From Net: NetName=NetIC10_121 Pin=U1-2
+Change Component Footprint: Designator=J39 Old Footprint=TEST POINT New Footprint=SULLINS GRPB031VWTC-RC
+Change Component Footprint: Designator=J41 Old Footprint=TEST POINT New Footprint=SULLINS GRPB031VWTC-RC
+Change Component Comment : Designator=J39 Old Comment=TEST POINT New Comment=3-Pin Straight Header
+Change Component Comment : Designator=J41 Old Comment=TEST POINT New Comment=6-Pin Header
+Change component parameters: Designator = "J39" ("J39"); Footprint = "TEST POINT"; UniqueID = "\MISYTZYT" ("\MISYTZYT")
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Finish - Mating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating (Amps)"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device ID"; Value = "CON00003"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Fastening Type"; Value = "Push-Pull"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Insulation Color"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Sullins Connector Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer P/N"; Value = "GRPB031VWTC-RC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions Loaded"; Value = "All"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 105°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "N/A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Type"; Value = "Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch - Mating"; Value = "0.050" (1.27mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Style"; Value = "Board to Board or Cable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1 P/N"; Value = "S9011E-03-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "3-Pin Straight Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J41" ("J41"); Footprint = "TEST POINT"; UniqueID = "\GQCRKQAR" ("\GQCRKQAR")
+Change component parameters (AddParameter): Name = "Connector Type"; Value = "Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Finish - Mating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current Rating (Amps)"; Value = "1A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device ID"; Value = "CON00003"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Fastening Type"; Value = "Push-Pull"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Insulation Color"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Sullins Connector Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer P/N"; Value = "GRPB031VWTC-RC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Positions Loaded"; Value = "All"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40°C ~ 105°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "N/A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Type"; Value = "Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch - Mating"; Value = "0.050" (1.27mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Style"; Value = "Board to Board or Cable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier1 P/N"; Value = "S9011E-03-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "3-Pin Straight Header"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "-"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BAT_ANODE Pin=C107-1
+Added Pin To Net: NetName=NetD1_1 Pin=IC4-16
+Added Pin To Net: NetName=NetIC8_3 Pin=IC10-24
+Added Pin To Net: NetName=BAT_ANODE Pin=J39-1
+Added Pin To Net: NetName=NetIC10_142 Pin=J39-2
+Added Pin To Net: NetName=NetIC10_138 Pin=J39-3
+Added Pin To Net: NetName=NetIC10_139 Pin=J41-1
+Added Pin To Net: NetName=NetIC10_140 Pin=J41-2
+Added Pin To Net: NetName=NetIC10_141 Pin=J41-3
+Added Pin To Net: NetName=NetIC10_121 Pin=J62-1
+Added Pin To Net: NetName=NetIC10_122 Pin=U1-2
+Added Pin To Net: NetName=NetIC10_124 Pin=IC10-124
+Added Pin To Net: NetName=NetIC10_124 Pin=IC27-30
+Added Pin To Net: NetName=NetIC10_124 Pin=J43-1
+Added Net: Name=NetIC10_124
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator

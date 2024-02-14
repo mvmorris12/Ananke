@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=Designator Member=J25
+Removed Member From Class: ClassName=Designator Member=J26
+Removed Member From Class: ClassName=Designator Member=J28
+Added Pin To Net: NetName=NetIC10_1 Pin=IC10-1
+Added Net: Name=NetIC10_1
+Added Pin To Net: NetName=NetIC10_13 Pin=IC10-13
+Added Net: Name=NetIC10_13
+Added Pin To Net: NetName=NetIC10_14 Pin=IC10-14
+Added Net: Name=NetIC10_14

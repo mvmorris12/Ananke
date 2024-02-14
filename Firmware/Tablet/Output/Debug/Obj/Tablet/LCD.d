@@ -58,4 +58,11 @@ Output/Debug/Obj/Tablet/LCD.o: \
   C:\Projects\Ananke\Firmware\Tablet\include\Colors.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Fonts.h \
   C:\Projects\Ananke\Firmware\Tablet\include\arm_math.h \
+<<<<<<< Updated upstream
   C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdlib.h
+=======
+  C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Pathfinder.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
+  C:\Projects\Ananke\Firmware\Tablet\include\Pathfinder_images.h
+>>>>>>> Stashed changes

@@ -1,0 +1,22 @@
+Added Component: Designator=C109(CAP 0805_2012)
+Add component (AddParameter): Name = "Device ID"; Value = "CAP0003F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Murata Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer P/N"; Value = "GRM21BZ71A226ME15L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805 (2012 Metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Type"; Value = "Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier1 P/N"; Value = "490-GRM21BZ71A226ME15LCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier2 P/N"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "22µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "10V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VDD_3.3 Pin=C109-1
+Added Pin To Net: NetName=BAT_ANODE Pin=C109-2
+Added Pin To Net: NetName=NetDS1_6 Pin=IC18-1
+Added Pin To Net: NetName=NetDS1_6 Pin=IC18-2
+Added Pin To Net: NetName=VDD_3.3 Pin=IC18-3
+Added Pin To Net: NetName=BAT_ANODE Pin=IC18-4

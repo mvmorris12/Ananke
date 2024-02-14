@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=VDD_3.3 Pin=R69-1
+Removed Pin From Net: NetName=GND Pin=R72-1
+Removed Pin From Net: NetName=GND Pin=S5-2
+Removed Pin From Net: NetName=GND Pin=S5-2
+Removed Pin From Net: NetName=VDD_3.3 Pin=S6-1
+Removed Pin From Net: NetName=VDD_3.3 Pin=S6-1
+Removed Member From Class: ClassName=Designator Member=R69
+Removed Member From Class: ClassName=Designator Member=R72
+Removed Member From Class: ClassName=Designator Member=S5
+Removed Member From Class: ClassName=Designator Member=S6

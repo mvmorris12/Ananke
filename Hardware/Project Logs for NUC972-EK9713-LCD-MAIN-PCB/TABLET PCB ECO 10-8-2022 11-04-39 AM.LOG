@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=BAT_ANODE Pin=C11-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-11
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC2-12
+Removed Pin From Net: NetName=BAT_ANODE Pin=IC3-2
+Removed Pin From Net: NetName=BAT_ANODE Pin=J1-1
+Added Pin To Net: NetName=BAT_CATHODE Pin=C11-2
+Added Pin To Net: NetName=BAT_CATHODE Pin=IC2-11
+Added Pin To Net: NetName=BAT_CATHODE Pin=IC2-12
+Added Pin To Net: NetName=BAT_CATHODE Pin=IC3-2
+Added Pin To Net: NetName=BAT_CATHODE Pin=J1-1
+Added Net: Name=BAT_CATHODE

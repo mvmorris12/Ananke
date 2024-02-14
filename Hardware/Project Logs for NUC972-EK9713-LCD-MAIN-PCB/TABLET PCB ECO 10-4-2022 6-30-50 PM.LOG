@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=NetC20_1 Pin=D1-1
+Removed Pin From Net: NetName=NetD1_2 Pin=D1-2
+Added Component: Designator=D4(DIOM4325X250N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "SK34A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_2 Pin=D1-1
+Added Pin To Net: NetName=NetC20_1 Pin=D1-2
+Added Pin To Net: NetName=NetD4_A Pin=D4-A
+Added Pin To Net: NetName=VDD_10 Pin=D4-C
+Added Pin To Net: NetName=NetD1_2 Pin=IC4-16
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetD1_1
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
+Added Room: Name=Designator
