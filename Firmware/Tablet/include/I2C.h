@@ -64,7 +64,7 @@ extern void I2C0_IRQHandler(void);
 extern void I2C1_IRQHandler(void);
 extern void I2C2_IRQHandler(void);
 void i2c_scan_devices(void);
-extern void delay_short();
+extern void delay_short(void);
 
 
 #endif /* end __I2C_H */

@@ -22,8 +22,10 @@ extern void EINT0_IRQHandler(void);
 extern uint32_t EINTInit( void );
 extern void interrupt_test(void);
 extern void lcd_touch_interrupt_enable(void);
+extern void lcd_touch_interrupt_disable(void);
 extern void esp32_slave_interrupt_enable(void);
 void rtc_interrupt_enable(void);
 void lcd_vfp_interrupt_enable(void);
 void timer0_interrupt_enable(void);
+void timer1_interrupt_enable(void);
 #endif /* end __EXTINT_H */

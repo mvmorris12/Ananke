@@ -1,21 +1,20 @@
 Output/Debug/Obj/Tablet/RTC.o: \
   C:\Projects\Ananke\Firmware\Tablet\src\RTC.c \
   C:\Projects\Ananke\Firmware\Tablet\include\RTC.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdio.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_ConfDefaults.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_Conf.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\__SEGGER_RTL_Arm_Conf.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\stdio.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\__SEGGER_RTL.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\__SEGGER_RTL_ConfDefaults.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\__SEGGER_RTL_Conf.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\__SEGGER_RTL_Arm_Conf.h \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\LPC177x_8x.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\core_cm3.h \
-  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ for\ ARM\ 5.60a\segger-rtl\include\stdint.h \
+  C:\Program\ Files\SEGGER\SEGGER\ Embedded\ Studio\ 8.22a\include\stdint.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_version.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\cmsis_gcc.h \
   C:\Projects\Ananke\Firmware\Tablet\CMSIS_5\CMSIS\Core\Include\mpu_armv7.h \
   C:\Projects\Ananke\Firmware\Tablet\LPC1700\Device\Include\system_LPC177x_8x.h \
   C:\Projects\Ananke\Firmware\Tablet\include\I2C.h \
-  C:\Projects\Ananke\Firmware\Tablet\include\type.h \
   C:\Projects\Ananke\Firmware\Tablet\include\type.h \
   C:\Projects\Ananke\Firmware\Tablet\include\Interrupts.h \
   C:\Projects\Ananke\Firmware\Tablet\src\getdatetime_var.h

@@ -93,13 +93,26 @@ void ram_init(void){
     delay_ms(100);
     ram_write_init(NULL,NULL,NULL);
     //ram_read(NULL,NULL,NULL);
-    //printf("ram setup done\n");
+    printf("ram setup done\n");
+    ram_test();
     
 }
 
 
 void ram_write_init(uint32_t row, uint32_t col, uint32_t val){
-    uint32_t* ram_addr = 0xA0000000;
+    uint32_t* ram_addr = (uint32_t *)0xA0000000;
+    //*ram_addr = 0xABCDEF21;
+    //ram_addr++;
+    for (uint32_t j=0; j<480; j++){
+        for (uint32_t i=0; i<800; i++){
+            *ram_addr = 0x00000000;
+            ram_addr++;
+            //*ram_addr = 0x0000;
+            //ram_addr++;
+        }
+        //}
+    }
+    ram_addr = (uint32_t *)0xA0500000;
     //*ram_addr = 0xABCDEF21;
     //ram_addr++;
     for (uint32_t j=0; j<480; j++){
@@ -113,8 +126,8 @@ void ram_write_init(uint32_t row, uint32_t col, uint32_t val){
     }
     //ram_addr++;
     //for (uint32_t i=0; i<4000; i++){
-        //*ram_addr = 0xFF00FF00;
-        //ram_addr++;
+    //    *ram_addr = 0xFF00FF00;
+    //    ram_addr++;
     //}
     //for (uint32_t i=0; i<200000; i++){
     //    *ram_addr = 0x0000FF00;
@@ -124,7 +137,8 @@ void ram_write_init(uint32_t row, uint32_t col, uint32_t val){
 
 void ram_read(uint32_t reg, uint8_t bytes, uint16_t* ret_ptr){
     uint32_t  read_val = 0;
-    uint32_t* ram_addr = 0xA0000000;
+    uint32_t* ram_addr;
+    ram_addr = (uint32_t *)0xA0000000;
     for (uint32_t i=1; i<800000; i++){
         read_val = *ram_addr;
         //delay(1000000);
@@ -145,11 +159,12 @@ void ram_write_test(void){
 }
 
 void ram_test(void){
-    uint32_t* ram_addr = 0xA0000000;
+    uint32_t* ram_addr;
+    ram_addr = (uint32_t*)0xA0000000;
     //ram_addr++;
 
     printf("start RAM write test\n");
-    for (uint32_t i=0; i<20; i++){
+    for (uint32_t i=0; i<200; i++){
         switch(i&0x0F){
             case 0x0:
                 *ram_addr = 0xF000F123;
@@ -212,13 +227,13 @@ void ram_test(void){
     printf("finished RAM write test\n");
     //delay_ms(10000);
     printf("start RAM read test\n");
-    ram_addr = 0xA0000802;
+    ram_addr = (uint32_t*)0xA0000004;
     //ram_addr++;
     uint32_t error_cnt = 0;
     uint32_t read_val = 0;
     uint32_t read_val_test = 0;
 
-    for (uint32_t i=1; i<20; i++){
+    for (uint32_t i=1; i<200; i++){
         read_val = *ram_addr;
         switch(i&0x0F){
             case 0x0:
@@ -276,7 +291,7 @@ void ram_test(void){
         //}
         if (read_val != read_val_test){
             error_cnt++;
-            //printf("%d %x %x %x %x %x\n", i, ram_addr, read_val);//, read_val_test);
+            printf("%d %x %x %x %x %x\n", i, ram_addr, read_val, read_val_test);
             //break;
         }
         //ram_addr+=4;

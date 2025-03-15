@@ -11,6 +11,7 @@
 #define WHITE       RGB(255,255,255)
 #define RED         RGB(255,0,0)
 #define GREEN       RGB(0,255,0)
+#define GREEN_DARK  RGB(0,128,0)
 #define BLUE        RGB(0,0,255)
 #define YELLOW      RGB(255,255,0)
 #define CYAN        RGB(0,255,255)
@@ -22,9 +23,9 @@
 #define MAROON      RGB(128,0,0)
 #define ORANGE      RGB(255,100,0)
 #define OLIVE       RGB(128,128,0)
-#define GREEN_DARK  RGB(0,128,0)
 #define PURPLE      RGB(128,0,128)
 #define TEAL        RGB(0,128,128)
 #define NAVY        RGB(0,0,128)
+#define GOLD        RGB(194,142,0)
 //#define  RGB
 //#define  RGB

@@ -53,7 +53,7 @@ void esp32_rcv(void){
 
 void esp32_get_accel_data(void){
     uint16_t xyz_vals[6];
-    esp32_read(0x5A, 6, &xyz_vals);
+    //esp32_read(0x5A, 6, &xyz_vals);
     x_accel = (xyz_vals[0] << 8) | xyz_vals[1];
     y_accel = (xyz_vals[2] << 8) | xyz_vals[3];
     z_accel = (xyz_vals[4] << 8) | xyz_vals[5];

@@ -1,5 +1,18 @@
 <!DOCTYPE CrossStudio_Project_File>
 <solution Name="Tablet" target="8" version="2">
+  <configuration
+    Name="Debug"
+    arm_simulator_memory_simulation_parameter="RX 00000000, 10000000, FFFFFFFF;RWX 10000000, 10000000, CDCDCDCD;RWX 20000000, 02000000, CDCDCDCD;RW 40000000, 02000000;RW E0000000, 10000000; RW A0000000, 20000"
+    c_preprocessor_definitions="DEBUG"
+    c_user_include_directories=".;$(ProjectDir)/include/"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="Level 2"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 2 balanced" />
   <project Name="Tablet">
     <configuration
       LIBRARY_IO_TYPE="RTT"
@@ -36,6 +49,10 @@
       project_type="Executable"
       target_reset_script="Reset();"
       target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <configuration
+      Name="Debug"
+      arm_simulator_memory_simulation_parameter="ROM;0x00000000;0x80000;RAM;0x10000000;0x10000;RAM;0x20000000;0x8000;RAM;0xA0000000;0x20000"
+      pre_build_command="&quot;$(StudioDir)/bin/emScript&quot; -load &quot;$(ProjectDir)/src/update_datetime.js&quot;" />
     <folder Name="CMSIS Files">
       <file file_name="LPC1700/Device/Include/SEGGER_LPC1700.h" />
       <file file_name="LPC1700/Device/Source/system_LPC177x_8x.c">
@@ -52,30 +69,9 @@
     </folder>
     <folder Name="Source Files">
       <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
-      <file file_name="src/Accelerometer.c" />
-      <file file_name="src/I2C.c" />
-      <file file_name="src/LEDs.c" />
-      <file file_name="src/Microphone.c" />
-      <file file_name="src/SPI.c" />
-      <file file_name="src/RTC.c" />
-      <file file_name="src/Flash.c" />
-      <file file_name="src/RAM.c" />
-      <file file_name="src/GPIO.c" />
-      <file file_name="src/Power.c" />
-      <file file_name="src/getdatetime.c">
-        <configuration Name="Debug" build_always_rebuild="Yes" />
-      </file>
-      <file file_name="src/ESP32.c" />
-      <file file_name="src/main.c" />
-      <file file_name="src/LCD.c" />
-      <file file_name="src/Interrupts.c" />
-      <file file_name="src/Fonts.c" />
       <folder Name="Apps">
-        <file file_name="src/Apps/Cube.c" />
-        <file file_name="src/Apps/Physics.c" />
-        <file file_name="src/Apps/Pong.c" />
-        <file file_name="src/Apps/Launcher.c" />
         <folder Name="FFT">
+          <file file_name="src/Apps/arm_fft_bin_data.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BasicMathFunctions/BasicMathFunctions.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BasicMathFunctions/BasicMathFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/BayesFunctions/BayesFunctions.c" />
@@ -91,48 +87,55 @@
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FastMathFunctions/FastMathFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FilteringFunctions/FilteringFunctions.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/FilteringFunctions/FilteringFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/MatrixFunctions/MatrixFunctions.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/MatrixFunctions/MatrixFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/QuaternionMathFunctions/QuaternionMathFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctionsF16.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctions.c" />
+          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SVMFunctions/SVMFunctions.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SVMFunctions/SVMFunctionsF16.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/TransformFunctions.c" />
           <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/TransformFunctions/TransformFunctionsF16.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctions.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/SupportFunctions/SupportFunctionsF16.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctions.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/StatisticsFunctions/StatisticsFunctionsF16.c" />
-          <file file_name="src/Apps/arm_fft_bin_data.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctions.c" />
-          <file file_name="C:/Users/mvmor/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.14.2/Source/InterpolationFunctions/InterpolationFunctionsF16.c" />
         </folder>
+        <file file_name="src/Apps/Cube.c" />
         <file file_name="src/Apps/FFT.c" />
+        <file file_name="src/Apps/Launcher.c" />
+        <file file_name="src/Apps/Pathfinder.c" />
+        <file file_name="src/Apps/Physics.c" />
+        <file file_name="src/Apps/Pong.c" />
+        <file file_name="src/Apps/Speech.c" />
+        <file file_name="src/Apps/Traffic.c" />
       </folder>
+      <file file_name="src/Accelerometer.c" />
+      <file file_name="src/ESP32.c" />
+      <file file_name="src/Flash.c" />
+      <file file_name="src/Fonts.c" />
+      <file file_name="src/getdatetime.c">
+        <configuration Name="Debug" build_always_rebuild="Yes" />
+      </file>
+      <file file_name="src/GPIO.c" />
+      <file file_name="src/I2C.c" />
+      <file file_name="src/Interrupts.c" />
+      <file file_name="src/LCD.c" />
+      <file file_name="src/LEDs.c" />
+      <file file_name="src/main.c" />
+      <file file_name="src/Microphone.c" />
+      <file file_name="src/Power.c" />
+      <file file_name="src/RAM.c" />
+      <file file_name="src/RTC.c" />
+      <file file_name="src/SPI.c" />
       <file file_name="src/Timer.c" />
     </folder>
     <folder Name="System Files">
-      <file file_name="SEGGER_THUMB_Startup.s" />
+      <file file_name="LPC1700/Source/LPC1700_Startup.s" />
       <file file_name="LPC1700/Source/LPC177x_8x_Vectors.s">
         <configuration Name="Common" file_type="Assembly" />
       </file>
-      <file file_name="LPC1700/Source/LPC1700_Startup.s" />
+      <file file_name="SEGGER_THUMB_Startup.s" />
     </folder>
-    <configuration
-      Name="Debug"
-      arm_simulator_memory_simulation_parameter="ROM;0x00000000;0x80000;RAM;0x10000000;0x10000;RAM;0x20000000;0x8000;RAM;0xA0000000;0x20000"
-      pre_build_command="&quot;$(StudioDir)/bin/emScript&quot; -load &quot;$(ProjectDir)/src/update_datetime.js&quot;" />
   </project>
-  <configuration
-    Name="Debug"
-    arm_simulator_memory_simulation_parameter="RX 00000000, 10000000, FFFFFFFF;RWX 10000000, 10000000, CDCDCDCD;RWX 20000000, 02000000, CDCDCDCD;RW 40000000, 02000000;RW E0000000, 10000000; RW A0000000, 20000"
-    c_preprocessor_definitions="DEBUG"
-    c_user_include_directories=".;$(ProjectDir)/include/"
-    gcc_debugging_level="Level 3"
-    gcc_optimization_level="None" />
-  <configuration
-    Name="Release"
-    c_preprocessor_definitions="NDEBUG"
-    gcc_debugging_level="Level 2"
-    gcc_omit_frame_pointer="Yes"
-    gcc_optimization_level="Level 2 balanced" />
 </solution>

@@ -74,6 +74,7 @@ typedef struct {
 extern void delay_long(void);
 void lcd_test(void);
 void lcd_init(void);
+void touch_check(void);
 void lcd_config(void);
 void InitLCDPorts(void);
 void lcd_fill_screen(uint32_t color);
@@ -92,9 +93,7 @@ void lcd_draw_audio_graph(uint8_t init);
 void lcd_process_audio_signal(void);
 void lcd_draw_audio_signal(void);
 void lcd_clear_audio_signal(void);
-<<<<<<< Updated upstream
 void lcd_fft_draw_buttons(void);
-=======
 
 void lcd_fft_draw_buttons(void);
 void lcd_toggle_fft_scale_button(void);
@@ -110,4 +109,3 @@ void lcd_speech_clear_answer(void);
 void lcd_speech_draw_answer(uint32_t word);
 
 void lcd_pf_draw_buttons(void);
->>>>>>> Stashed changes

@@ -97,7 +97,7 @@ void acc_init(void){
 
 void acc_read_xyz(void){
     uint16_t xyz_vals[6];
-    acc_read(ACC_OUTX_L_XL, 6, &xyz_vals);
+    acc_read(ACC_OUTX_L_XL, 6, xyz_vals);
     //for (uint8_t i=0; i<6; i++){
     //    printf("%X ", xyz_vals[i]);
     //}

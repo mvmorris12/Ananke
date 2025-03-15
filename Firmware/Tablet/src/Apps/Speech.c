@@ -1,13 +1,13 @@
 #include "LCD.h"
 #include "Speech.h"
-#include "Speech_signals.h"
+//#include "Speech_signals.h"
 #include "Microphone.h"
 #include "Colors.h"
 #include <string.h>
 #include <stdio.h>
 
 //extern const audio_signal_r[16000];
-extern I2S_array_t *I2S_arr;
+//extern I2S_array_t *I2S_arr;
 
 //int speech_find_audio_start(char color[]){
 //    int *signal;
@@ -60,10 +60,10 @@ extern I2S_array_t *I2S_arr;
 
 
 void speech_detection_app(void){
-    lcd_clear_screen();
+    //lcd_clear_screen();
     lcd_draw_speech_models();
     lcd_speech_draw_buttons();
-    fft_speech_models();
+    //fft_speech_models();
     //delay_long();
     //lcd_speech_draw_answer(RED);
     //delay_long();

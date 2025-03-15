@@ -128,7 +128,7 @@ static uint8_t i2s_GetWordWidth(  uint8_t TRMode) {
 	uint8_t value;
 
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_TX_MODE) {
 		value = (LPC_I2S->DAO) & 0x03; /* get wordwidth bit */
@@ -157,7 +157,7 @@ static uint8_t i2s_GetChannel(  uint8_t TRMode) {
 	uint8_t value;
 
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_TX_MODE) {
 		value = ((LPC_I2S->DAO) & 0x04)>>2; /* get bit[2] */
@@ -258,7 +258,7 @@ void I2S_DeInit(void) {
 uint8_t I2S_GetLevel(  uint8_t TRMode)
 {
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if(TRMode == I2S_TX_MODE)
 	{
@@ -320,7 +320,7 @@ uint32_t I2S_Receive(void) {
  *********************************************************************/
 void I2S_Pause(  uint8_t TRMode) {
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_TX_MODE) //Transmit mode
 	{
@@ -341,7 +341,7 @@ void I2S_Pause(  uint8_t TRMode) {
  *********************************************************************/
 void I2S_Mute(  uint8_t TRMode) {
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_TX_MODE) //Transmit mode
 	{
@@ -387,8 +387,8 @@ ITStatus I2S_FreqConfig(  uint32_t Freq, uint8_t TRMode) {
 	uint8_t bitrate, channel, wordwidth;
 
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PRAM_I2S_FREQ(Freq));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PRAM_I2S_FREQ(Freq));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	//set i2s reference is i2s_pclk/2 as default
 	i2sMclk = 0x8;
@@ -444,10 +444,10 @@ void I2S_ModeConfig(  I2S_MODEConf_Type* ModeConfig,
 		uint8_t TRMode)
 {
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_I2S_CLKSEL(ModeConfig->clksel));
-	CHECK_PARAM(PARAM_I2S_4PIN(ModeConfig->fpin));
-	CHECK_PARAM(PARAM_I2S_MCLK(ModeConfig->mcena));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_I2S_CLKSEL(ModeConfig->clksel));
+	//CHECK_PARAM(PARAM_I2S_4PIN(ModeConfig->fpin));
+	//CHECK_PARAM(PARAM_I2S_MCLK(ModeConfig->mcena));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_TX_MODE) {
 		LPC_I2S->TXMODE &= ~0x0F; //clear bit 3:0 in I2STXMODE register
@@ -523,9 +523,9 @@ void I2S_DMACmd(  uint8_t DMAIndex, uint8_t TRMode,
 		FunctionalState NewState)
 {
 	//CHECK_PARAM(PARAM_I2Sx(I2Sx));
-	CHECK_PARAM(PARAM_FUNCTIONALSTATE(NewState));
-	CHECK_PARAM(PARAM_I2S_DMA(DMAIndex));
-	CHECK_PARAM(PARAM_I2S_TRX(TRMode));
+	//CHECK_PARAM(PARAM_FUNCTIONALSTATE(NewState));
+	//CHECK_PARAM(PARAM_I2S_DMA(DMAIndex));
+	//CHECK_PARAM(PARAM_I2S_TRX(TRMode));
 
 	if (TRMode == I2S_RX_MODE) {
 		if (DMAIndex == I2S_DMA_1) {

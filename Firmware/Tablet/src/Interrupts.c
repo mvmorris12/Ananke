@@ -11,9 +11,11 @@
 
 extern volatile uint8_t get_touch_coordinates_flag;
 extern volatile uint8_t fft_ready;
+extern volatile uint8_t tr_ready;
 extern volatile RTCTime local_time;
 volatile uint32_t eint0_counter;
 extern float32_t maxValue;
+extern uint16_t touch_x[5], touch_y[5];
 uint32_t cnt1 = 0;
 
 /*****************************************************************************
@@ -57,10 +59,20 @@ void EINT2_IRQHandler(void){
 void TIMER0_IRQHandler(void){
     NVIC_DisableIRQ(TIMER0_IRQn);
     //printf("timer0 interrupt\n");
-    physics_interrupt_operations();
+    //physics_interrupt_operations();
     LPC_TIM0->IR = 0x1;
     timer0_interrupt_enable();
 }
+
+
+void TIMER1_IRQHandler(void){
+    NVIC_DisableIRQ(TIMER1_IRQn);
+    printf("timer1 interrupt\n");
+    //physics_interrupt_operations();
+    LPC_TIM1->IR = 0x1;
+    timer1_interrupt_enable();
+}
+
 
 void RTC_IRQHandler(void){
     NVIC_DisableIRQ(RTC_IRQn);
@@ -74,17 +86,15 @@ void RTC_IRQHandler(void){
 void LCD_IRQHandler(void){
     NVIC_DisableIRQ(LCD_IRQn);
     //printf("LCD interrupt\n");
-    //lcd_block_test(150,25,600,400);
-
-    // do drawing stuff here, maybe calculations outside? might have timing issues
-    // maybe calcs inside too
-    // LCD vertical front porch set to 199, max at 200(?) should be long enough to draw
-    // for large changes might need to use double frame buffer
 
     if (fft_ready){
         fft_ready = 0;
         lcd_draw_audio_signal();
         lcd_draw_fft_bins(maxValue);
+    }
+
+    if (tr_ready){
+        tr_ready = 0;
     }
 
     LPC_LCD->INTCLR |= (0x1 << 3);
@@ -99,7 +109,7 @@ void GPIO_IRQHandler(void){
     NVIC_DisableIRQ(GPIO_IRQn);
     //LPC_GPIOINT->IO0IntClr |= (0x1<<12);
     //NVIC_DisableIRQ(GPIO_IRQn);
-    //get_touch_coordinates_flag = 1;
+    get_touch_coordinates_flag = 1;
     //NVIC_EnableIRQ(GPIO_IRQn);
     if (LPC_GPIOINT->IO2IntStatR & (0x1<<1)){
         LPC_GPIOINT->IO2IntClr |= (0x1<<1);
@@ -160,8 +170,17 @@ extern void lcd_touch_interrupt_enable(void){
     LPC_GPIO0->DIR &= ~(0x1 << 12);
     LPC_GPIOINT->IO0IntEnF |= (0x1 << 12);	/* Port2.10 is falling edge. */
     //LPC_SC->EXTMODE  = EINT0_EDGE;		/* INT0 edge trigger */
+    LPC_GPIOINT->IO0IntClr |= (0x1<<12);
+    touch_x[0] = 0;
+    touch_y[0] = 0;
     NVIC_EnableIRQ(GPIO_IRQn);
 }
+
+extern void lcd_touch_interrupt_disable(void){
+    NVIC_DisableIRQ(GPIO_IRQn);
+}
+
+
 
 extern void esp32_interrupt_enable(void){
     LPC_IOCON->P2_1 = (0x1<<3);
@@ -188,7 +207,14 @@ void lcd_vfp_interrupt_enable(void){
     NVIC_EnableIRQ(LCD_IRQn);
 }
 
+
 void timer0_interrupt_enable(void){
 
     NVIC_EnableIRQ(TIMER0_IRQn);
+}
+
+
+void timer1_interrupt_enable(void){
+
+    NVIC_EnableIRQ(TIMER1_IRQn);
 }

@@ -477,14 +477,14 @@ static const glyph_dsc_t glyph_dsc[] = {
     {.bitmap_index = 42, .adv_w = 256, .box_w = 12, .box_h = 14, .ofs_x = 2, .ofs_y = 2},   // "
     {.bitmap_index = 63, .adv_w = 256, .box_w = 14, .box_h = 12, .ofs_x = 0, .ofs_y = 2},   // #
     {.bitmap_index = 84, .adv_w = 256, .box_w = 14, .box_h = 14, .ofs_x = 0, .ofs_y = 2},   // $
-    {.bitmap_index = 109, .adv_w = 256, .box_w = 6, .box_h = 6, .ofs_x = 4, .ofs_y = 10},   // %
+    {.bitmap_index = 109, .adv_w = 256, .box_w = 6, .box_h = 6, .ofs_x = 4, .ofs_y = 11},   // %
     {.bitmap_index = 114, .adv_w = 256, .box_w = 8, .box_h = 14, .ofs_x = 4, .ofs_y = 2},   // &
     {.bitmap_index = 128, .adv_w = 256, .box_w = 8, .box_h = 14, .ofs_x = 4, .ofs_y = 2},   // '
     {.bitmap_index = 142, .adv_w = 256, .box_w = 16, .box_h = 10, .ofs_x = 0, .ofs_y = 4},  // (
     {.bitmap_index = 162, .adv_w = 256, .box_w = 12, .box_h = 10, .ofs_x = 2, .ofs_y = 4},  // )
     {.bitmap_index = 177, .adv_w = 256, .box_w = 6, .box_h = 6, .ofs_x = 4, .ofs_y = 0},    // *
     {.bitmap_index = 182, .adv_w = 256, .box_w = 12, .box_h = 2, .ofs_x = 2, .ofs_y = 8},   // +
-    {.bitmap_index = 185, .adv_w = 256, .box_w = 4, .box_h = 4, .ofs_x = 6, .ofs_y = 2},    // -
+    {.bitmap_index = 185, .adv_w = 256, .box_w = 4, .box_h = 4, .ofs_x = 4, .ofs_y = 12},    // -
     {.bitmap_index = 187, .adv_w = 256, .box_w = 16, .box_h = 14, .ofs_x = 0, .ofs_y = 2},  // /
     {.bitmap_index = 215, .adv_w = 256, .box_w = 12, .box_h = 14, .ofs_x = 2, .ofs_y = 2},  // 0
     {.bitmap_index = 236, .adv_w = 256, .box_w = 12, .box_h = 14, .ofs_x = 2, .ofs_y = 2},  // 1

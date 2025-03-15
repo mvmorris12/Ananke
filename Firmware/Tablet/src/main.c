@@ -21,11 +21,14 @@
 #include "getdatetime_var.h"
 
 #include "Cube.h"
+#include "Pathfinder.h"
 #include "Physics.h"
 #include "Pong.h"
 #include "Launcher.h"
+#include "Traffic.h"
 
 #include "Colors.h"
+
 
 
 volatile unsigned int Continue;
@@ -92,17 +95,18 @@ void HardFault_Handler(void) {
 
 
 
+
 int main(void) {
     SystemClockUpdate();
     led_init();
-    led_flash(2);
+    led_flash(1);
 
-    //I2C0_Init(1); // lcd
+    I2C0_Init(1); // lcd
     I2C1_Init(1);   // rtc
     SSP0_Init();
 
 
-    esp32_init(); 
+    //esp32_init(); 
 
     RTC_Init();  // just for on-board RTC
     RTCStart();  // just for on-board RTC
@@ -127,7 +131,7 @@ int main(void) {
     //interrupt_test();
 
 
-    lcd_test();
+    //lcd_test();
 
     lcd_draw_time();
 
@@ -157,17 +161,16 @@ int main(void) {
 
     //cube_run_app();
     //physics_run_app();
-<<<<<<< Updated upstream
-    mic_start_fft();
-=======
+    //mic_start_fft();
+
 
 
 
     //mic_start_fft(); ////////// live audio analysis
     //speech_detection_app(); ////////// speech recognition
-    pathfinder_run_app(); ////////// pathfinding
+    //pathfinder_run_app(); ////////// pathfinding
 
-
+    traffic_run_app();
 
 
     //for (int i=0; i<16000; i++){
@@ -180,11 +183,17 @@ int main(void) {
     //flash_test();
     //flash_write_audio(NULL, 0);
 
-
     int i=0;
->>>>>>> Stashed changes
     while(1){
-
+      //lcd_fill_screen(WHITE);
+      //printf("white\n");
+      //delay_ms(2000);
+      //lcd_fill_screen(BLUE);
+      //printf("blue\n");
+      //delay_ms(2000);
+      //lcd_fill_screen(GRAY_DARK);
+      //printf("graydark\n");
+      //delay_ms(2000);
     }
 
     printf("Fin\n");

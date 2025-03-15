@@ -26,7 +26,8 @@ float current_spots[8][2] = {{0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.0}, {0.0,0.
 uint16_t current_spots_avg[NUMBER_SAMPLES_AVG_DRAW][8][2];
 uint8_t  current_spots_avg_idx = 0;
 
-uint16_t draw_spot_x[8]; draw_spot_y[8];
+uint16_t draw_spot_x[8]; 
+uint16_t draw_spot_y[8];
 uint8_t draw_spot_flag = 1;
 volatile uint16_t x_accel, y_accel, z_accel;
 
@@ -107,9 +108,9 @@ void xyz_calc(void){
 	z_var += 2*(z_var+90000);
     }
 
-    sprintf(x_deg_txt, "%d", x_var);
-    sprintf(y_deg_txt, "%d", y_var);
-    sprintf(z_deg_txt, "%d", z_var);
+    sprintf(x_deg_txt, "%0.2f", x_var);
+    sprintf(y_deg_txt, "%0.2f", y_var);
+    sprintf(z_deg_txt, "%0.2f", z_var);
 
     //int16_t tmpxacc = (int)strtol(dev2.x_txt_raw, NULL, 16);
     //int16_t tmpyacc = (int)strtol(dev2.y_txt_raw, NULL, 16);
@@ -337,7 +338,7 @@ void calculate_cube_points(void){
 void cube_run_app(void){
     uint8_t cube_run = 1;
     esp32_start_ble();
-    esp32_interrupt_enable();
+    //esp32_interrupt_enable();
     printf("Starting cube app\n");
     //current_spots_avg[NUMBER_SAMPLES_AVG_DRAW][8][2];
     for (uint16_t i=0; i<(NUMBER_SAMPLES_AVG_DRAW); i++){
